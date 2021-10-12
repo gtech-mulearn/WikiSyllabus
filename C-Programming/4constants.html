@@ -1,0 +1,445 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Constants - WikiSyllabus</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../C-Programming/SUMMARY.html"><strong aria-hidden="true">1.</strong> C Programming</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../C-Programming/1intro.html"><strong aria-hidden="true">1.1.</strong> Introduction to C Programming</a></li><li class="chapter-item expanded "><a href="../C-Programming/2variables_keywords.html"><strong aria-hidden="true">1.2.</strong> Variables and Keywords</a></li><li class="chapter-item expanded "><a href="../C-Programming/3datatypes.html"><strong aria-hidden="true">1.3.</strong> Datatypes</a></li><li class="chapter-item expanded "><a href="../C-Programming/4constants.html" class="active"><strong aria-hidden="true">1.4.</strong> Constants</a></li><li class="chapter-item expanded "><a href="../C-Programming/5operators.html"><strong aria-hidden="true">1.5.</strong> Operators</a></li><li class="chapter-item expanded "><a href="../C-Programming/6control_statements.html"><strong aria-hidden="true">1.6.</strong> Control Statements</a></li><li class="chapter-item expanded "><a href="../C-Programming/7goto.html"><strong aria-hidden="true">1.7.</strong> goto statement</a></li><li class="chapter-item expanded "><a href="../C-Programming/8switch_statement.html"><strong aria-hidden="true">1.8.</strong> Switch Statement</a></li><li class="chapter-item expanded "><a href="../C-Programming/9break.html"><strong aria-hidden="true">1.9.</strong> break Statement</a></li><li class="chapter-item expanded "><a href="../C-Programming/10continue.html"><strong aria-hidden="true">1.10.</strong> Continue Statement</a></li><li class="chapter-item expanded "><a href="../C-Programming/11loops.html"><strong aria-hidden="true">1.11.</strong> Loops</a></li><li class="chapter-item expanded "><a href="../C-Programming/12functions.html"><strong aria-hidden="true">1.12.</strong> Functions</a></li><li class="chapter-item expanded "><a href="../C-Programming/13function_arguments.html"><strong aria-hidden="true">1.13.</strong> Calling Functions</a></li><li class="chapter-item expanded "><a href="../C-Programming/14library_functions.html"><strong aria-hidden="true">1.14.</strong> Library Functions</a></li><li class="chapter-item expanded "><a href="../C-Programming/15recursion.html"><strong aria-hidden="true">1.15.</strong> Recursion</a></li><li class="chapter-item expanded "><a href="../C-Programming/16storage_classes.html"><strong aria-hidden="true">1.16.</strong> Storage Classes</a></li><li class="chapter-item expanded "><a href="../C-Programming/17arrays.html"><strong aria-hidden="true">1.17.</strong> Array</a></li><li class="chapter-item expanded "><a href="../C-Programming/18pointer_arithmetic.html"><strong aria-hidden="true">1.18.</strong> Pointers</a></li><li class="chapter-item expanded "><a href="../C-Programming/19pointer_to_pointer.html"><strong aria-hidden="true">1.19.</strong> Pointer to Pointer</a></li><li class="chapter-item expanded "><a href="../C-Programming/20strings.html"><strong aria-hidden="true">1.20.</strong> Strings</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">WikiSyllabus</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="constants"><a class="header" href="#constants">Constants</a></h1>
+<p>C Constants is the most fundamental and essential part of the C programming language. Constants in C are the fixed values that are used in a program, and its value remains the same during the entire execution of the program.</p>
+<ul>
+<li>Constants are also called literals.</li>
+<li>Constants can be any of the data types.</li>
+<li>It is considered best practice to define constants using only upper-case names.</li>
+</ul>
+<h2 id="constant-definition-in-c"><a class="header" href="#constant-definition-in-c">Constant definition in C</a></h2>
+<h4 id="syntax"><a class="header" href="#syntax">Syntax:</a></h4>
+<pre><code class="language-text">   const type constant_name;
+</code></pre>
+<h4 id="example"><a class="header" href="#example">Example:</a></h4>
+<pre><code class="language-text">     #include&lt;stdio.h&gt;
+       main()
+       {
+          const int SIDE = 10;
+           int area;
+           area = SIDE*SIDE;
+           printf(&quot;The area of the square with side: %d is: %d sq. units&quot;, SIDE, area);
+       }
+</code></pre>
+<h4 id="program-output"><a class="header" href="#program-output">Program Output:</a></h4>
+<p><img src="assets/c-constants.jpg" alt="" /></p>
+<h2 id="constant-types-in-c"><a class="header" href="#constant-types-in-c">Constant Types in C</a></h2>
+<p>Constants are categorized into two basic types, and each of these types has its subtypes/categories. These are:</p>
+<h3 id="primary-constants"><a class="header" href="#primary-constants">Primary Constants</a></h3>
+<ol>
+<li>Numeric Constants
+<ul>
+<li>Integer Constants</li>
+<li>Real Constants</li>
+</ul>
+</li>
+<li>Character Constants
+<ul>
+<li>Single Character Constants</li>
+<li>String Constants</li>
+<li>Backslash Character Constants</li>
+</ul>
+</li>
+</ol>
+<h2 id="integer-constant"><a class="header" href="#integer-constant">Integer Constant</a></h2>
+<p>It's referring to a sequence of digits. Integers are of three types viz:</p>
+<ol>
+<li>
+<p>Decimal Integer</p>
+</li>
+<li>
+<p>Octal Integer</p>
+</li>
+<li>
+<p>Hexadecimal Integer</p>
+<p><strong>Example:</strong></p>
+<p>15, -265, 0, 99818, +25, 045, 0X6</p>
+</li>
+</ol>
+<h2 id="real-constant"><a class="header" href="#real-constant">Real Constant</a></h2>
+<p>The numbers containing fractional parts like 99.25 are called real or floating points constant.</p>
+<h2 id="single-character-constant"><a class="header" href="#single-character-constant">Single Character Constant</a></h2>
+<p>It simply contains a single character enclosed within ' and ' (a pair of single quote). It is to be noted that the character '8' is not the same as 8. Character constants have a specific set of integer values known as ASCII values (American Standard Code for Information Interchange).</p>
+<h3 id="example-1"><a class="header" href="#example-1">Example:</a></h3>
+<pre><code class="language-text">'X', '5', ';'
+</code></pre>
+<h2 id="string-constant"><a class="header" href="#string-constant">String Constant</a></h2>
+<p>These are a sequence of characters enclosed in double quotes, and they may include letters, digits, special characters, and blank spaces. It is again to be noted that &quot;G&quot; and 'G' are different - because &quot;G&quot; represents a string as it is enclosed within a pair of double quotes whereas 'G' represents a single character.</p>
+<h3 id="example-2"><a class="header" href="#example-2">Example:</a></h3>
+<pre><code class="language-text">&quot;Hello!&quot;, &quot;2015&quot;, &quot;2+1&quot;
+</code></pre>
+<h2 id="backslash-character-constant"><a class="header" href="#backslash-character-constant">Backslash Character Constant</a></h2>
+<p>C supports some character constants having a backslash in front of it. The lists of backslash characters have a specific meaning which is known to the compiler. They are also termed as &quot;Escape Sequence&quot;.</p>
+<pre><code class="language-text">  Constants                             Meaning
+
+    \a                                  beep sound
+    \b                                    backspace
+    \f                                    form feed
+    \n                                    new line
+    \r                                    carriage return
+    \t                                    horizontal tab
+    \v                                    vertical tab
+    \'                                    single quote
+    \&quot;                                    double quote
+    \\                                    backslash
+    \0                                    null
+</code></pre>
+<h3 id="secondary-constants"><a class="header" href="#secondary-constants">Secondary Constants</a></h3>
+<ul>
+<li>
+<p>Array</p>
+</li>
+<li>
+<p>Pointer</p>
+</li>
+<li>
+<p>Structure</p>
+</li>
+<li>
+<p>Union</p>
+</li>
+<li>
+<p>Enum</p>
+<p><strong>Array</strong></p>
+<p>The array is a data structure in C programming, which can store a fixed-size sequential collection of elements of the same data type. For example, if you want to store ten numbers, it is easier to define an array of 10 lengths, instead of defining ten variables.</p>
+<p>In the C programming language, an array can be One-Dimensional, Two-Dimensional, and Multidimensional.</p>
+<p><strong>Define an array in C</strong></p>
+<p><strong>Syntax:</strong></p>
+<p>type arrayName [ size ];</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-text">double amount[5];
+</code></pre>
+<p><strong>Initialize an array in C</strong></p>
+<p>int age[5]={22,25,30,32,35};</p>
+<p><strong>Accessing array elements</strong></p>
+<p>int myArray[5]; int n = 0;</p>
+<pre><code class="language-text">// Initializing elements of array seperately
+</code></pre>
+<p>for(n=0;n&lt;sizeof(myArray)/sizeof(myArray[0]);n++) { myArray[n] = n; }</p>
+<pre><code class="language-text">int a = myArray[3]; // Assigning 3rd element of array value to integer 'a'.
+</code></pre>
+</li>
+</ul>
+<h2 id="pointer"><a class="header" href="#pointer">Pointer</a></h2>
+<p>A pointer is a variable in C, and pointers value is the address of a memory location.</p>
+<h3 id="pointer-definition-in-c"><a class="header" href="#pointer-definition-in-c">Pointer definition in C</a></h3>
+<h4 id="syntax-1"><a class="header" href="#syntax-1">Syntax:</a></h4>
+<pre><code class="language-text">    type *variable_name;
+</code></pre>
+<h4 id="example-3"><a class="header" href="#example-3">Example:</a></h4>
+<pre><code class="language-text">     int  *width;
+     char  *letter;
+</code></pre>
+<h3 id="benefits-of-using-pointers"><a class="header" href="#benefits-of-using-pointers">Benefits of using Pointers</a></h3>
+<ul>
+<li>Pointers allow passing of arrays and strings to functions more efficiently.</li>
+<li>Pointers make it possible to return more than one value from the function.</li>
+<li>Pointers reduce the length and complexity of a program.</li>
+<li>Pointers increase the processing speed.</li>
+<li>Pointers save the memory.</li>
+</ul>
+<h2 id="structure"><a class="header" href="#structure">Structure</a></h2>
+<p>The structure is a user-defined data type in C, which is used to store a collection of different kinds of data.</p>
+<ul>
+<li>The structure is something similar to an array; the only difference is array is used to store the same data types.</li>
+<li>struct keyword is used to declare the structure in C.</li>
+<li>Variables inside the structure are called members of the structure. </li>
+</ul>
+<h3 id="defining-a-structure-in-c"><a class="header" href="#defining-a-structure-in-c">Defining a structure in C</a></h3>
+<h4 id="syntax-2"><a class="header" href="#syntax-2">Syntax:</a></h4>
+<pre><code class="language-text">    struct structureName
+    {
+       //member definitions
+    };
+</code></pre>
+<h4 id="example-4"><a class="header" href="#example-4">Example:</a></h4>
+<pre><code class="language-text">    struct Courses
+    {
+      char  WebSite[50];
+      char  Subject[50];
+      int   Price;
+    };
+</code></pre>
+<h3 id="accessing-structure-members"><a class="header" href="#accessing-structure-members">Accessing structure members</a></h3>
+<h4 id="example-5"><a class="header" href="#example-5">Example:</a></h4>
+<pre><code class="language-text">      #include&lt;stdio.h&gt;
+      #include&lt;string.h&gt;
+
+      struct Courses
+      {
+        char  WebSite[50];
+        char  Subject[50];
+        int   Price;
+      };
+
+      void main( )
+      {
+        struct Courses C;
+
+        //Initialization
+        strcpy( C.WebSite, &quot;w3schools.in&quot;);
+        strcpy( C.Subject, &quot;The C Programming Language&quot;); 
+        C.Price = 0;
+
+        //Print
+        printf( &quot;WebSite : %s\n&quot;, C.WebSite);
+        printf( &quot;Book Author : %s\n&quot;, C.Subject);
+        printf( &quot;Book Price : %d\n&quot;, C.Price);
+      }
+</code></pre>
+<h4 id="output"><a class="header" href="#output">Output:</a></h4>
+<pre><code class="language-text">    WebSite : w3schools.in
+
+    Book Author: The C Programming Language
+
+    Book Price : 0
+</code></pre>
+<h2 id="unions"><a class="header" href="#unions">Unions</a></h2>
+<p>Unions are user-defined data type in C, which is used to store a collection of different kinds of data, just like a structure. However, with unions, you can only store information in one field at any one time.</p>
+<ul>
+<li>
+<p>Unions are like structures except it used less memory.</p>
+</li>
+<li>
+<p>The keyword union is used to declare the structure in C.</p>
+</li>
+<li>
+<p>Variables inside the union are called members of the union.</p>
+<p><strong>Defining a union</strong></p>
+<p><strong>Syntax:</strong></p>
+<pre><code class="language-text">    union unionName
+     {
+       //member definitions
+     };
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-text">     union Courses
+     {
+       char  WebSite[50];
+       char  Subject[50];
+       int   Price;
+     };
+</code></pre>
+</li>
+</ul>
+<h3 id="accessing-union-members"><a class="header" href="#accessing-union-members">Accessing union members</a></h3>
+<h4 id="example-6"><a class="header" href="#example-6">Example:</a></h4>
+<pre><code class="language-text">     #include&lt;stdio.h&gt;
+     #include&lt;string.h&gt;
+
+     union Courses
+     {
+       char  WebSite[50];
+       char  Subject[50];
+       int   Price;
+     };
+
+        void main( )
+     {
+       union Courses C;
+
+       strcpy( C.WebSite, &quot;w3schools.in&quot;);   
+       printf( &quot;WebSite : %s\n&quot;, C.WebSite);
+
+       strcpy( C.Subject, &quot;The C Programming Language&quot;);    
+       printf( &quot;Book Author : %s\n&quot;, C.Subject);
+
+       C.Price = 0;
+       printf( &quot;Book Price : %d\n&quot;, C.Price);
+     } 
+</code></pre>
+<h4 id="output-1"><a class="header" href="#output-1">Output:</a></h4>
+<pre><code class="language-text">      WebSite : w3schools.in
+
+      Book Author: The C Programming Language
+
+      Book Price : 0
+</code></pre>
+<h2 id="enums"><a class="header" href="#enums">Enums</a></h2>
+<p>In C programming, an enumeration type (also called enum) is a data type that consists of integral constants. To define enums, the enum keyword is used.</p>
+<h4 id="syntax-3"><a class="header" href="#syntax-3">Syntax:</a></h4>
+<pre><code class="language-text">     enum flag {const1, const2, ..., constN};
+</code></pre>
+<p>By default, const1 is 0, const2 is 1 and so on. You can change default values of enum elements during declaration (if necessary).</p>
+<pre><code class="language-text">      // Changing default values of enum constants
+       enum suit {
+       club = 0,
+       diamonds = 10,
+       hearts = 20,
+       spades = 3,
+       };
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../C-Programming/3datatypes.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../C-Programming/5operators.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../C-Programming/3datatypes.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../C-Programming/5operators.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
