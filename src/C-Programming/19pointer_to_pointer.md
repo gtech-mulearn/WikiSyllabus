@@ -10,6 +10,7 @@ int **p; // pointer to a pointer which is pointing to an integer.
 
 Example:
 
+```c
 #include<stdio.h>  
 void main (){  
     int a = 10;  
@@ -22,7 +23,7 @@ void main (){
     printf("value stored at p: %d\n",*p); // value stoted at the address contained by p i.e. 10 will be printed  
     printf("value stored at pp: %d\n",**pp); // value stored at the address contained by the pointer stoyred at pp  
   }  
-
+```
 
 Output
 
@@ -39,6 +40,7 @@ https://static.javatpoint.com/cpages/images/cpointertopointerexample.png
 
 As you can see in the above figure, p2 contains the address of p (fff2), and p contains the address of number variable (fff4).
 
+```c
 #include<stdio.h>  
 int main(){  
     int number=50;      
@@ -53,6 +55,7 @@ int main(){
     printf("Value of **p2 variable is %d \n",*p);      
     return 0;  
   } 
+  ```
 
 Output
 
@@ -64,6 +67,7 @@ Value of **p variable is 50
 
 ##  Q. What will be the output of the following program?
 
+```c
 #include<stdio.h>  
 void main (){  
     int a[10] = {100, 206, 300, 409, 509, 601}; //Line 1  
@@ -78,6 +82,7 @@ void main (){
     ++**pp; // Line 10   
     printf("%d %d %d\n",pp-p,*pp - a,**pp); // Line 11  
   }  
+  ```
 
 
   ## Explanation:
