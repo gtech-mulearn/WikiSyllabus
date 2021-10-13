@@ -65,8 +65,14 @@ git push origin main
 ## Create a pull request
   
 <img align="right" width="300" src="https://github.com/Angelrose19/WikiSyllabus/blob/main/docs/assets/pr.PNG" /> 
-Open the main page of your repository on your GitHub account in your browser and click on the Pull requests tab. Now, click on the New Pull Request button.  
-Click Create Pull Request option. Enter a suitable title and description for the pull request. Now submit the pull request.  
+Open the main page of your repository on your GitHub account in your browser and click on the Pull requests tab.  
+Now, click on the New Pull Request button.  
+Click Create Pull Request option. Enter a suitable title and description for the pull request. Now submit the pull request.    
+
+  
+What is a [pull request?](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)    
+  
+You can find more GitHub Commands [here](https://www.geeksforgeeks.org/list-useful-github-commands/)
   
 __Congrats! You just completed the standard fork -> clone -> edit -> pull request workflow that you'll encounter often as a contributor!🎉__
 
@@ -98,6 +104,8 @@ To use cargo, you may need to have C/C++ Build tools. If you don’t have it ins
 Install the mdBook CLI from cargo  : ```cargo install mdbook```
   
 Check version of mdBook installed to verify the installation was successful	: ```cargo -V```
+
+You could go through [mdBook Handbook](https://phaiax.github.io/mdBook/README.html) to get more familiar with mdBook.
 
 
 
