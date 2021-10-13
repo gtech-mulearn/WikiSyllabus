@@ -29,6 +29,7 @@ For 32-bit int variable, it will be incremented by 2 bytes.
 For 64-bit int variable, it will be incremented by 4 bytes.
 
 Example:
+
 ```c
 #include<stdio.h>  
 int main(){  
@@ -71,6 +72,7 @@ printing array elements...
 ## Decrementing Pointer in C
 
 Like increment, we can decrement a pointer variable. If we decrement a pointer, it will start pointing to the previous location. The formula of decrementing the pointer is given below:
+
 ```c
 new_address= current_address - i * size_of(data type)  
 ```
@@ -81,6 +83,7 @@ For 32-bit int variable, it will be decremented by 2 bytes.
 For 64-bit int variable, it will be decremented by 4 bytes.
 
 Example:
+
 ```c
 #include <stdio.h>            
 void main(){            
@@ -128,7 +131,7 @@ Output
 ```text
 Address of p variable is 3214864300 
 After adding 3: Address of p variable is 3214864312
-
+```
 As you can see, the address of p is 3214864300. But after adding 3 with p variable, it is 3214864312. Since we are using 64-bit architecture, it increments 12. But if we were using 32-bit architecture, it was incrementing to 6 only, i.e. As integer value occupies 2-byte memory in 32-bit OS.
 
 ## C Pointer Subtraction
@@ -168,9 +171,12 @@ You can see after subtracting 3 from the pointer variable, it is 12 (4*3) less t
 However, instead of subtracting a number, we can also subtract an address from another address (pointer). This will result in a number. It will not be a simple arithmetic operation, but it will follow the following rule.
 
 If two pointers are of the same type,
+```c
+Address2 - Address1 = (Subtraction of two addresses)/size of data type which pointer points 
+```
 
-Address2 - Address1 = (Subtraction of two addresses)/size of data type which pointer points  
 Consider the following example to subtract one pointer from an another.
+
 ```c
 #include<stdio.h>  
 void main ()  

@@ -57,9 +57,9 @@ int main(){
     printf("Value of **p2 variable is %d \n",*p);      
     return 0;  
   } 
-
+```
 Output
-
+```text
 Address of number variable is fff4
 Address of p variable is fff4
 Value of *p variable is 50
