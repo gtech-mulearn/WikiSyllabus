@@ -28,7 +28,7 @@ C program to Demonstrate the use of Library functions
 ```
 
 Program output:
-
+```text
 10
 
 0.990105
@@ -40,4 +40,4 @@ Program output:
 -1145744106
 
 81.000000
-
+```

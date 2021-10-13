@@ -42,9 +42,10 @@ return 0;
 }  
 ```
 Output
-
+```text
 Address of p variable is 3214864300 
 After increment: Address of p variable is 3214864304 
+```
 
 ## Traversing an array by using pointer
 ```c
@@ -63,9 +64,10 @@ void main ()
 ```
 Output
 
+```text
 printing array elements...
 1  2  3  4  5
-
+```
 ## Decrementing Pointer in C
 
 Like increment, we can decrement a pointer variable. If we decrement a pointer, it will start pointing to the previous location. The formula of decrementing the pointer is given below:
@@ -92,9 +94,10 @@ printf("After decrement: Address of p variable is %u \n",p); // P will now point
 ```
 Output
 
+```text
 Address of p variable is 3214864300 
 After decrement: Address of p variable is 3214864296 
-
+```
 ## C Pointer Addition
 
 We can add a value to the pointer variable. The formula of adding value to pointer is given below:
@@ -122,6 +125,7 @@ return 0;
 ```
 Output
 
+```text
 Address of p variable is 3214864300 
 After adding 3: Address of p variable is 3214864312
 
@@ -154,10 +158,10 @@ return 0;
 ```
 
 Output
-
+```text
 Address of p variable is 3214864300 
 After subtracting 3: Address of p variable is 3214864288
-
+```
 
 You can see after subtracting 3 from the pointer variable, it is 12 (4*3) less than the previous address value.
 
@@ -180,8 +184,9 @@ void main ()
 }  
 ```
 Output
-
+```text
 Pointer Subtraction: 1030585080 - 1030585068 = 3
+```
 
 ## Pointer to function in C
 
@@ -207,10 +212,10 @@ int addition()
 ```
 
 Output
-
+```text
 Enter two numbers?10 15 
 The sum is 25  
-
+```
 ## Pointer to Array of functions in C
 
 To understand the concept of an array of functions, we must understand the array of function. Basically, an array of the function is an array which contains the addresses of functions. In other words, the pointer to an array of functions is a pointer pointing to an array which contains the pointers to the functions. Consider the following example.
@@ -243,6 +248,7 @@ int showadd(int b)
 ```
 
 Output
-
+```text
 printing the value returned by show : 65 
 Adding 90 to the value returned by show: 155
+```
