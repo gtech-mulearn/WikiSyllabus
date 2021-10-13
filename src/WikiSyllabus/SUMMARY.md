@@ -1,3 +1,3 @@
 # CONTEXT
 
-- [C Programming](./C-Programming/SUMMARY.md)
+- [C Programming](./WikiSyllabus/C-Programming/SUMMARY.md)
