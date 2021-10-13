@@ -66,9 +66,9 @@ git push origin main
 Open the main page of your repository on your GitHub account in your browser and click on the Pull requests tab. Now, click on the New Pull Request button.  
 Click Create Pull Request option. Enter a suitable title and description for the pull request. Now submit the pull request.  
   
-  
     
-### Congrats! You just completed the standard fork -> clone -> edit -> pull request workflow that you'll encounter often as a contributor!
+    
+__Congrats! You just completed the standard fork -> clone -> edit -> pull request workflow that you'll encounter often as a contributor!__
 
 ## Setting Up mdBook (Optional)
 mdBook is a command line tool and Rust crate to create books with Markdown. You can edit the markdown files (.md) in a text editor of your choice, but you wouldn’t be able to view the rendered output in the book form with formatting. To view the book as intended, you will need to set up the mdBook CLI on your system. 
@@ -90,15 +90,14 @@ Install [rustup and cargo](https://www.rust-lang.org/tools/install)
   
 To use cargo, you may need to have C/C++ Build tools. If you don’t have it installed, there are two options, choose either one.  
 * GNU C Compiler : Install it using the following commands
-```rustup toolchain install stable-x86_64-pc-windows-gnu```
+```rustup toolchain install stable-x86_64-pc-windows-gnu```  
+
 ```rustup default stable-x86_64-pc-windows-gnu```
 * Visual Studio C++ Build Tools : Install C++ build tools from this [link](https://visualstudio.microsoft.com/visual-cpp-build-tools)
   
-Install the mdBook CLI from cargo  
-```cargo install mdbook```
+Install the mdBook CLI from cargo  : ```cargo install mdbook```
   
-Check version of mdBook installed to verify the installation was successful	
-```cargo -V```
+Check version of mdBook installed to verify the installation was successful	: ```cargo -V```
 
 
 
