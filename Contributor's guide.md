@@ -4,7 +4,7 @@ Thank you for investing your time in contributing to our project!
 
 Wikisyllabus is collaborative project to build an evolving website/wiki to host, enhance, link, extend & update the university syllabus to help students find a way to connect their education to what’s new in the industry.
   
-#### If you don't have git on your machine, [install it](https://help.github.com/articles/set-up-git/).
+#### If you don't have Git Bash on your machine, [install it](https://git-scm.com/downloads).
 If you are new to Git and Github, you need to [create a github account](https://github.com). It is advisable that you go through [Git Handbook](https://guides.github.com/introduction/git-handbook/) before moving to next step.  
 
 
@@ -46,7 +46,8 @@ Open Git Bash, navigate to the project directory and execute the command ```git 
 ```
 git add filename.md
 ```
-You can also add all the unstaged files using : ```git add .```
+You can also add all the unstaged files using : ```git add .```  
+
 Now commit those changes using the `git commit` command:
 
 ```
@@ -60,6 +61,11 @@ Push your changes using the command `git push`:
 ```
 git push origin main
 ```
+
+## Create a pull request
+  
+Open the main page of your repository on your GitHub account in your browser and click on the Pull requests tab. Now, click on the ```New pull request``` button.  
+Click Create Pull Request option. Enter a suitable title and description for the pull request. Now submit the pull request.
 
 
    
