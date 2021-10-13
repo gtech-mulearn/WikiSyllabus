@@ -34,6 +34,8 @@ where `username` is your GitHub username. Here you're copying the contents of th
 Open up the project in your favourite text editor, select the file you want to contribute to, and make your changes.Make sure to save the edits.
 
 All the files in this project are ```.md``` files. You would need to have Markdown knowledge to contribute to this project.  
+  
+  
 Markdown is a fast and easy way to take notes, create content for a website, and produce print-ready documents. It doesn't take long to learn the Markdown syntax, and once you know how to use it, you can write using Markdown just about everywhere. Visit [here](https://guides.github.com/features/mastering-markdown/) to master Markdown.
 
 ## Add and Commit your changes
@@ -65,9 +67,6 @@ git push origin main
 <img align="right" width="300" src="https://github.com/Angelrose19/WikiSyllabus/blob/main/docs/assets/pr.PNG" /> 
 Open the main page of your repository on your GitHub account in your browser and click on the Pull requests tab. Now, click on the New Pull Request button.  
 Click Create Pull Request option. Enter a suitable title and description for the pull request. Now submit the pull request.  
-  
-    
-  
   
 __Congrats! You just completed the standard fork -> clone -> edit -> pull request workflow that you'll encounter often as a contributor!🎉__
 
