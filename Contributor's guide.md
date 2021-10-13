@@ -9,7 +9,7 @@ In this guide you will get an overview of the contribution workflow from creatin
 
 2. Fork the Wikisyllabus repository on GitHub.[Help guide to fork a repositry](https://github.com/Angelrose19/WikiSyllabus/blob/main/Git%20%26%20GitHub%20Basics.md/Clone.md)  
  
-3. Clone the project.[Help guide to clone a repository](/Git & GitHub Basics.md/Clone.md)  
+3. Clone the project.[Help guide to clone a repository](https://github.com/Angelrose19/WikiSyllabus/blob/main/Git%20%26%20GitHub%20Basics.md/Clone.md)  
  
  
 
