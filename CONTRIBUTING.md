@@ -20,7 +20,7 @@ git clone url
 ```
 
 where url  is the url you just copied! (your fork of this project).
-<img align="right" width="300" src="https://github.com/Angelrose19/WikiSyllabus/blob/main/docs/assets/code.jpg" />  
+<img align="right" width="300" src="https://github.com/Angelrose19/WikiSyllabus/blob/main/docs/assets/code.png" />  
 For example:
 
 ```
@@ -62,7 +62,7 @@ git push origin main
 
 ## Create a pull request
   
-<img align="right" width="300" src="https://github.com/Angelrose19/WikiSyllabus/blob/main/docs/assets/pr.jpg" /> 
+<img align="right" width="300" src="https://github.com/Angelrose19/WikiSyllabus/blob/main/docs/assets/pr.png" /> 
 Open the main page of your repository on your GitHub account in your browser and click on the Pull requests tab. Now, click on the ```New pull request``` button.  
 Click Create Pull Request option. Enter a suitable title and description for the pull request. Now submit the pull request.  
   
