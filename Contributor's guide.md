@@ -65,7 +65,9 @@ git push origin main
 ## Create a pull request
   
 Open the main page of your repository on your GitHub account in your browser and click on the Pull requests tab. Now, click on the ```New pull request``` button.  
-Click Create Pull Request option. Enter a suitable title and description for the pull request. Now submit the pull request.
+Click Create Pull Request option. Enter a suitable title and description for the pull request. Now submit the pull request.  
+  
+Congrats! You just completed the standard fork -> clone -> edit -> pull request workflow that you'll encounter often as a contributor!
 
 
    
