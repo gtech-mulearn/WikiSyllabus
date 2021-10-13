@@ -1,8 +1,8 @@
 # Wikisyllabus : Take your syllabus online
 
+Wikisyllabus is collaborative project to build an evolving website/wiki to host, enhance, link, extend & update the university syllabus to help students find a way to connect their education to what’s new in the industry.  
+  
 Thank you for investing your time in contributing to our project!
-
-Wikisyllabus is collaborative project to build an evolving website/wiki to host, enhance, link, extend & update the university syllabus to help students find a way to connect their education to what’s new in the industry.
   
 #### If you don't have Git Bash on your machine, [install it](https://git-scm.com/downloads).
 If you are new to Git and Github, you need to [create a github account](https://github.com). It is advisable that you go through [Git Handbook](https://guides.github.com/introduction/git-handbook/) before moving to next step.  
