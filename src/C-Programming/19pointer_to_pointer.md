@@ -52,8 +52,7 @@ int main(){
     printf("Address of p2 variable is %x \n",p2);      
     printf("Value of **p2 variable is %d \n",*p);      
     return 0;  
-    } 
-
+  } 
 
 Output
 
