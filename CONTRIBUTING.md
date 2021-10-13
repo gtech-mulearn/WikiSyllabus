@@ -1,5 +1,5 @@
 # Contributing to Wikisyllabus
-Thank you for investing your time in contributing to our project!
+Thank you for investing your time in contributing to our project✨
   
 #### If you don't have Git Bash on your machine, [install it](https://git-scm.com/downloads).
 If you are new to Git and Github, you need to [create a github account](https://github.com). It is advisable that you go through [Git Handbook](https://guides.github.com/introduction/git-handbook/) before moving to next step.  
@@ -68,7 +68,7 @@ Click Create Pull Request option. Enter a suitable title and description for the
   
     
     
-__Congrats! You just completed the standard fork -> clone -> edit -> pull request workflow that you'll encounter often as a contributor!__
+__Congrats! You just completed the standard fork -> clone -> edit -> pull request workflow that you'll encounter often as a contributor!🎉__
 
 ## Setting Up mdBook (Optional)
 mdBook is a command line tool and Rust crate to create books with Markdown. You can edit the markdown files (.md) in a text editor of your choice, but you wouldn’t be able to view the rendered output in the book form with formatting. To view the book as intended, you will need to set up the mdBook CLI on your system. 
