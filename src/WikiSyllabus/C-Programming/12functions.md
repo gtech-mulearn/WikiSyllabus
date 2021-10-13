@@ -1,8 +1,6 @@
 # Functions
 
-## **C function**
-
-C function is a self-contained block of statements that can be executed repeatedly whenever we need it.
+#### Function is a self-contained block of statements that can be executed repeatedly whenever we need it.
 
 ## **Benefits of using the function in C**
 

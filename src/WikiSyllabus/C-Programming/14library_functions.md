@@ -1,6 +1,6 @@
-# C Library Functions
+# Library Functions
 
-## The C library functions are provided by the system and stored in the library. The C library function is also called an inbuilt function in C programming.
+### The library functions are provided by the system and stored in the library. The C library function is also called an inbuilt function in C programming.
 
 To use Inbuilt Function in C, you must include their respective header files, which contain prototypes and data definitions of the function.
 
