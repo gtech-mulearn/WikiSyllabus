@@ -67,7 +67,8 @@ Open the main page of your repository on your GitHub account in your browser and
 Click Create Pull Request option. Enter a suitable title and description for the pull request. Now submit the pull request.  
   
     
-    
+  
+  
 __Congrats! You just completed the standard fork -> clone -> edit -> pull request workflow that you'll encounter often as a contributor!🎉__
 
 ## Setting Up mdBook (Optional)
