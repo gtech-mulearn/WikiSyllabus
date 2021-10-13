@@ -2,7 +2,7 @@
 Thank you for investing your time in contributing to our project✨
   
 #### If you don't have Git Bash on your machine, [install it](https://git-scm.com/downloads).
-If you are new to Git and Github, you need to [create a github account](https://github.com). It is advisable that you go through [Git Handbook](https://guides.github.com/introduction/git-handbook/) before moving to next step.  
+If you are new to Git and Github, you need to [create a Github Account](https://github.com). It is advisable that you go through [Git Handbook](https://guides.github.com/introduction/git-handbook/) before moving to next step.  
 
 
 ## Fork the repository  
