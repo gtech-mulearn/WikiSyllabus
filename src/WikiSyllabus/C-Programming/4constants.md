@@ -1,5 +1,5 @@
 # Constants
-
+## **Definition**
 C Constants is the most fundamental and essential part of the C programming language. Constants in C are the fixed values that are used in a program, and its value remains the same during the entire execution of the program.
 
 * Constants are also called literals.

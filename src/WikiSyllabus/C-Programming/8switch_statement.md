@@ -1,26 +1,28 @@
-# Switch Statements
+# switch Statement
 
-## A switch statement allows a variable to be tested for equality against a list of values. Each value is called a case, and the variable being switched on is checked for each switch case.
+##### A switch Statement allows a variable to be tested for equality against a list of values. Each value is called a case, and the variable being switched on is checked for each switch case.
 
 ### Syntax
 The syntax for a switch statement in C programming language is as follows − 
 
-'''c
+```c
 
-	 switch(expression) {
-	   case constant-expression  :
+switch(expression)
+	 {
+		 case constant-expression  :
 	      statement(s);
 	      break; /* optional */
 
-	   case constant-expression  :
+		case constant-expression  :
 	      statement(s);
 	      break; /* optional */
 
-	   /* you can have any number of case statements */
-	   default : /* Optional */
-	   statement(s);
+		/* you can have any number of case statements */
+	    default : /* Optional */
+	    statement(s);
 	}
-'''
+```
+
 The following rules apply to a **switch** statement −
 
 * The expression used in a switch statement must have an integral or enumerated type, or be of a class type in which the class has a single conversion function to an integral or enumerated type.
@@ -37,17 +39,12 @@ The following rules apply to a **switch** statement −
 
 * A switch statement can have an optional default case, which must appear at the end of the switch. The default case can be used for performing a task when none of the cases is true. No break is needed in the default case.
 
-
-## Flow Diagram
-![](assets/c_switch.jpg)
-
 ## Example
 
-'''c
-
-	#include <stdio.h>
-	int main () {
-
+```c
+#include <stdio.h>
+	int main ()
+	{
 	   /* local variable definition */
 	   char grade = 'B';
 
@@ -73,9 +70,11 @@ The following rules apply to a **switch** statement −
 
 	   return 0;
 	}
-'''
+```
 
-### When the above code is compiled and executed, it produces the following result −
+#### When the above code is compiled and executed, it produces the following result −
 
+```text
 Well done
 Your grade is B
+```
