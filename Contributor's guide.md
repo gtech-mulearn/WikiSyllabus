@@ -1,4 +1,4 @@
-# Contributor's Guide
+# Wikisyllabus : Take your syllabus online
 
 Thank you for investing your time in contributing to our project!
 
