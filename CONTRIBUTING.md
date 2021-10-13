@@ -62,11 +62,12 @@ git push origin main
 
 ## Create a pull request
   
-<img align="right" width="300" src="https://github.com/Angelrose19/WikiSyllabus/blob/main/docs/assets/pr.png" /> 
-Open the main page of your repository on your GitHub account in your browser and click on the Pull requests tab. Now, click on the ```New pull request``` button.  
+<img align="right" width="300" src="https://github.com/Angelrose19/WikiSyllabus/blob/main/docs/assets/pr.PNG" /> 
+Open the main page of your repository on your GitHub account in your browser and click on the Pull requests tab. Now, click on the New Pull Request button.  
 Click Create Pull Request option. Enter a suitable title and description for the pull request. Now submit the pull request.  
   
   
+    
 ### Congrats! You just completed the standard fork -> clone -> edit -> pull request workflow that you'll encounter often as a contributor!
 
 ## Setting Up mdBook (Optional)
