@@ -1,7 +1,4 @@
-# Wikisyllabus : Take your syllabus online
-
-Wikisyllabus is collaborative project to build an evolving website/wiki to host, enhance, link, extend & update the university syllabus to help students find a way to connect their education to what’s new in the industry.  
-  
+# Contributing to Wikisyllabus
 Thank you for investing your time in contributing to our project!
   
 #### If you don't have Git Bash on your machine, [install it](https://git-scm.com/downloads).
@@ -9,7 +6,7 @@ If you are new to Git and Github, you need to [create a github account](https://
 
 
 ## Fork the repository  
-<img align="right" width="300" src="https://github.com/Angelrose19/WikiSyllabus/blob/main/Git%20%26%20GitHub%20Basics.md/assets/fork.jpg" />
+<img align="right" width="300" src="https://github.com/Angelrose19/WikiSyllabus/blob/main/docs/assets/fork.jpg" />
 Fork this repository by clicking on the fork button on the top of this page.
 This will create a copy of this repository in your account.  
 
@@ -23,7 +20,7 @@ git clone url
 ```
 
 where url  is the url you just copied! (your fork of this project).
-<img align="right" width="300" src="https://github.com/Angelrose19/WikiSyllabus/blob/main/Git%20%26%20GitHub%20Basics.md/assets/code.png" />  
+<img align="right" width="300" src="https://github.com/Angelrose19/WikiSyllabus/blob/main/docs/assets/code.png" />  
 For example:
 
 ```
@@ -68,7 +65,7 @@ Open the main page of your repository on your GitHub account in your browser and
 Click Create Pull Request option. Enter a suitable title and description for the pull request. Now submit the pull request.  
   
   
-__Congrats! You just completed the standard fork -> clone -> edit -> pull request workflow that you'll encounter often as a contributor!__
+### Congrats! You just completed the standard fork -> clone -> edit -> pull request workflow that you'll encounter often as a contributor!
 
 ## Setting Up mdBook (Optional)
 mdBook is a command line tool and Rust crate to create books with Markdown. You can edit the markdown files (.md) in a text editor of your choice, but you wouldn’t be able to view the rendered output in the book form with formatting. To view the book as intended, you will need to set up the mdBook CLI on your system. 
