@@ -16,6 +16,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/CLiz17"><img src="https://avatars.githubusercontent.com/u/68838221?v=4?s=100" width="100px;" alt=""/><br /><sub><b> Chaitanya Liz</b></sub></a><br /><a href="https://github.com/gtechatfg/WikiSyllabus/commits?author=CLiz17" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/umavm"><img src="https://avatars.githubusercontent.com/u/80395383?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Uma V Menon </b></sub></a><br /><a href="https://github.com/gtechatfg/WikiSyllabus/commits?author=umavm" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/Angelrose19"><img src="https://avatars.githubusercontent.com/u/84169295?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Angel Rose</b></sub></a><br /><a href="https://github.com/gtechatfg/WikiSyllabus/commits?author=Angelrose19" title="Code">💻</a></td>
   </tr>
 </table>
