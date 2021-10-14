@@ -108,9 +108,17 @@ Check version of mdBook installed to verify the installation was successful	: ``
 You could go through [mdBook Handbook](https://phaiax.github.io/mdBook/README.html) to get more familiar with mdBook.
 
 
+## To Add your details in contributors 
 
+Comment on Issue or Pull Request, asking @all-contributors to add your details.
 
+`@all-contributors please add @<username> for <contributions>`
 
+eg: 
+
+`@all-contributors please add @userid for coding`
+
+Make sure to add this comment after merging one of your PR to `main`
 
 
 
