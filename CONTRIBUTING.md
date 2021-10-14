@@ -6,7 +6,7 @@ If you are new to Git and Github, you need to [create a Github Account](https://
 
 
 ## Fork the repository  
-<img align="right" width="300" src="https://github.com/Angelrose19/WikiSyllabus/blob/main/docs/assets/fork.jpg" />
+<img align="right" width="300" src="https://github.com/gtechatfg/WikiSyllabus/blob/main/docs/assets/fork.jpg" />
 Fork this repository by clicking on the fork button on the top of this page.
 This will create a copy of this repository in your account.  
 
@@ -20,7 +20,7 @@ git clone url
 ```
 
 where url  is the url you just copied! (your fork of this project).
-<img align="right" width="300" src="https://github.com/Angelrose19/WikiSyllabus/blob/main/docs/assets/code.png" />  
+<img align="right" width="300" src="https://github.com/gtechatfg/WikiSyllabus/blob/main/docs/assets/code.png" />  
 For example:
 
 ```
@@ -48,7 +48,7 @@ git add filename.md
 You can also add all the unstaged files using : ```git add .```  
 
 Now commit those changes using the `git commit` command:
-<img align="right" width="300" src="https://github.com/Angelrose19/WikiSyllabus/blob/main/docs/assets/commit.png" /> 
+<img align="right" width="300" src="https://github.com/gtechatfg/WikiSyllabus/blob/main/docs/assets/commit.png" /> 
 
 ```
 git commit -m "commit message"
@@ -64,7 +64,7 @@ git push origin main
 
 ## Create a pull request
   
-<img align="right" width="300" src="https://github.com/Angelrose19/WikiSyllabus/blob/main/docs/assets/pr.PNG" /> 
+<img align="right" width="300" src="https://github.com/gtechatfg/WikiSyllabus/blob/main/docs/assets/pr.PNG" /> 
 Open the main page of your repository on your GitHub account in your browser and click on the Pull requests tab.  
 Now, click on the New Pull Request button.  
 Click Create Pull Request option. Enter a suitable title and description for the pull request. Now submit the pull request.    
