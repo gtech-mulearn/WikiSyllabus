@@ -22,6 +22,15 @@
       "contributions": [
         "code"
       ]
+    }'
+    {
+      "login": "Angelrose19",
+      "name": "Angel Rose",
+      "avatar_url": "https://avatars.githubusercontent.com/u/84169295?v=4",
+      "profile": "https://github.com/Angelrose19",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
