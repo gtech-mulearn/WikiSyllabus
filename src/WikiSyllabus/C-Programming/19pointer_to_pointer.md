@@ -2,7 +2,7 @@
 
 As we know that, a pointer is used to store the address of a variable in C. Pointer reduces the access time of a variable. However, In C, we can also define a pointer to store the address of another pointer. Such pointer is known as a double pointer (pointer to pointer). The first pointer is used to store the address of a variable whereas the second pointer is used to store the address of the first pointer. Let's understand it by the diagram given below.
 
-![](assets/pointertopointer1.png)
+![](assets/pointertopointer1.jpg)
 
 Syntax:
 
@@ -38,7 +38,7 @@ value stored at pp: 10
 
 Example:
 
-![](assets/cpointertopointerexample.png)
+![](assets/cpointertopointerexample.jpg)
 
 As you can see in the above figure, p2 contains the address of p (fff2), and p contains the address of number variable (fff4).
 
