@@ -40,6 +40,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "IRJ2",
+      "name": "Irene Rose Johnson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/80707395?v=4",
+      "profile": "https://github.com/IRJ2",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
