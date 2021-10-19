@@ -97,3 +97,349 @@ Enter number: 1546
 
 
 
+## 3. Develop a C program to generate Fibonacci series.
+
+### Program
+    #include<stdio.h>    
+    int main()    
+    {    
+        int n1=0,n2=1,n3,i,number;    
+        printf("Enter the number of elements:");    
+        scanf("%d",&number);    
+        printf("\n%d %d",n1,n2);//printing 0 and 1    
+        for(i=2;i<number;++i)//loop starts from 2 because 0 and 1 are already printed    
+        {    
+            n3=n1+n2;    
+            printf(" %d",n3);    
+            n1=n2;    
+            n2=n3;    
+        }  
+        return 0;  
+    } 
+
+## 4.  Write a C program to copy a string without using a built in function
+
+### Program
+
+    #include<stdio.h>
+
+    int main()
+    {
+    
+        char a[50], b[50], e[50], f[50] ;
+        int i,j,c,d;
+        printf("String concatenation without using Builtin function\n");
+        printf("Enter First string:");
+        scanf("%s",a);
+        printf("Enter Second string:");
+        scanf("%s",b);
+        c=strlen(a);
+        d=strlen(b);
+        
+        for(j=0;j<=d;j++){
+        
+            a[c]=b[j];
+            c++;
+        }
+        printf("The concatenated string is: %s ",a) ; 
+    }
+
+## 5. Write a C program to find largest element in an array 
+
+### Program
+
+    #include<stdio.h>
+
+    int main()
+    {
+        int a[100], n,i,j;
+        printf("Enter number of elements:");
+        scanf("%d",&n);
+        for(i=0;i<n;i++)
+        {
+            printf("Enter a[%d]:",i);
+            scanf("%d",&a[i]);
+        }
+    
+        for(i=1;i<n;i++)
+        {
+            if(a[0]<a[i+1])
+            {
+                a[0]=a[i]; // store the largest number to first element of the array
+            }
+        
+        }
+        printf("The largest number in the array is %d",a[0]);
+    }
+
+## 6. Write a C program to swap the content of two variables using pointers.
+
+### Program
+
+    #include<stdio.h>
+
+    int swap(int *a, int *b)
+    {
+        int temp;
+        temp=*a;
+        *a=*b;
+        *b=temp;
+        print("a=%d")
+    }
+
+    int main()
+    {
+        int a,b,*ap,*bp,s;
+        scanf("%d",&a);
+        printf("Enter number b:");
+        scanf("%d",&b);
+        ap=&a;
+        bp=&b;
+        swap(ap,bp);
+    }
+    
+## 7. Write a program to print the pattern 101010... using for loop.
+
+### Program
+  
+    #include<stdio.h>
+    int main()
+    {
+    for(;;)
+    printf("10");
+    
+    return 0;
+    }
+
+### Output
+    101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010.............................................................and so on.
+
+## 8. Write a C program to check whether a number is Armstrong or not.
+
+## Program
+    #include<stdio.h>
+
+    int main()
+    {
+        int n,num,a,rev=0;
+        printf("Enter no:");
+        scanf("%d",&num);
+        n=num;
+        for(num;num!=0;num=num/10){
+        a= num % 10;
+        rev+=a*a*a;
+        }
+        if(n==rev)
+        {
+            printf("Amstrong number");
+        } 
+        
+        else
+        {
+            printf("Not an Amstrong number");
+        }
+        printf("\n");
+        return 0; 
+    }
+
+### Output
+
+    Enter no:123
+    Not an Amstrong number
+
+    Enter no:153
+    Amstrong number
+
+## 9. Write a C program to find transpose of a matrix.
+
+### Program
+
+    int main()
+    {
+        int a[10][10];
+        int transp[10][10];
+        int i,j,r,c;
+        printf("First matrix A\n");
+        printf("Enter number of rows:");
+        scanf("%d",&r);
+        printf("Enter number of columns:");
+        scanf("%d",&c);
+        // Getting the Matrix from user 
+        for(i=0;i<r;i++)
+        {
+            for(j=0;j<c;j++)
+            {
+                printf("Enter a[%d][%d]:",i+1,j+1);
+                scanf("%d",&a[i][j]);
+            }
+        }
+        // Displaying Input Matrix
+        printf("The Matrix A is :\n");
+        for(i=0;i<r;i++)
+        {
+            for(j=0;j<c;j++)
+            {
+                printf("%d  ",a[i][j]);
+            
+            }
+         printf("\n");
+        }
+        // Transposing the Input Matrix 
+        for(i=0;i<r;i++)
+        {
+            for(j=0;j<c;j++)
+            {
+                transp[j][i]=a[i][j];
+            }
+        }  
+        // Displaying Transpose Matrix 
+        printf("Transpose of Matrix A:\n");  
+        for(i=0;i<r;i++)
+        {
+            for(j=0;j<c;j++)
+            {
+                printf("%d  ",transp[i][j]);
+            }
+         printf("\n");
+        }
+    
+    }     
+
+### Output
+
+    Enter number of rows:3 
+    Enter number of columns:3
+    Enter a[1][1]:5 
+    Enter a[1][2]:6
+    Enter a[1][3]:9
+    Enter a[2][1]:4
+    Enter a[2][2]:5
+    Enter a[2][3]:6
+    Enter a[3][1]:7
+    Enter a[3][2]:1
+    Enter a[3][3]:6
+    The Matrix A is :
+    5  6  9  
+    4  5  6  
+    7  1  6  
+    Transpose of Matrix A:
+    5  4  7  
+    6  5  1  
+    9  6  6  
+
+## 10. Write a C program to subtract two matrices
+
+### Program 
+    #include<stdio.h>
+
+    int main()
+    {
+
+        int a[10][10];
+        int b[10][10];
+        int diff[10][10];
+        int i,j,r,c;
+        printf("First matrix A\n");
+        printf("Enter number of rows:");
+        scanf("%d",&r);
+        printf("Enter number of columns:");
+        scanf("%d",&c);
+        
+        for(i=0;i<r;i++)
+        {
+            for(j=0;j<c;j++)
+            {
+                printf("Enter a[%d][%d]:",i+1,j+1);
+                scanf("%d",&a[i][j]);
+            }
+        }
+        
+
+        
+        printf("Second matrix B\n");
+        printf("Enter number of rows:");
+        scanf("%d",&r);
+        printf("Enter number of columns:");
+        scanf("%d",&c);
+        
+        for(i=0;i<r;i++)
+        {
+            for(j=0;j<c;j++)
+            {
+                printf("Enter b[%d][%d]:",i+1,j+1);
+                scanf("%d",&b[i][j]);
+            }
+        }
+        
+        printf("The matrix A is :\n");
+        for(i=0;i<r;i++)
+        {
+            for(j=0;j<c;j++)
+            {
+                printf("%d\t",a[i][j]);
+            }
+         printf("\n");
+        }
+        printf("The matrix B is :\n");
+        for(i=0;i<r;i++)
+        {
+            for(j=0;j<c;j++)
+            {
+                printf("%d\t",b[i][j]);
+            }
+         printf("\n");
+        }
+        for(i=0;i<r;i++)
+        {
+            for(j=0;j<c;j++)
+            {
+                diff[i][j]=a[i][j]-b[i][j];
+            }
+        }
+        
+        printf("The Difference Matrix is :\n");
+        for(i=0;i<r;i++)
+        {
+            for(j=0;j<c;j++)
+            {
+                printf("%d\t",diff[i][j]);
+            }
+         printf("\n");
+        }
+    }
+## 11. Write a C program using function to find the decimal equivalent of a binary number.
+
+### Programs 
+
+    #include <stdio.h>  
+    
+    int main()  
+    {  
+        
+        int num, b_num=0, d_num = 0, base = 1, rem;  
+        printf ("Enter a binary number:");  
+        scanf (" %d", &num);   
+        b_num = num;   
+        while ( num > 0)  
+        {  
+            rem = num % 10; 
+            d_num = d_num + rem * base;  
+            num = num / 10; //   
+            base = base * 2;  
+        }  
+    
+        printf ( "%d = %d , b_num,d_num);   
+           
+        
+    } 
+
+
+### Output
+
+    Enter a binary number:1010100101
+    1010100101 = 677
+
+    Enter a binary number:100
+    100 = 4
+
+
