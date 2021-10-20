@@ -31,7 +31,9 @@ where `username` is your GitHub username. Here you're copying the contents of th
 
 ## Create an issue
 
-On the main page of your repository, click  Issues. Click New issue.  
+What's an [issue?](https://docs.github.com/en/issues/tracking-your-work-with-issues/quickstart)  
+  
+To create an issue, On the main page of your repository, click  Issues. Click New issue.  
 Click Get started next to the type of issue you'd like to open. Or, click Open a blank issue if the type of issue you'd like to open isn't included in the available options.  
 Type a title and description for your issue. Then click Submit new issue.
 
@@ -117,12 +119,11 @@ mdBook can be installed with cargo, the package manager for Rust extensions. Car
 * Install [rustup and cargo](https://www.rust-lang.org/tools/install)  
   
 * To use cargo, you may need to have C/C++ Build tools. If you don’t have it installed, there are two options, choose either one.  
-  * GNU C Compiler : Install it using the following commands  ```rustup toolchain install stable-x86_64-pc-windows-gnu```  
+  * GNU C Compiler : Install it using the following commands  ```rustup toolchain install stable-x86_64-pc-windows-gnu``` ```rustup default stable-x86_64-pc-windows-gnu```  
   * Visual Studio C++ Build Tools : Install C++ build tools from this [link](https://visualstudio.microsoft.com/visual-cpp-build-tools)
   
-* Install the mdBook CLI from cargo  : ```cargo install mdbook```  ```rustup default stable-x86_64-pc-windows-gnu```
+* Install the mdBook CLI from cargo  : ```cargo install mdbook```    
 
-  
 * Check version of mdBook installed to verify the installation was successful	: ```cargo -V```
 
 You could go through [mdBook Handbook](https://phaiax.github.io/mdBook/README.html) to get more familiar with mdBook.
