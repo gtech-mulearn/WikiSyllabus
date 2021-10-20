@@ -1,0 +1,51 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "CLiz17",
+      "name": "Chaitanya Liz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68838221?v=4",
+      "profile": "https://github.com/CLiz17",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "umavm",
+      "name": "Uma V Menon",
+      "avatar_url": "https://avatars.githubusercontent.com/u/80395383?v=4",
+      "profile": "https://github.com/umavm",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Angelrose19",
+      "name": "Angel Rose",
+      "avatar_url": "https://avatars.githubusercontent.com/u/84169295?v=4",
+      "profile": "https://github.com/Angelrose19",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "ThejasKiranPS",
+      "name": "Thejas Kiran P S",
+      "avatar_url": "https://avatars.githubusercontent.com/u/30928792?v=4",
+      "profile": "https://github.com/ThejasKiranPS",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "WikiSyllabus",
+  "projectOwner": "gtechatfg",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
