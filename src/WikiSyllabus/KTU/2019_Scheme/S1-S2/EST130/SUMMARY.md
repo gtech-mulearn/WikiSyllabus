@@ -1,6 +1,6 @@
-# C PROGRAMMING
-##### S1,S2 - All Branches
-### INDEX
+# EST 130 - C PROGRAMMING
+
+#### INDEX
 
 - [Introduction to C Programming](./1intro.md)
 - [Variables and Keywords](./2variables_keywords.md)
