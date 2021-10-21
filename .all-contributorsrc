@@ -40,6 +40,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "nabilweq",
+      "name": "Muhammed Nabeel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/62200954?v=4",
+      "profile": "http://www.nabilweq.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
