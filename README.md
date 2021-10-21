@@ -1,6 +1,6 @@
 # WikiSyllabus : Take your syllabus online
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 A collaborative project to build an evolving website/wiki to host, enhance, link, extend &amp; update the university syllabus to help students find a way to connect their education to what’s new in the industry.
 
@@ -19,6 +19,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/umavm"><img src="https://avatars.githubusercontent.com/u/80395383?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Uma V Menon</b></sub></a><br /><a href="https://github.com/gtechatfg/WikiSyllabus/commits?author=umavm" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/Angelrose19"><img src="https://avatars.githubusercontent.com/u/84169295?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Angel Rose</b></sub></a><br /><a href="https://github.com/gtechatfg/WikiSyllabus/commits?author=Angelrose19" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/ThejasKiranPS"><img src="https://avatars.githubusercontent.com/u/30928792?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Thejas Kiran P S</b></sub></a><br /><a href="https://github.com/gtechatfg/WikiSyllabus/commits?author=ThejasKiranPS" title="Code">💻</a></td>
+    <td align="center"><a href="http://www.nabilweq.com"><img src="https://avatars.githubusercontent.com/u/62200954?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Muhammed Nabeel</b></sub></a><br /><a href="https://github.com/gtechatfg/WikiSyllabus/commits?author=nabilweq" title="Documentation">📖</a></td>
   </tr>
 </table>
 
