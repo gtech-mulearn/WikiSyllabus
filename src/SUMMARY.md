@@ -2,7 +2,7 @@
 - [KTU](./WikiSyllabus/KTU/SUMMARY.md)
   - [2019_Scheme](./WikiSyllabus/KTU/2019_Scheme/SUMMARY.md)
     - [S1 & S2](./WikiSyllabus/KTU/2019_Scheme/S1-S2/SUMMARY.md)
-      - [EST 130](./WikiSyllabus/KTU/2019_Scheme/S1-S2/EST130/SUMMARY.md) 
+      - [EST 102](./WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/SUMMARY.md) 
     - [S3](./WikiSyllabus/KTU/2019_Scheme/S3/SUMMARY.md)
       - [CSE](./WikiSyllabus/KTU/2019_Scheme/S3/CSE/SUMMARY.md)
       - [ECE](./WikiSyllabus/KTU/2019_Scheme/S3/ECE/SUMMARY.md)
