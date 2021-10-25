@@ -2,4 +2,4 @@
 ### ALL BRANCHES
 #### CONTEXT
 
-- [EST 130 - C Programming](./EST130/SUMMARY.md)
+- [EST 130 - C Programming](./EST102/SUMMARY.md)
