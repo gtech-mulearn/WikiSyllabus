@@ -3,3 +3,5 @@
 #### CONTEXT
 
 - [ITT 204 - COMPUTER ORGANIZATION](./IT/ITT204/SUMMARY.md)
+- [CST 206 - Operating Systems](./CSE/CST206/SUMMARY.md)
+
