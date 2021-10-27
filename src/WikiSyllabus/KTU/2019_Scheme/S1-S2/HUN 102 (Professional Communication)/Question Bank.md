@@ -10,19 +10,19 @@
 4. Define paraphrasing and cite examples.
 5. Explain Numerical adjective.
 6. What is a clause? Explain the different types of clauses.
-7. Fill up the blanks with the agreeing words.
-   a) Mary and Jack ......................friends(is, are)
-   b) One of the flowers ..................dying.(is, are)
-   c) MOst of the trees ........................dying. (is , are )
-   d) Hundred kilometers-----------long distance.( is .are) 
+7. Fill up the blanks with the agreeing words.  
+   a) Mary and Jack ......................friends(is, are)  
+   b) One of the flowers ..................dying.(is, are)  
+   c) MOst of the trees ........................dying. (is , are )  
+   d) Hundred kilometers-----------long distance.( is .are)   
    e) Mathematics ......................easy.( is, are )
-8. Report the following sentences.
-   a) Rama said ," I bought  a new car.."
+8. Report the following sentences.  
+   a) Rama said ," I bought  a new car.."  
    b) John exclaimed," What a beautiful picture!"
-9. Change the following into passive voice.
-	a.Open the door.
-	b.Who broke the chair?
-	c.I hate people looking at me.
+9. Change the following into passive voice.  
+	a) Open the door.  
+	b) Who broke the chair?  
+	c) I hate people looking at me.
 10. Explain the functions of search engines.
 11. Write short notes on :
 	* Repositories
