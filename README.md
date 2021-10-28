@@ -21,7 +21,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/ThejasKiranPS"><img src="https://avatars.githubusercontent.com/u/30928792?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Thejas Kiran P S</b></sub></a><br /><a href="https://github.com/gtechatfg/WikiSyllabus/commits?author=ThejasKiranPS" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/IRJ2"><img src="https://avatars.githubusercontent.com/u/80707395?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Irene Rose Johnson</b></sub></a><br /><a href="https://github.com/gtechatfg/WikiSyllabus/commits?author=IRJ2" title="Documentation">📖</a></td>
     <td align="center"><a href="https://aravinds-arv.github.io/"><img src="https://avatars.githubusercontent.com/u/78845005?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aravind S</b></sub></a><br /><a href="https://github.com/gtechatfg/WikiSyllabus/commits?author=aravinds-arv" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/milandeepak"><img src="https://avatars.githubusercontent.com/u/71485068?v=4?s=100" width="100px;" alt=""/><br /><sub><b>milandeepak</b></sub></a><br /><a href="#question-milandeepak" title="Answering Questions">💬</a></td>
+    <td align="center"><a href="https://github.com/milandeepak"><img src="https://avatars.githubusercontent.com/u/71485068?v=4?s=100" width="100px;" alt=""/><br /><sub><b>milandeepak</b></sub></a><br /><a href="#question-milandeepak" title="Answering Questions">💬</a> <a href="https://github.com/gtechatfg/WikiSyllabus/commits?author=milandeepak" title="Documentation">📖</a></td>
   </tr>
 </table>
 
