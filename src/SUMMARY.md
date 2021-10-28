@@ -23,6 +23,7 @@
         - [Pointers](./WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/18pointer_arithmetic.md)
         - [Pointer to Pointer](./WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/19pointer_to_pointer.md)
         - [Strings](./WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/20strings.md)
+        - [Frequently asked Programming questions](./WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/21frequentlyaskedquestions.md)
     - [S3](./WikiSyllabus/KTU/2019_Scheme/S3/SUMMARY.md)
       - [CSE](./WikiSyllabus/KTU/2019_Scheme/S3/CSE/SUMMARY.md)
       - [ECE](./WikiSyllabus/KTU/2019_Scheme/S3/ECE/SUMMARY.md)
