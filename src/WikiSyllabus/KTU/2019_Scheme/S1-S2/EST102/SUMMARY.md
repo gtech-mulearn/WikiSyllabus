@@ -22,3 +22,4 @@
 - [Pointers](./18pointer_arithmetic.md)
 - [Pointer to Pointer](./19pointer_to_pointer.md)
 - [Strings](./20strings.md)
+- [Frequently asked C programming questions](./21frequentlyaskedquestions.md)
