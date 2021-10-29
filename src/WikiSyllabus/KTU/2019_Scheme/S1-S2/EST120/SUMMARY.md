@@ -2,4 +2,4 @@
 
 #### INDEX
 
-- [Previous year Question Papers](./Question_Papers.md)
+- [Previous year Question Papers](./Question_Papers/SUMMARY.md)
