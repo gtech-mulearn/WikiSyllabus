@@ -13,8 +13,8 @@
 7. Fill up the blanks with the agreeing words.  
    a) Mary and Jack ......................friends(is, are)  
    b) One of the flowers ..................dying.(is, are)  
-   c) MOst of the trees ........................dying. (is , are )  
-   d) Hundred kilometers-----------long distance.( is .are)   
+   c) Most of the trees ........................dying. (is , are )  
+   d) Hundred kilometers........................long distance.( is .are)   
    e) Mathematics ......................easy.( is, are )
 8. Report the following sentences.  
    a) Rama said ," I bought  a new car.."  
