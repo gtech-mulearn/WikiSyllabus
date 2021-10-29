@@ -2,4 +2,4 @@
 
 #### CONTEXT
 
-- [KTU](./WikiSyllabus/KTU/SUMMARY.md)
+- [KTU](./KTU/SUMMARY.md)
