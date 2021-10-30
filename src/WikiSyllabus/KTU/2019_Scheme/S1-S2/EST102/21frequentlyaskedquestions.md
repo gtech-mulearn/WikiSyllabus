@@ -483,17 +483,17 @@ printf("\n");
  Enter b[3][2]:3
  Enter b[3][3]:4
  The matrix A is :
- 5	6	4	
- 7	8	9	
- 1	3	6	
+ 5	6	 4	
+ 7	8	 9	
+ 1	3	 6	
  The matrix B is :
- 2	5	7	
- 8	9	4	
- 0	3	4	
+ 2	5	 7	
+ 8	9	 4	
+ 0	3	 4	
  The Difference Matrix is :
- 3	1  -3	
--1  -1	5	
- 1	0	2
+ 3	1 -3	
+-1 -1	 5	
+ 1	0	 2
 
 ``` 
 ## 11. Write a C program using function to find the decimal equivalent of a binary number.
