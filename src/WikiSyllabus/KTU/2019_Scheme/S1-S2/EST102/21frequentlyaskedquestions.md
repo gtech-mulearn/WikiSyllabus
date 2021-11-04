@@ -1,6 +1,6 @@
 # Frequently asked C programming Questions
 
-## 1. Write a C program to check whether a given number is palindrome or not using command line arguments.
+## 1. Write a C program to check whether a given number is palindrome or not using command line arguments.(IMP)
 
 
 A palindrome is a word, sentence, verse, or even number that reads the same backward or forward.
@@ -136,7 +136,7 @@ Enter the number of elements:10
 ```
 
 
-## 4.  Write a C program to copy a string without using a built in function
+## 4.  Write a C program to copy a string without using a built in function(IMP)
 
 ### Program
 ```c
@@ -297,7 +297,7 @@ printf("Not an Amstrong number");
  Enter no:153
  Amstrong number
 ```
-## 9. Write a C program to find transpose of a matrix.
+## 9. Write a C program to find transpose of a matrix.(IMP)
 
 ### Program
 ```c
@@ -491,46 +491,13 @@ printf("\n");
  8	9	 4	
  0	3	 4	
  The Difference Matrix is :
- 3	1 -3	
--1 -1	 5	
- 1	0	 2
+ 3	 1  -3	
+-1  -1	 5	
+ 1	 0	 2
 
 ``` 
-## 11. Write a C program using function to find the decimal equivalent of a binary number.
 
-### Program
-```c
- #include <stdio.h>  
- 
- int main()  
- {  
-  
-  int num, b_num=0, d_num = 0, base = 1, rem;  
-  printf ("Enter a binary number:");  
-  scanf (" %d", &num);
-  b_num = num;
-  while ( num > 0)  
-  {  
-rem = num % 10; 
-d_num = d_num + rem * base;  
-num = num / 10; 
-base = base * 2;  
-  }  
- 
-  printf("Decimal equivalent of %d = %d", b_num,d_num);
-  
-  
- } 
-```
-### Output
-```
- Enter a binary number:1001
- Decimal equivalent of 1001 = 9
- 
- Enter a binary number:100
- Decimal equivalent of 100 = 4
-```
-## 12. Write a program to Multiply two m x n matrices
+## 11. Write a program to Multiply two m x n matrices
 
 ### Program
 ```c
@@ -639,7 +606,140 @@ for(j = 0; j < c1; j++){
  91 213 320
  85 115 118
 ```
-## 13. Write a C program to print Floyd's triangle
+## 12. Write a C program to sort an array using Bubble Sort.(IMP)
+
+### Program
+```c
+#include<stdio.h>
+
+int main()
+{
+  int n,a[100],i,j,temp;
+  printf("Enter no of elements:");
+  scanf("%d",&n);
+  for(i=0; i<n; i++)
+  {
+    printf("Enter element:");
+    scanf("%d",&a[i]);
+  }
+  printf("Array before Sorting:");
+   for(i=0; i<n; i++)
+  {
+    printf("%d ",a[i]);
+  }  
+  for(i=0; i<n-1; i++)
+  {
+    for(j=0; i<n-1-j; j++)
+    {
+      if(a[j]>a[j+1])
+      {
+        temp=a[j];
+        a[j]=a[j+1];
+        a[j+1]=temp;
+      }
+    }
+  }
+   printf("\nArray after Sorting:");
+   for(i=0; i<n; i++)
+  {
+    printf("%d ",a[i]);
+  }   
+   
+}
+```
+
+### Output
+```
+Enter no of elements:5
+Enter element:5
+Enter element:4
+Enter element:6
+Enter element:7
+Enter element:4
+Array before Sorting:5 4 6 7 4 
+Array after Sorting:4 4 5 6 7 
+```
+## 13. Write a C program to perform a linear search on an array of numbers(IMP)
+
+### Program
+```c
+#include<stdio.h>
+
+int main()
+{
+  int n,a[100],i,x,temp;
+  printf("Enter number of elements:");
+  scanf("%d",&n);
+  for(i=0; i<n; i++)
+  {
+    printf("Enter element:");
+    scanf("%d",&a[i]);
+  }
+  printf("Enter the number to be found:");
+  scanf("%d",&x);
+  int flag=0;
+  for(i=0; i<n; i++)
+  {
+    if(a[i]==x)
+    {
+      temp=i;
+      flag=1;
+    }
+  }
+  if(flag==0)
+    printf("Element not found");
+  else
+    printf("Element found at index %d ",temp);  
+}
+```
+### Output
+```
+Enter number of elements:5
+Enter element:6
+Enter element:3
+Enter element:4
+Enter element:2
+Enter element:8
+Enter the number to be found:8
+Element found at index 4 
+```
+## 14. Write a C program to find the frequency of vowels and consonants in a string
+
+## Program
+```c
+#include <stdio.h>
+int main() {
+    char line[150];
+    int vowels, consonant;
+
+    vowels = consonant = 0;
+
+    printf("Enter a line of string: ");
+    scanf("%s",line);
+
+    for (int i = 0; line[i] != '\0'; ++i) {
+        if (line[i] == 'a' || line[i] == 'e' || line[i] == 'i' ||
+            line[i] == 'o' || line[i] == 'u' || line[i] == 'A' ||
+            line[i] == 'E' || line[i] == 'I' || line[i] == 'O' ||
+            line[i] == 'U') {
+            ++vowels;
+        } else if ((line[i] >= 'a' && line[i] <= 'z') || (line[i] >= 'A' && line[i] <= 'Z')) {
+            ++consonant;
+        } 
+    }
+
+    printf("Vowels: %d", vowels);
+    printf("\nConsonants: %d", consonant);
+
+}
+```
+### Output
+```
+Enter a line of string: Cprogramming
+Vowels: 3
+Consonants: 9
+```
+## 15. Write a C program to print Floyd's triangle
 
 ### Program
 ```c
@@ -668,5 +768,6 @@ return 0;
   4  5  6
   7  8  9 10
   11 12 13 14 15
+
 ```
 
