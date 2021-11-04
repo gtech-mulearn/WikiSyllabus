@@ -705,7 +705,7 @@ Element found at index 4
 ```
 ## 14. Write a C program to find the frequency of vowels and consonants in a string
 
-## Program
+### Program
 ```c
 #include <stdio.h>
 int main() {
@@ -739,7 +739,42 @@ Enter a line of string: Cprogramming
 Vowels: 3
 Consonants: 9
 ```
-## 15. Write a C program to print Floyd's triangle
+## 15. Write a C program using function to find the decimal equivalent of a binary number.
+
+### Program
+```c
+ #include <stdio.h>  
+ 
+ int main()  
+ {  
+  
+  int num, b_num=0, d_num = 0, base = 1, rem;  
+  printf ("Enter a binary number:");  
+  scanf (" %d", &num);
+  b_num = num;
+  while ( num > 0)  
+  {  
+    rem = num % 10; 
+    d_num = d_num + rem * base;  
+    num = num / 10; 
+    base = base * 2;  
+  }  
+ 
+  printf("Decimal equivalent of %d = %d", b_num,d_num);
+  
+  
+ } 
+```
+### Output
+```
+ Enter a binary number:1001
+ Decimal equivalent of 1001 = 9
+ 
+ Enter a binary number:100
+ Decimal equivalent of 100 = 4
+```
+
+## 16. Write a C program to print Floyd's triangle
 
 ### Program
 ```c
