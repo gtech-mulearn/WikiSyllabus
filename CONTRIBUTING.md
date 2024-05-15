@@ -41,12 +41,64 @@ Type a title and description for your issue. Then click Submit new issue.
 ## Make necessary changes
 
 Open up the project in your favourite text editor, select the file you want to contribute to, and make your changes.Make sure to save the edits.
+...
+# Adding Files to Wikisyllabus
+
+If you fork and clone the WikiSyllabus Repository, follow these steps:
+
+## Go to the `src` Folder
+
+1. Navigate to the `Wikisyllabus` folder.
+2. If you are contributing materials for other universities, create a new folder with the university's name (e.g., `foldername: MG`). Inside this folder, add a `SUMMARY.md` file and type the university's name (e.g., `MG`).
+
+For contributions to KTU (Kerala Technological University):
+
+3. There are two folders: `2019_scheme` and `2015_scheme`.
+4. Inside each of these folders, there are seven folders, `S1&S2` to `S8`.
+5. Go to the folder corresponding to the semester you want to contribute.
+6. Create a new folder with the course code as its name.
+7. Add a `SUMMARY.md` file inside this folder and type the current folder's name.
+8. You can create one or more `.md` files in this folder. The names of these files should be specific to their content.
+
+## Adding Content to the `.md` File
+
+1. If you have a PDF file, you can copy the text from the PDF and paste it into the `.md` file.
+2. If there are any pictures in the PDF, take a screenshot and upload it at the appropriate position in the `.md` file.
+   - If you are using GitHub for editing, you can easily drag and drop the image at the desired position.
+3. If the study material you want to contribute is already present, do not add it again. However, if there are any changes or additions to the existing content, you can edit the corresponding `.md` file and add your content below the current one.
+
+## Adding Your Name to the Contributors List
+
+1. Open the `README.md` file in the repository.
+2. Add a new `<td>` inside the table like this: `<table><tr><td></td></tr></table>`.
+3. Inside the `<td>` tag, add your details in the following format:
+
+```html
+<td align="center">
+  <a href="https://github.com/your_github">
+    <img src="link_of_your_image_from_github" width="100px;" alt="" />
+    <br />
+    <sub><b>Your_Name</b></sub>
+  </a>
+  <br />
+  <a href="your_commit_link" title="File_type">Give a symbol</a>
+</td>
+```
+
+4. Commit your changes and create a pull request.
 
 All the files in this project are ```.md``` files. You would need to have Markdown knowledge to contribute to this project.    
    
 Markdown is a fast and easy way to take notes, create content for a website, and produce print-ready documents. It doesn't take long to learn the Markdown syntax, and once you know how to use it, you can write using Markdown just about everywhere. Visit [here](https://guides.github.com/features/mastering-markdown/) to master Markdown.  
   
 You could add Notes, Useful Website links, Youtube lecture links or anything you find useful in learning the specific topic.
+
+## Earning Karma Points
+
+An individual can earn 200 karma points for each contribution. You can contribute twice in a month to earn more karma points.
+
+...
+
 
 ## Add and Commit your changes
 Open Git Bash, navigate to the project directory and execute the command ```git status```, you'll see there are changes.
