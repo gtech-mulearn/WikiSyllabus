@@ -1,14 +1,16 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js light">
+<html lang="en" class="light" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Frequently asked Programming questions - WikiSyllabus</title>
+
+
         <!-- Custom HTML head -->
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff">
 
         <link rel="icon" href="../../../../../favicon.svg">
         <link rel="shortcut icon" href="../../../../../favicon.png">
@@ -16,25 +18,29 @@
         <link rel="stylesheet" href="../../../../../css/general.css">
         <link rel="stylesheet" href="../../../../../css/chrome.css">
         <link rel="stylesheet" href="../../../../../css/print.css" media="print">
+
         <!-- Fonts -->
         <link rel="stylesheet" href="../../../../../FontAwesome/css/font-awesome.css">
         <link rel="stylesheet" href="../../../../../fonts/fonts.css">
+
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="../../../../../highlight.css">
         <link rel="stylesheet" href="../../../../../tomorrow-night.css">
         <link rel="stylesheet" href="../../../../../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+
     </head>
-    <body>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">
+        <script>
             var path_to_root = "../../../../../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script type="text/javascript">
+        <script>
             try {
                 var theme = localStorage.getItem('mdbook-theme');
                 var sidebar = localStorage.getItem('mdbook-sidebar');
@@ -50,50 +56,81 @@
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
-        <script type="text/javascript">
+        <script>
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
-            html.classList.remove('no-js')
             html.classList.remove('light')
             html.classList.add(theme);
-            html.classList.add('js');
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
         </script>
 
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
         <!-- Hide / unhide sidebar before it is displayed -->
-        <script type="text/javascript">
-            var html = document.querySelector('html');
-            var sidebar = 'hidden';
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../../../../WikiSyllabus/SUMMARY.html"></a></li><li class="chapter-item expanded affix "><a href="../../../../../WikiSyllabus/KTU/SUMMARY.html">KTU</a></li><li class="chapter-item expanded "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/SUMMARY.html"><strong aria-hidden="true">1.</strong> 2019_Scheme</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/SUMMARY.html"><strong aria-hidden="true">1.1.</strong> S1 &amp; S2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/SUMMARY.html"><strong aria-hidden="true">1.1.1.</strong> EST 102</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/1intro.html"><strong aria-hidden="true">1.1.1.1.</strong> Introduction to C Programming</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/2variables_keywords.html"><strong aria-hidden="true">1.1.1.2.</strong> Variables and Keywords</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/3datatypes.html"><strong aria-hidden="true">1.1.1.3.</strong> Datatypes</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/4constants.html"><strong aria-hidden="true">1.1.1.4.</strong> Constants</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/5operators.html"><strong aria-hidden="true">1.1.1.5.</strong> Operators</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/6control_statements.html"><strong aria-hidden="true">1.1.1.6.</strong> Control Statements</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/7goto.html"><strong aria-hidden="true">1.1.1.7.</strong> goto statement</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/8switch_statement.html"><strong aria-hidden="true">1.1.1.8.</strong> Switch Statement</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/9break.html"><strong aria-hidden="true">1.1.1.9.</strong> break Statement</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/10continue.html"><strong aria-hidden="true">1.1.1.10.</strong> Continue Statement</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/11loops.html"><strong aria-hidden="true">1.1.1.11.</strong> Loops</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/12functions.html"><strong aria-hidden="true">1.1.1.12.</strong> Functions</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/13function_arguments.html"><strong aria-hidden="true">1.1.1.13.</strong> Calling Functions</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/14library_functions.html"><strong aria-hidden="true">1.1.1.14.</strong> Library Functions</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/15recursion.html"><strong aria-hidden="true">1.1.1.15.</strong> Recursion</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/16storage_classes.html"><strong aria-hidden="true">1.1.1.16.</strong> Storage Classes</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/17arrays.html"><strong aria-hidden="true">1.1.1.17.</strong> Array</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/18pointer_arithmetic.html"><strong aria-hidden="true">1.1.1.18.</strong> Pointers</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/19pointer_to_pointer.html"><strong aria-hidden="true">1.1.1.19.</strong> Pointer to Pointer</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/20strings.html"><strong aria-hidden="true">1.1.1.20.</strong> Strings</a></li><li class="chapter-item expanded "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/21frequentlyaskedquestions.html" class="active"><strong aria-hidden="true">1.1.1.21.</strong> Frequently asked Programming questions</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/22universityqps.html"><strong aria-hidden="true">1.1.1.22.</strong> University Question papers</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S3/SUMMARY.html"><strong aria-hidden="true">1.2.</strong> S3</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S3/CSE/SUMMARY.html"><strong aria-hidden="true">1.2.1.</strong> CSE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S3/ECE/SUMMARY.html"><strong aria-hidden="true">1.2.2.</strong> ECE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S3/EEE/SUMMARY.html"><strong aria-hidden="true">1.2.3.</strong> EEE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S3/CE/SUMMARY.html"><strong aria-hidden="true">1.2.4.</strong> CE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S3/ME/SUMMARY.html"><strong aria-hidden="true">1.2.5.</strong> ME</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S3/IC/SUMMARY.html"><strong aria-hidden="true">1.2.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S4/SUMMARY.html"><strong aria-hidden="true">1.3.</strong> S4</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S4/IT/SUMMARY.html"><strong aria-hidden="true">1.3.1.</strong> IT</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S4/IT/ITT204/SUMMARY.html"><strong aria-hidden="true">1.3.1.1.</strong> ITT 204</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S4/IT/ITT204/M1-CO-intro.html"><strong aria-hidden="true">1.3.1.1.1.</strong> Fundamentals of Computer Organization</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S4/IT/ITT204/M1-CO-1.html"><strong aria-hidden="true">1.3.1.1.2.</strong> Basic Structure of Computers</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S4/CSE/SUMMARY.html"><strong aria-hidden="true">1.3.2.</strong> CSE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S4/ECE/SUMMARY.html"><strong aria-hidden="true">1.3.3.</strong> ECE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S4/EEE/SUMMARY.html"><strong aria-hidden="true">1.3.4.</strong> EEE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S4/CE/SUMMARY.html"><strong aria-hidden="true">1.3.5.</strong> CE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S4/ME/SUMMARY.html"><strong aria-hidden="true">1.3.6.</strong> ME</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S4/IC/SUMMARY.html"><strong aria-hidden="true">1.3.7.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S5/SUMMARY.html"><strong aria-hidden="true">1.4.</strong> S5</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S5/CSE/SUMMARY.html"><strong aria-hidden="true">1.4.1.</strong> CSE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S5/ECE/SUMMARY.html"><strong aria-hidden="true">1.4.2.</strong> ECE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S5/EEE/SUMMARY.html"><strong aria-hidden="true">1.4.3.</strong> EEE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S5/CE/SUMMARY.html"><strong aria-hidden="true">1.4.4.</strong> CE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S5/ME/SUMMARY.html"><strong aria-hidden="true">1.4.5.</strong> ME</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S5/IC/SUMMARY.html"><strong aria-hidden="true">1.4.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S6/SUMMARY.html"><strong aria-hidden="true">1.5.</strong> S6</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S6/CSE/SUMMARY.html"><strong aria-hidden="true">1.5.1.</strong> CSE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S6/ECE/SUMMARY.html"><strong aria-hidden="true">1.5.2.</strong> ECE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S6/EEE/SUMMARY.html"><strong aria-hidden="true">1.5.3.</strong> EEE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S6/CE/SUMMARY.html"><strong aria-hidden="true">1.5.4.</strong> CE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S6/ME/SUMMARY.html"><strong aria-hidden="true">1.5.5.</strong> ME</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S6/IC/SUMMARY.html"><strong aria-hidden="true">1.5.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S7/SUMMARY.html"><strong aria-hidden="true">1.6.</strong> S7</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S7/CSE/SUMMARY.html"><strong aria-hidden="true">1.6.1.</strong> CSE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S7/ECE/SUMMARY.html"><strong aria-hidden="true">1.6.2.</strong> ECE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S7/EEE/SUMMARY.html"><strong aria-hidden="true">1.6.3.</strong> EEE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S7/CE/SUMMARY.html"><strong aria-hidden="true">1.6.4.</strong> CE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S7/ME/SUMMARY.html"><strong aria-hidden="true">1.6.5.</strong> ME</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S7/IC/SUMMARY.html"><strong aria-hidden="true">1.6.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S8/SUMMARY.html"><strong aria-hidden="true">1.7.</strong> S8</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S8/CSE/SUMMARY.html"><strong aria-hidden="true">1.7.1.</strong> CSE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S8/ECE/SUMMARY.html"><strong aria-hidden="true">1.7.2.</strong> ECE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S8/EEE/SUMMARY.html"><strong aria-hidden="true">1.7.3.</strong> EEE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S8/CE/SUMMARY.html"><strong aria-hidden="true">1.7.4.</strong> CE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S8/ME/SUMMARY.html"><strong aria-hidden="true">1.7.5.</strong> ME</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S8/IC/SUMMARY.html"><strong aria-hidden="true">1.7.6.</strong> IC</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/SUMMARY.html"><strong aria-hidden="true">2.</strong> 2015_Scheme</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S1-S2/SUMMARY.html"><strong aria-hidden="true">2.1.</strong> S1-S2</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S3/SUMMARY.html"><strong aria-hidden="true">2.2.</strong> S3</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S3/CSE/SUMMARY.html"><strong aria-hidden="true">2.2.1.</strong> CSE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S3/ECE/SUMMARY.html"><strong aria-hidden="true">2.2.2.</strong> ECE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S3/EEE/SUMMARY.html"><strong aria-hidden="true">2.2.3.</strong> EEE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S3/CE/SUMMARY.html"><strong aria-hidden="true">2.2.4.</strong> CE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S3/ME/SUMMARY.html"><strong aria-hidden="true">2.2.5.</strong> ME</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S3/IC/SUMMARY.html"><strong aria-hidden="true">2.2.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S4/SUMMARY.html"><strong aria-hidden="true">2.3.</strong> S4</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S4/CSE/SUMMARY.html"><strong aria-hidden="true">2.3.1.</strong> CSE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S4/ECE/SUMMARY.html"><strong aria-hidden="true">2.3.2.</strong> ECE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S4/EEE/SUMMARY.html"><strong aria-hidden="true">2.3.3.</strong> EEE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S4/CE/SUMMARY.html"><strong aria-hidden="true">2.3.4.</strong> CE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S4/ME/SUMMARY.html"><strong aria-hidden="true">2.3.5.</strong> ME</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S4/IC/SUMMARY.html"><strong aria-hidden="true">2.3.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S5/SUMMARY.html"><strong aria-hidden="true">2.4.</strong> S5</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S5/CSE/SUMMARY.html"><strong aria-hidden="true">2.4.1.</strong> CSE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S5/ECE/SUMMARY.html"><strong aria-hidden="true">2.4.2.</strong> ECE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S5/EEE/SUMMARY.html"><strong aria-hidden="true">2.4.3.</strong> EEE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S5/CE/SUMMARY.html"><strong aria-hidden="true">2.4.4.</strong> CE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S5/ME/SUMMARY.html"><strong aria-hidden="true">2.4.5.</strong> ME</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S5/IC/SUMMARY.html"><strong aria-hidden="true">2.4.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S6/SUMMARY.html"><strong aria-hidden="true">2.5.</strong> S6</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S6/CSE/SUMMARY.html"><strong aria-hidden="true">2.5.1.</strong> CSE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S6/ECE/SUMMARY.html"><strong aria-hidden="true">2.5.2.</strong> ECE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S6/EEE/SUMMARY.html"><strong aria-hidden="true">2.5.3.</strong> EEE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S6/CE/SUMMARY.html"><strong aria-hidden="true">2.5.4.</strong> CE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S6/ME/SUMMARY.html"><strong aria-hidden="true">2.5.5.</strong> ME</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S6/IC/SUMMARY.html"><strong aria-hidden="true">2.5.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S7/SUMMARY.html"><strong aria-hidden="true">2.6.</strong> S7</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S7/CSE/SUMMARY.html"><strong aria-hidden="true">2.6.1.</strong> CSE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S7/ECE/SUMMARY.html"><strong aria-hidden="true">2.6.2.</strong> ECE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S7/EEE/SUMMARY.html"><strong aria-hidden="true">2.6.3.</strong> EEE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S7/CE/SUMMARY.html"><strong aria-hidden="true">2.6.4.</strong> CE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S7/ME/SUMMARY.html"><strong aria-hidden="true">2.6.5.</strong> ME</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S7/IC/SUMMARY.html"><strong aria-hidden="true">2.6.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S8/SUMMARY.html"><strong aria-hidden="true">2.7.</strong> S8</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S8/CSE/SUMMARY.html"><strong aria-hidden="true">2.7.1.</strong> CSE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S8/ECE/SUMMARY.html"><strong aria-hidden="true">2.7.2.</strong> ECE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S8/EEE/SUMMARY.html"><strong aria-hidden="true">2.7.3.</strong> EEE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S8/CE/SUMMARY.html"><strong aria-hidden="true">2.7.4.</strong> CE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S8/ME/SUMMARY.html"><strong aria-hidden="true">2.7.5.</strong> ME</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S8/IC/SUMMARY.html"><strong aria-hidden="true">2.7.6.</strong> IC</a></li></ol></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../../../../WikiSyllabus/SUMMARY.html"><strong aria-hidden="true">1.</strong> </a></li><li class="chapter-item expanded "><a href="../../../../../WikiSyllabus/KTU/SUMMARY.html"><strong aria-hidden="true">2.</strong> KTU</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/SUMMARY.html"><strong aria-hidden="true">2.1.</strong> 2019_Scheme</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/SUMMARY.html"><strong aria-hidden="true">2.1.1.</strong> S1 & S2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/SUMMARY.html"><strong aria-hidden="true">2.1.1.1.</strong> EST 102</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/1intro.html"><strong aria-hidden="true">2.1.1.1.1.</strong> Introduction to C Programming</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/2variables_keywords.html"><strong aria-hidden="true">2.1.1.1.2.</strong> Variables and Keywords</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/3datatypes.html"><strong aria-hidden="true">2.1.1.1.3.</strong> Datatypes</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/4constants.html"><strong aria-hidden="true">2.1.1.1.4.</strong> Constants</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/5operators.html"><strong aria-hidden="true">2.1.1.1.5.</strong> Operators</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/6control_statements.html"><strong aria-hidden="true">2.1.1.1.6.</strong> Control Statements</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/7goto.html"><strong aria-hidden="true">2.1.1.1.7.</strong> goto statement</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/8switch_statement.html"><strong aria-hidden="true">2.1.1.1.8.</strong> Switch Statement</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/9break.html"><strong aria-hidden="true">2.1.1.1.9.</strong> break Statement</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/10continue.html"><strong aria-hidden="true">2.1.1.1.10.</strong> Continue Statement</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/11loops.html"><strong aria-hidden="true">2.1.1.1.11.</strong> Loops</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/12functions.html"><strong aria-hidden="true">2.1.1.1.12.</strong> Functions</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/13function_arguments.html"><strong aria-hidden="true">2.1.1.1.13.</strong> Calling Functions</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/14library_functions.html"><strong aria-hidden="true">2.1.1.1.14.</strong> Library Functions</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/15recursion.html"><strong aria-hidden="true">2.1.1.1.15.</strong> Recursion</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/16storage_classes.html"><strong aria-hidden="true">2.1.1.1.16.</strong> Storage Classes</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/17arrays.html"><strong aria-hidden="true">2.1.1.1.17.</strong> Array</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/18pointer_arithmetic.html"><strong aria-hidden="true">2.1.1.1.18.</strong> Pointers</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/19pointer_to_pointer.html"><strong aria-hidden="true">2.1.1.1.19.</strong> Pointer to Pointer</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/20strings.html"><strong aria-hidden="true">2.1.1.1.20.</strong> Strings</a></li><li class="chapter-item expanded "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/21frequentlyaskedquestions.html" class="active"><strong aria-hidden="true">2.1.1.1.21.</strong> Frequently asked Programming questions</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/22universityqps.html"><strong aria-hidden="true">2.1.1.1.22.</strong> University Question papers</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S3/SUMMARY.html"><strong aria-hidden="true">2.1.2.</strong> S3</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S3/CSE/SUMMARY.html"><strong aria-hidden="true">2.1.2.1.</strong> CSE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S3/ECE/SUMMARY.html"><strong aria-hidden="true">2.1.2.2.</strong> ECE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S3/EEE/SUMMARY.html"><strong aria-hidden="true">2.1.2.3.</strong> EEE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S3/CE/SUMMARY.html"><strong aria-hidden="true">2.1.2.4.</strong> CE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S3/ME/SUMMARY.html"><strong aria-hidden="true">2.1.2.5.</strong> ME</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S3/IC/SUMMARY.html"><strong aria-hidden="true">2.1.2.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S4/SUMMARY.html"><strong aria-hidden="true">2.1.3.</strong> S4</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S4/IT/SUMMARY.html"><strong aria-hidden="true">2.1.3.1.</strong> IT</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S4/IT/ITT204/SUMMARY.html"><strong aria-hidden="true">2.1.3.1.1.</strong> ITT 204</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S4/IT/ITT204/M1-CO-intro.html"><strong aria-hidden="true">2.1.3.1.1.1.</strong> Fundamentals of Computer Organization</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S4/IT/ITT204/M1-CO-1.html"><strong aria-hidden="true">2.1.3.1.1.2.</strong> Basic Structure of Computers</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S4/CSE/SUMMARY.html"><strong aria-hidden="true">2.1.3.2.</strong> CSE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S4/ECE/SUMMARY.html"><strong aria-hidden="true">2.1.3.3.</strong> ECE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S4/EEE/SUMMARY.html"><strong aria-hidden="true">2.1.3.4.</strong> EEE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S4/CE/SUMMARY.html"><strong aria-hidden="true">2.1.3.5.</strong> CE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S4/ME/SUMMARY.html"><strong aria-hidden="true">2.1.3.6.</strong> ME</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S4/IC/SUMMARY.html"><strong aria-hidden="true">2.1.3.7.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S5/SUMMARY.html"><strong aria-hidden="true">2.1.4.</strong> S5</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S5/CSE/SUMMARY.html"><strong aria-hidden="true">2.1.4.1.</strong> CSE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S5/ECE/SUMMARY.html"><strong aria-hidden="true">2.1.4.2.</strong> ECE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S5/EEE/SUMMARY.html"><strong aria-hidden="true">2.1.4.3.</strong> EEE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S5/CE/SUMMARY.html"><strong aria-hidden="true">2.1.4.4.</strong> CE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S5/ME/SUMMARY.html"><strong aria-hidden="true">2.1.4.5.</strong> ME</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S5/IC/SUMMARY.html"><strong aria-hidden="true">2.1.4.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S6/SUMMARY.html"><strong aria-hidden="true">2.1.5.</strong> S6</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S6/CSE/SUMMARY.html"><strong aria-hidden="true">2.1.5.1.</strong> CSE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S6/ECE/SUMMARY.html"><strong aria-hidden="true">2.1.5.2.</strong> ECE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S6/EEE/SUMMARY.html"><strong aria-hidden="true">2.1.5.3.</strong> EEE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S6/CE/SUMMARY.html"><strong aria-hidden="true">2.1.5.4.</strong> CE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S6/ME/SUMMARY.html"><strong aria-hidden="true">2.1.5.5.</strong> ME</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S6/IC/SUMMARY.html"><strong aria-hidden="true">2.1.5.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S7/SUMMARY.html"><strong aria-hidden="true">2.1.6.</strong> S7</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S7/CSE/SUMMARY.html"><strong aria-hidden="true">2.1.6.1.</strong> CSE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S7/ECE/SUMMARY.html"><strong aria-hidden="true">2.1.6.2.</strong> ECE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S7/EEE/SUMMARY.html"><strong aria-hidden="true">2.1.6.3.</strong> EEE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S7/CE/SUMMARY.html"><strong aria-hidden="true">2.1.6.4.</strong> CE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S7/ME/SUMMARY.html"><strong aria-hidden="true">2.1.6.5.</strong> ME</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S7/IC/SUMMARY.html"><strong aria-hidden="true">2.1.6.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S8/SUMMARY.html"><strong aria-hidden="true">2.1.7.</strong> S8</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S8/CSE/SUMMARY.html"><strong aria-hidden="true">2.1.7.1.</strong> CSE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S8/ECE/SUMMARY.html"><strong aria-hidden="true">2.1.7.2.</strong> ECE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S8/EEE/SUMMARY.html"><strong aria-hidden="true">2.1.7.3.</strong> EEE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S8/CE/SUMMARY.html"><strong aria-hidden="true">2.1.7.4.</strong> CE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S8/ME/SUMMARY.html"><strong aria-hidden="true">2.1.7.5.</strong> ME</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2019_Scheme/S8/IC/SUMMARY.html"><strong aria-hidden="true">2.1.7.6.</strong> IC</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/SUMMARY.html"><strong aria-hidden="true">2.2.</strong> 2015_Scheme</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S1-S2/SUMMARY.html"><strong aria-hidden="true">2.2.1.</strong> S1-S2</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S3/SUMMARY.html"><strong aria-hidden="true">2.2.2.</strong> S3</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S3/CSE/SUMMARY.html"><strong aria-hidden="true">2.2.2.1.</strong> CSE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S3/ECE/SUMMARY.html"><strong aria-hidden="true">2.2.2.2.</strong> ECE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S3/EEE/SUMMARY.html"><strong aria-hidden="true">2.2.2.3.</strong> EEE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S3/CE/SUMMARY.html"><strong aria-hidden="true">2.2.2.4.</strong> CE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S3/ME/SUMMARY.html"><strong aria-hidden="true">2.2.2.5.</strong> ME</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S3/IC/SUMMARY.html"><strong aria-hidden="true">2.2.2.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S4/SUMMARY.html"><strong aria-hidden="true">2.2.3.</strong> S4</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S4/CSE/SUMMARY.html"><strong aria-hidden="true">2.2.3.1.</strong> CSE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S4/ECE/SUMMARY.html"><strong aria-hidden="true">2.2.3.2.</strong> ECE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S4/EEE/SUMMARY.html"><strong aria-hidden="true">2.2.3.3.</strong> EEE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S4/CE/SUMMARY.html"><strong aria-hidden="true">2.2.3.4.</strong> CE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S4/ME/SUMMARY.html"><strong aria-hidden="true">2.2.3.5.</strong> ME</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S4/IC/SUMMARY.html"><strong aria-hidden="true">2.2.3.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S5/SUMMARY.html"><strong aria-hidden="true">2.2.4.</strong> S5</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S5/CSE/SUMMARY.html"><strong aria-hidden="true">2.2.4.1.</strong> CSE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S5/ECE/SUMMARY.html"><strong aria-hidden="true">2.2.4.2.</strong> ECE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S5/EEE/SUMMARY.html"><strong aria-hidden="true">2.2.4.3.</strong> EEE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S5/CE/SUMMARY.html"><strong aria-hidden="true">2.2.4.4.</strong> CE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S5/ME/SUMMARY.html"><strong aria-hidden="true">2.2.4.5.</strong> ME</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S5/IC/SUMMARY.html"><strong aria-hidden="true">2.2.4.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S6/SUMMARY.html"><strong aria-hidden="true">2.2.5.</strong> S6</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S6/CSE/SUMMARY.html"><strong aria-hidden="true">2.2.5.1.</strong> CSE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S6/ECE/SUMMARY.html"><strong aria-hidden="true">2.2.5.2.</strong> ECE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S6/EEE/SUMMARY.html"><strong aria-hidden="true">2.2.5.3.</strong> EEE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S6/CE/SUMMARY.html"><strong aria-hidden="true">2.2.5.4.</strong> CE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S6/ME/SUMMARY.html"><strong aria-hidden="true">2.2.5.5.</strong> ME</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S6/IC/SUMMARY.html"><strong aria-hidden="true">2.2.5.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S7/SUMMARY.html"><strong aria-hidden="true">2.2.6.</strong> S7</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S7/CSE/SUMMARY.html"><strong aria-hidden="true">2.2.6.1.</strong> CSE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S7/ECE/SUMMARY.html"><strong aria-hidden="true">2.2.6.2.</strong> ECE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S7/EEE/SUMMARY.html"><strong aria-hidden="true">2.2.6.3.</strong> EEE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S7/CE/SUMMARY.html"><strong aria-hidden="true">2.2.6.4.</strong> CE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S7/ME/SUMMARY.html"><strong aria-hidden="true">2.2.6.5.</strong> ME</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S7/IC/SUMMARY.html"><strong aria-hidden="true">2.2.6.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S8/SUMMARY.html"><strong aria-hidden="true">2.2.7.</strong> S8</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S8/CSE/SUMMARY.html"><strong aria-hidden="true">2.2.7.1.</strong> CSE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S8/ECE/SUMMARY.html"><strong aria-hidden="true">2.2.7.2.</strong> ECE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S8/EEE/SUMMARY.html"><strong aria-hidden="true">2.2.7.3.</strong> EEE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S8/CE/SUMMARY.html"><strong aria-hidden="true">2.2.7.4.</strong> CE</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S8/ME/SUMMARY.html"><strong aria-hidden="true">2.2.7.5.</strong> ME</a></li><li class="chapter-item "><a href="../../../../../WikiSyllabus/KTU/2015_Scheme/S8/IC/SUMMARY.html"><strong aria-hidden="true">2.2.7.6.</strong> IC</a></li></ol></li></ol></li></ol></li></ol>
             </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
         </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
 
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky bordered">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </button>
+                        </label>
                         <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
@@ -110,6 +147,7 @@
                         <a href="../../../../../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
+
                     </div>
                 </div>
 
@@ -123,8 +161,9 @@
                         </ul>
                     </div>
                 </div>
+
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script type="text/javascript">
+                <script>
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
                     document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
                     Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
@@ -144,8 +183,8 @@ For example <strong>Racecar</strong> is a palindrome whereas <strong>Wikisyllabu
 int main()
 {
  int n,r,sum=0,temp; //variable declaration
- printf(&quot;Enter number:&quot;); 
- scanf(&quot;%d&quot;,&amp;n); // get number from user
+ printf("Enter number:"); 
+ scanf("%d",&amp;n); // get number from user
  temp = n;
  while(n&gt;0) // to reverse the number
  {
@@ -155,12 +194,12 @@ int main()
  }
  if(temp==sum) //to check if reversed number equal to input number 
  {
- printf(&quot;%d is a palindrome&quot;, temp); // 
+ printf("%d is a palindrome", temp); // 
 
  } 
  else
  {
- printf(&quot;%d is not a palindrome&quot;,temp);
+ printf("%d is not a palindrome",temp);
  }
 
 }
@@ -184,12 +223,12 @@ Enter number: 1546
   char filename[100]; 
   char ch;
   int lc=0, wc=0, cc=0;
-  printf(&quot;Enter a filename :&quot;);
+  printf("Enter a filename :");
   gets(filename);
-  fp = fopen(filename,&quot;r&quot;); // open existing file or create a new file
+  fp = fopen(filename,"r"); // open existing file or create a new file
   if (fp==NULL) 
   {
-printf(&quot;The file %s doesn't exist\n&quot;,filename);
+printf("The file %s doesn't exist\n",filename);
 exit(1);
   }
   else
@@ -202,13 +241,13 @@ while ((ch = fgetc(fp))!= EOF)
 }
 fclose(fp);
   }
-  printf(&quot;Lines : %d \n&quot;, lc);
-  printf(&quot;Words : %d \n&quot;, wc);
-  printf(&quot;Characters : %d \n&quot;, cc);
+  printf("Lines : %d \n", lc);
+  printf("Words : %d \n", wc);
+  printf("Characters : %d \n", cc);
   
-  fp=fopen (&quot;result.txt&quot;, &quot;w&quot;);
-  printf(&quot;Writing to result.txt\n&quot;);
-  fprintf (fp, &quot;Lines : %d \n Words : %d \n Characters : %d \n&quot;, lc,wc,cc);
+  fp=fopen ("result.txt", "w");
+  printf("Writing to result.txt\n");
+  fprintf (fp, "Lines : %d \n Words : %d \n Characters : %d \n", lc,wc,cc);
   fclose (fp); //close the file opened.
   return 0;
  }
@@ -226,13 +265,13 @@ Writing to result.txt
 int main() 
  { 
   int n1=0,n2=1,n3,i,number; 
-  printf(&quot;Enter the number of elements:&quot;); 
-  scanf(&quot;%d&quot;,&amp;number); 
-  printf(&quot;\n%d %d&quot;,n1,n2);//printing 0 and 1 
+  printf("Enter the number of elements:"); 
+  scanf("%d",&amp;number); 
+  printf("\n%d %d",n1,n2);//printing 0 and 1 
   for(i=2;i&lt;number;++i)//loop starts from 2 because 0 and 1 are already printed 
   { 
 n3=n1+n2; 
-printf(&quot; %d&quot;,n3); 
+printf(" %d",n3); 
 n1=n2; 
 n2=n3; 
   }  
@@ -261,11 +300,11 @@ int main()
  
  char a[50], b[50], e[50], f[50] ;
  int i,j,c,d;
- printf(&quot;String concatenation without using Builtin function\n&quot;);
- printf(&quot;Enter First string:&quot;);
- scanf(&quot;%s&quot;,a);
- printf(&quot;Enter Second string:&quot;);
- scanf(&quot;%s&quot;,b);
+ printf("String concatenation without using Builtin function\n");
+ printf("Enter First string:");
+ scanf("%s",a);
+ printf("Enter Second string:");
+ scanf("%s",b);
  c=strlen(a);
  d=strlen(b);  
 for(j=0;j&lt;=d;j++){
@@ -273,7 +312,7 @@ for(j=0;j&lt;=d;j++){
 a[c]=b[j];
 c++;
 }
-printf(&quot;The concatenated string is: %s &quot;,a) ; 
+printf("The concatenated string is: %s ",a) ; 
 }
 </code></pre>
 <h2 id="5-write-a-c-program-to-find-largest-element-in-an-array"><a class="header" href="#5-write-a-c-program-to-find-largest-element-in-an-array">5. Write a C program to find largest element in an array</a></h2>
@@ -283,12 +322,12 @@ printf(&quot;The concatenated string is: %s &quot;,a) ;
  int main()
  {
   int a[100], n,i,j;
-  printf(&quot;Enter number of elements:&quot;);
-  scanf(&quot;%d&quot;,&amp;n);
+  printf("Enter number of elements:");
+  scanf("%d",&amp;n);
   for(i=0;i&lt;n;i++)
   {
-printf(&quot;Enter a[%d]:&quot;,i);
-scanf(&quot;%d&quot;,&amp;a[i]);
+printf("Enter a[%d]:",i);
+scanf("%d",&amp;a[i]);
   }
  
   for(i=1;i&lt;n;i++)
@@ -299,7 +338,7 @@ if(a[0]&lt;a[i+1])
 }
   
   }
-  printf(&quot;The largest number in the array is %d&quot;,a[0]);
+  printf("The largest number in the array is %d",a[0]);
  }
 </code></pre>
 <h3 id="output-3"><a class="header" href="#output-3">Output</a></h3>
@@ -326,21 +365,21 @@ if(a[0]&lt;a[i+1])
  int main()
  {
   int a,b,*ap,*bp,s;
-  printf(&quot;Enter number:&quot;);
-  scanf(&quot;%d&quot;,&amp;a);
-  printf(&quot;Enter number:&quot;);
-  scanf(&quot;%d&quot;,&amp;b);
-  printf(&quot;Before swapping:\n&quot;);
-  printf(&quot;a=%d &quot;,a);
-  printf(&quot;b=%d &quot;,b);
-  printf(&quot;\n&quot;);
+  printf("Enter number:");
+  scanf("%d",&amp;a);
+  printf("Enter number:");
+  scanf("%d",&amp;b);
+  printf("Before swapping:\n");
+  printf("a=%d ",a);
+  printf("b=%d ",b);
+  printf("\n");
   ap=&amp;a;
   bp=&amp;b;
   swap(ap,bp);
-  printf(&quot;After swapping:\n&quot;);
-  printf(&quot;a=%d &quot;,a);
-  printf(&quot;b=%d &quot;,b);
-  printf(&quot;\n&quot;); 
+  printf("After swapping:\n");
+  printf("a=%d ",a);
+  printf("b=%d ",b);
+  printf("\n"); 
  }
 </code></pre>
 <h3 id="output-4"><a class="header" href="#output-4">Output</a></h3>
@@ -357,7 +396,7 @@ if(a[0]&lt;a[i+1])
  int main()
  {
  for(;;)
- printf(&quot;10&quot;);
+ printf("10");
  
  return 0;
  }
@@ -372,8 +411,8 @@ if(a[0]&lt;a[i+1])
  int main()
  {
   int n,num,a,rev=0;
-  printf(&quot;Enter no:&quot;);
-  scanf(&quot;%d&quot;,&amp;num);
+  printf("Enter no:");
+  scanf("%d",&amp;num);
   n=num;
   for(num;num!=0;num=num/10){
   a= num % 10;
@@ -381,14 +420,14 @@ if(a[0]&lt;a[i+1])
   }
   if(n==rev)
   {
-printf(&quot;Amstrong number&quot;);
+printf("Amstrong number");
   } 
   
   else
   {
-printf(&quot;Not an Amstrong number&quot;);
+printf("Not an Amstrong number");
   }
-  printf(&quot;\n&quot;);
+  printf("\n");
   return 0; 
  }
 </code></pre>
@@ -406,30 +445,30 @@ printf(&quot;Not an Amstrong number&quot;);
   int a[10][10];
   int transp[10][10];
   int i,j,r,c;
-  printf(&quot;First matrix A\n&quot;);
-  printf(&quot;Enter number of rows:&quot;);
-  scanf(&quot;%d&quot;,&amp;r);
-  printf(&quot;Enter number of columns:&quot;);
-  scanf(&quot;%d&quot;,&amp;c);
+  printf("First matrix A\n");
+  printf("Enter number of rows:");
+  scanf("%d",&amp;r);
+  printf("Enter number of columns:");
+  scanf("%d",&amp;c);
   // Getting the Matrix from user 
   for(i=0;i&lt;r;i++)
   {
 for(j=0;j&lt;c;j++)
 {
- printf(&quot;Enter a[%d][%d]:&quot;,i+1,j+1);
- scanf(&quot;%d&quot;,&amp;a[i][j]);
+ printf("Enter a[%d][%d]:",i+1,j+1);
+ scanf("%d",&amp;a[i][j]);
 }
   }
   // Displaying Input Matrix
-  printf(&quot;The Matrix A is :\n&quot;);
+  printf("The Matrix A is :\n");
   for(i=0;i&lt;r;i++)
   {
 for(j=0;j&lt;c;j++)
 {
- printf(&quot;%d  &quot;,a[i][j]);
+ printf("%d  ",a[i][j]);
 
 }
-printf(&quot;\n&quot;);
+printf("\n");
   }
   // Transposing the Input Matrix 
   for(i=0;i&lt;r;i++)
@@ -440,14 +479,14 @@ for(j=0;j&lt;c;j++)
 }
   }  
   // Displaying Transpose Matrix 
-  printf(&quot;Transpose of Matrix A:\n&quot;);  
+  printf("Transpose of Matrix A:\n");  
   for(i=0;i&lt;r;i++)
   {
 for(j=0;j&lt;c;j++)
 {
- printf(&quot;%d  &quot;,transp[i][j]);
+ printf("%d  ",transp[i][j]);
 }
-printf(&quot;\n&quot;);
+printf("\n");
   }
  
  }  
@@ -484,55 +523,55 @@ int a[10][10];
 int b[10][10];
 int diff[10][10];
 int i,j,r,c;
-printf(&quot;First matrix A\n&quot;);
-printf(&quot;Enter number of rows:&quot;);
-  scanf(&quot;%d&quot;,&amp;r);
-  printf(&quot;Enter number of columns:&quot;);
-  scanf(&quot;%d&quot;,&amp;c);
+printf("First matrix A\n");
+printf("Enter number of rows:");
+  scanf("%d",&amp;r);
+  printf("Enter number of columns:");
+  scanf("%d",&amp;c);
   
   for(i=0;i&lt;r;i++)
   {
 for(j=0;j&lt;c;j++)
 {
- printf(&quot;Enter a[%d][%d]:&quot;,i+1,j+1);
- scanf(&quot;%d&quot;,&amp;a[i][j]);
+ printf("Enter a[%d][%d]:",i+1,j+1);
+ scanf("%d",&amp;a[i][j]);
 }
   }
   
 
   
-  printf(&quot;Second matrix B\n&quot;);
-  printf(&quot;Enter number of rows:&quot;);
-  scanf(&quot;%d&quot;,&amp;r);
-  printf(&quot;Enter number of columns:&quot;);
-  scanf(&quot;%d&quot;,&amp;c);
+  printf("Second matrix B\n");
+  printf("Enter number of rows:");
+  scanf("%d",&amp;r);
+  printf("Enter number of columns:");
+  scanf("%d",&amp;c);
   
   for(i=0;i&lt;r;i++)
   {
 for(j=0;j&lt;c;j++)
 {
- printf(&quot;Enter b[%d][%d]:&quot;,i+1,j+1);
- scanf(&quot;%d&quot;,&amp;b[i][j]);
+ printf("Enter b[%d][%d]:",i+1,j+1);
+ scanf("%d",&amp;b[i][j]);
 }
   }
   
-  printf(&quot;The matrix A is :\n&quot;);
+  printf("The matrix A is :\n");
   for(i=0;i&lt;r;i++)
   {
 for(j=0;j&lt;c;j++)
 {
- printf(&quot;%d\t&quot;,a[i][j]);
+ printf("%d\t",a[i][j]);
 }
-printf(&quot;\n&quot;);
+printf("\n");
   }
-  printf(&quot;The matrix B is :\n&quot;);
+  printf("The matrix B is :\n");
   for(i=0;i&lt;r;i++)
   {
 for(j=0;j&lt;c;j++)
 {
- printf(&quot;%d\t&quot;,b[i][j]);
+ printf("%d\t",b[i][j]);
 }
-printf(&quot;\n&quot;);
+printf("\n");
   }
   for(i=0;i&lt;r;i++)
   {
@@ -542,14 +581,14 @@ for(j=0;j&lt;c;j++)
 }
   }
   
-  printf(&quot;The Difference Matrix is :\n&quot;);
+  printf("The Difference Matrix is :\n");
   for(i=0;i&lt;r;i++)
   {
 for(j=0;j&lt;c;j++)
 {
- printf(&quot;%d\t&quot;,diff[i][j]);
+ printf("%d\t",diff[i][j]);
 }
-printf(&quot;\n&quot;);
+printf("\n");
   }
  }
 </code></pre>
@@ -601,29 +640,29 @@ printf(&quot;\n&quot;);
  {
 
   int r,c,r1,c1,i,j,k,a[10][10],b[10][10],pro[10][10],sum = 0;
-  printf(&quot;First Matrix A&quot;);
-  printf(&quot;\nEnter the number of rows:&quot;);
-  scanf(&quot;%d&quot;,&amp;r);
-  printf(&quot;Enter the number of columns:&quot;);
-  scanf(&quot;%d&quot;,&amp;c);
+  printf("First Matrix A");
+  printf("\nEnter the number of rows:");
+  scanf("%d",&amp;r);
+  printf("Enter the number of columns:");
+  scanf("%d",&amp;c);
 
   for(i = 0; i &lt; r; i++)
   {  
 for(j = 0; j &lt; c; j++){
- printf(&quot;Enter a[%d][%d]: &quot;,i+1,j+1);
- scanf(&quot;%d&quot;, &amp;a[i][j]);
+ printf("Enter a[%d][%d]: ",i+1,j+1);
+ scanf("%d", &amp;a[i][j]);
 }
   }
-  printf(&quot;Second Matrix B\n&quot;);
-  printf(&quot;Enter the number of rows:&quot;);
-  scanf(&quot;%d&quot;,&amp;r1);
-  printf(&quot;Enter the number of columns:&quot;);
-  scanf(&quot;%d&quot;,&amp;c1);
+  printf("Second Matrix B\n");
+  printf("Enter the number of rows:");
+  scanf("%d",&amp;r1);
+  printf("Enter the number of columns:");
+  scanf("%d",&amp;c1);
 
   for(i = 0; i &lt; r1; i++){  
 for(j = 0; j &lt; c1; j++){
- printf(&quot;Enter b[%d][%d]: &quot;,i+1,j+1);
- scanf(&quot;%d&quot;, &amp;b[i][j]);
+ printf("Enter b[%d][%d]: ",i+1,j+1);
+ scanf("%d", &amp;b[i][j]);
 }
   }  
   for(i = 0; i &lt; r; i++){
@@ -636,27 +675,27 @@ sum=0;
   }
   }
   
-  printf(&quot;The matrix A is :\n&quot;);
+  printf("The matrix A is :\n");
   for(i=0;i&lt;r;i++){
   for(j=0;j&lt;c;j++){
-printf(&quot;%d  &quot;,a[i][j]);
+printf("%d  ",a[i][j]);
 
   }
-  printf(&quot;\n&quot;);
+  printf("\n");
   }
-  printf(&quot;The matrix is :\n&quot;);
+  printf("The matrix is :\n");
 for(i=0;i&lt;r1;i++){
 for(j=0;j&lt;c1;j++){
- printf(&quot;%d  &quot;,b[i][j]);
+ printf("%d  ",b[i][j]);
 }
-printf(&quot;\n&quot;);
+printf("\n");
 }
-  printf(&quot;The product matrix\n&quot;);
+  printf("The product matrix\n");
 for(i = 0; i &lt; r; i++){
 for(j = 0; j &lt; c1; j++){
- printf(&quot;%d&quot;, pro[i][j]);
+ printf("%d", pro[i][j]);
 }
- printf(&quot;\n&quot;); 
+ printf("\n"); 
 }
  }
 </code></pre>
@@ -705,17 +744,17 @@ for(j = 0; j &lt; c1; j++){
 int main()
 {
   int n,a[100],i,j,temp;
-  printf(&quot;Enter no of elements:&quot;);
-  scanf(&quot;%d&quot;,&amp;n);
+  printf("Enter no of elements:");
+  scanf("%d",&amp;n);
   for(i=0; i&lt;n; i++)
   {
-    printf(&quot;Enter element:&quot;);
-    scanf(&quot;%d&quot;,&amp;a[i]);
+    printf("Enter element:");
+    scanf("%d",&amp;a[i]);
   }
-  printf(&quot;Array before Sorting:&quot;);
+  printf("Array before Sorting:");
    for(i=0; i&lt;n; i++)
   {
-    printf(&quot;%d &quot;,a[i]);
+    printf("%d ",a[i]);
   }  
   for(i=0; i&lt;n-1; i++)
   {
@@ -729,10 +768,10 @@ int main()
       }
     }
   }
-   printf(&quot;\nArray after Sorting:&quot;);
+   printf("\nArray after Sorting:");
    for(i=0; i&lt;n; i++)
   {
-    printf(&quot;%d &quot;,a[i]);
+    printf("%d ",a[i]);
   }   
    
 }
@@ -754,15 +793,15 @@ Array after Sorting:4 4 5 6 7
 int main()
 {
   int n,a[100],i,x,temp;
-  printf(&quot;Enter number of elements:&quot;);
-  scanf(&quot;%d&quot;,&amp;n);
+  printf("Enter number of elements:");
+  scanf("%d",&amp;n);
   for(i=0; i&lt;n; i++)
   {
-    printf(&quot;Enter element:&quot;);
-    scanf(&quot;%d&quot;,&amp;a[i]);
+    printf("Enter element:");
+    scanf("%d",&amp;a[i]);
   }
-  printf(&quot;Enter the number to be found:&quot;);
-  scanf(&quot;%d&quot;,&amp;x);
+  printf("Enter the number to be found:");
+  scanf("%d",&amp;x);
   int flag=0;
   for(i=0; i&lt;n; i++)
   {
@@ -773,9 +812,9 @@ int main()
     }
   }
   if(flag==0)
-    printf(&quot;Element not found&quot;);
+    printf("Element not found");
   else
-    printf(&quot;Element found at index %d &quot;,temp);  
+    printf("Element found at index %d ",temp);  
 }
 </code></pre>
 <h3 id="output-11"><a class="header" href="#output-11">Output</a></h3>
@@ -797,8 +836,8 @@ int main() {
 
     vowels = consonant = 0;
 
-    printf(&quot;Enter a line of string: &quot;);
-    scanf(&quot;%s&quot;,line);
+    printf("Enter a line of string: ");
+    scanf("%s",line);
 
     for (int i = 0; line[i] != '\0'; ++i) {
         if (line[i] == 'a' || line[i] == 'e' || line[i] == 'i' ||
@@ -811,8 +850,8 @@ int main() {
         } 
     }
 
-    printf(&quot;Vowels: %d&quot;, vowels);
-    printf(&quot;\nConsonants: %d&quot;, consonant);
+    printf("Vowels: %d", vowels);
+    printf("\nConsonants: %d", consonant);
 
 }
 </code></pre>
@@ -829,8 +868,8 @@ Consonants: 9
  {  
   
   int num, b_num=0, d_num = 0, base = 1, rem;  
-  printf (&quot;Enter a binary number:&quot;);  
-  scanf (&quot; %d&quot;, &amp;num);
+  printf ("Enter a binary number:");  
+  scanf (" %d", &amp;num);
   b_num = num;
   while ( num &gt; 0)  
   {  
@@ -840,7 +879,7 @@ Consonants: 9
     base = base * 2;  
   }  
  
-  printf(&quot;Decimal equivalent of %d = %d&quot;, b_num,d_num);
+  printf("Decimal equivalent of %d = %d", b_num,d_num);
   
   
  } 
@@ -859,14 +898,14 @@ Consonants: 9
 int main() {
 int n,i,j,k = 1;
 
-printf(&quot;Enter number of rows:&quot;);
-scanf(&quot;%d&quot;,&amp;n);
+printf("Enter number of rows:");
+scanf("%d",&amp;n);
 
 for(i = 1; i &lt;= n; i++) {
 for(j = 1;j &lt;= i; j++)
-printf(&quot;%3d&quot;, k++);
+printf("%3d", k++);
 
-printf(&quot;\n&quot;);
+printf("\n");
 }
 
 return 0;
@@ -888,9 +927,11 @@ return 0;
                             <a rel="prev" href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/20strings.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                            <a rel="next" href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/22universityqps.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+
+                            <a rel="next prefetch" href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/22universityqps.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
+
                         <div style="clear: both"></div>
                     </nav>
                 </div>
@@ -900,23 +941,33 @@ return 0;
                     <a rel="prev" href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/20strings.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                    <a rel="next" href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/22universityqps.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+
+                    <a rel="next prefetch" href="../../../../../WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/22universityqps.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
 
         </div>
 
-        <script type="text/javascript">
+
+
+
+        <script>
             window.playground_copyable = true;
         </script>
-        <script src="../../../../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../../../../mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../../../../searcher.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../../../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../../../../highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../../../../book.js" type="text/javascript" charset="utf-8"></script>
+
+
+        <script src="../../../../../elasticlunr.min.js"></script>
+        <script src="../../../../../mark.min.js"></script>
+        <script src="../../../../../searcher.js"></script>
+
+        <script src="../../../../../clipboard.min.js"></script>
+        <script src="../../../../../highlight.js"></script>
+        <script src="../../../../../book.js"></script>
 
         <!-- Custom JS scripts -->
+
+
+    </div>
     </body>
 </html>

@@ -1,15 +1,17 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js light">
+<html lang="en" class="light" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>WikiSyllabus</title>
-        <meta name="robots" content="noindex" />
+        <meta name="robots" content="noindex">
+
+
         <!-- Custom HTML head -->
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff">
 
         <link rel="icon" href="favicon.svg">
         <link rel="shortcut icon" href="favicon.png">
@@ -17,25 +19,29 @@
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
         <link rel="stylesheet" href="css/print.css" media="print">
+
         <!-- Fonts -->
         <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
         <link rel="stylesheet" href="fonts/fonts.css">
+
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="highlight.css">
         <link rel="stylesheet" href="tomorrow-night.css">
         <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+
     </head>
-    <body>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">
+        <script>
             var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script type="text/javascript">
+        <script>
             try {
                 var theme = localStorage.getItem('mdbook-theme');
                 var sidebar = localStorage.getItem('mdbook-sidebar');
@@ -51,50 +57,81 @@
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
-        <script type="text/javascript">
+        <script>
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
-            html.classList.remove('no-js')
             html.classList.remove('light')
             html.classList.add(theme);
-            html.classList.add('js');
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
         </script>
 
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
         <!-- Hide / unhide sidebar before it is displayed -->
-        <script type="text/javascript">
-            var html = document.querySelector('html');
-            var sidebar = 'hidden';
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="WikiSyllabus/SUMMARY.html"></a></li><li class="chapter-item expanded affix "><a href="WikiSyllabus/KTU/SUMMARY.html">KTU</a></li><li class="chapter-item expanded "><a href="WikiSyllabus/KTU/2019_Scheme/SUMMARY.html"><strong aria-hidden="true">1.</strong> 2019_Scheme</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/SUMMARY.html"><strong aria-hidden="true">1.1.</strong> S1 &amp; S2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/SUMMARY.html"><strong aria-hidden="true">1.1.1.</strong> EST 102</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/1intro.html"><strong aria-hidden="true">1.1.1.1.</strong> Introduction to C Programming</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/2variables_keywords.html"><strong aria-hidden="true">1.1.1.2.</strong> Variables and Keywords</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/3datatypes.html"><strong aria-hidden="true">1.1.1.3.</strong> Datatypes</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/4constants.html"><strong aria-hidden="true">1.1.1.4.</strong> Constants</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/5operators.html"><strong aria-hidden="true">1.1.1.5.</strong> Operators</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/6control_statements.html"><strong aria-hidden="true">1.1.1.6.</strong> Control Statements</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/7goto.html"><strong aria-hidden="true">1.1.1.7.</strong> goto statement</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/8switch_statement.html"><strong aria-hidden="true">1.1.1.8.</strong> Switch Statement</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/9break.html"><strong aria-hidden="true">1.1.1.9.</strong> break Statement</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/10continue.html"><strong aria-hidden="true">1.1.1.10.</strong> Continue Statement</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/11loops.html"><strong aria-hidden="true">1.1.1.11.</strong> Loops</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/12functions.html"><strong aria-hidden="true">1.1.1.12.</strong> Functions</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/13function_arguments.html"><strong aria-hidden="true">1.1.1.13.</strong> Calling Functions</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/14library_functions.html"><strong aria-hidden="true">1.1.1.14.</strong> Library Functions</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/15recursion.html"><strong aria-hidden="true">1.1.1.15.</strong> Recursion</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/16storage_classes.html"><strong aria-hidden="true">1.1.1.16.</strong> Storage Classes</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/17arrays.html"><strong aria-hidden="true">1.1.1.17.</strong> Array</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/18pointer_arithmetic.html"><strong aria-hidden="true">1.1.1.18.</strong> Pointers</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/19pointer_to_pointer.html"><strong aria-hidden="true">1.1.1.19.</strong> Pointer to Pointer</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/20strings.html"><strong aria-hidden="true">1.1.1.20.</strong> Strings</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/21frequentlyaskedquestions.html"><strong aria-hidden="true">1.1.1.21.</strong> Frequently asked Programming questions</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/22universityqps.html"><strong aria-hidden="true">1.1.1.22.</strong> University Question papers</a></li></ol></li></ol></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S3/SUMMARY.html"><strong aria-hidden="true">1.2.</strong> S3</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S3/CSE/SUMMARY.html"><strong aria-hidden="true">1.2.1.</strong> CSE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S3/ECE/SUMMARY.html"><strong aria-hidden="true">1.2.2.</strong> ECE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S3/EEE/SUMMARY.html"><strong aria-hidden="true">1.2.3.</strong> EEE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S3/CE/SUMMARY.html"><strong aria-hidden="true">1.2.4.</strong> CE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S3/ME/SUMMARY.html"><strong aria-hidden="true">1.2.5.</strong> ME</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S3/IC/SUMMARY.html"><strong aria-hidden="true">1.2.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S4/SUMMARY.html"><strong aria-hidden="true">1.3.</strong> S4</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S4/IT/SUMMARY.html"><strong aria-hidden="true">1.3.1.</strong> IT</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S4/IT/ITT204/SUMMARY.html"><strong aria-hidden="true">1.3.1.1.</strong> ITT 204</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S4/IT/ITT204/M1-CO-intro.html"><strong aria-hidden="true">1.3.1.1.1.</strong> Fundamentals of Computer Organization</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S4/IT/ITT204/M1-CO-1.html"><strong aria-hidden="true">1.3.1.1.2.</strong> Basic Structure of Computers</a></li></ol></li></ol></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S4/CSE/SUMMARY.html"><strong aria-hidden="true">1.3.2.</strong> CSE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S4/ECE/SUMMARY.html"><strong aria-hidden="true">1.3.3.</strong> ECE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S4/EEE/SUMMARY.html"><strong aria-hidden="true">1.3.4.</strong> EEE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S4/CE/SUMMARY.html"><strong aria-hidden="true">1.3.5.</strong> CE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S4/ME/SUMMARY.html"><strong aria-hidden="true">1.3.6.</strong> ME</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S4/IC/SUMMARY.html"><strong aria-hidden="true">1.3.7.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S5/SUMMARY.html"><strong aria-hidden="true">1.4.</strong> S5</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S5/CSE/SUMMARY.html"><strong aria-hidden="true">1.4.1.</strong> CSE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S5/ECE/SUMMARY.html"><strong aria-hidden="true">1.4.2.</strong> ECE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S5/EEE/SUMMARY.html"><strong aria-hidden="true">1.4.3.</strong> EEE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S5/CE/SUMMARY.html"><strong aria-hidden="true">1.4.4.</strong> CE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S5/ME/SUMMARY.html"><strong aria-hidden="true">1.4.5.</strong> ME</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S5/IC/SUMMARY.html"><strong aria-hidden="true">1.4.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S6/SUMMARY.html"><strong aria-hidden="true">1.5.</strong> S6</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S6/CSE/SUMMARY.html"><strong aria-hidden="true">1.5.1.</strong> CSE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S6/ECE/SUMMARY.html"><strong aria-hidden="true">1.5.2.</strong> ECE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S6/EEE/SUMMARY.html"><strong aria-hidden="true">1.5.3.</strong> EEE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S6/CE/SUMMARY.html"><strong aria-hidden="true">1.5.4.</strong> CE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S6/ME/SUMMARY.html"><strong aria-hidden="true">1.5.5.</strong> ME</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S6/IC/SUMMARY.html"><strong aria-hidden="true">1.5.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S7/SUMMARY.html"><strong aria-hidden="true">1.6.</strong> S7</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S7/CSE/SUMMARY.html"><strong aria-hidden="true">1.6.1.</strong> CSE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S7/ECE/SUMMARY.html"><strong aria-hidden="true">1.6.2.</strong> ECE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S7/EEE/SUMMARY.html"><strong aria-hidden="true">1.6.3.</strong> EEE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S7/CE/SUMMARY.html"><strong aria-hidden="true">1.6.4.</strong> CE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S7/ME/SUMMARY.html"><strong aria-hidden="true">1.6.5.</strong> ME</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S7/IC/SUMMARY.html"><strong aria-hidden="true">1.6.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S8/SUMMARY.html"><strong aria-hidden="true">1.7.</strong> S8</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S8/CSE/SUMMARY.html"><strong aria-hidden="true">1.7.1.</strong> CSE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S8/ECE/SUMMARY.html"><strong aria-hidden="true">1.7.2.</strong> ECE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S8/EEE/SUMMARY.html"><strong aria-hidden="true">1.7.3.</strong> EEE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S8/CE/SUMMARY.html"><strong aria-hidden="true">1.7.4.</strong> CE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S8/ME/SUMMARY.html"><strong aria-hidden="true">1.7.5.</strong> ME</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S8/IC/SUMMARY.html"><strong aria-hidden="true">1.7.6.</strong> IC</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="WikiSyllabus/KTU/2015_Scheme/SUMMARY.html"><strong aria-hidden="true">2.</strong> 2015_Scheme</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S1-S2/SUMMARY.html"><strong aria-hidden="true">2.1.</strong> S1-S2</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S3/SUMMARY.html"><strong aria-hidden="true">2.2.</strong> S3</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S3/CSE/SUMMARY.html"><strong aria-hidden="true">2.2.1.</strong> CSE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S3/ECE/SUMMARY.html"><strong aria-hidden="true">2.2.2.</strong> ECE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S3/EEE/SUMMARY.html"><strong aria-hidden="true">2.2.3.</strong> EEE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S3/CE/SUMMARY.html"><strong aria-hidden="true">2.2.4.</strong> CE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S3/ME/SUMMARY.html"><strong aria-hidden="true">2.2.5.</strong> ME</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S3/IC/SUMMARY.html"><strong aria-hidden="true">2.2.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S4/SUMMARY.html"><strong aria-hidden="true">2.3.</strong> S4</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S4/CSE/SUMMARY.html"><strong aria-hidden="true">2.3.1.</strong> CSE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S4/ECE/SUMMARY.html"><strong aria-hidden="true">2.3.2.</strong> ECE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S4/EEE/SUMMARY.html"><strong aria-hidden="true">2.3.3.</strong> EEE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S4/CE/SUMMARY.html"><strong aria-hidden="true">2.3.4.</strong> CE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S4/ME/SUMMARY.html"><strong aria-hidden="true">2.3.5.</strong> ME</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S4/IC/SUMMARY.html"><strong aria-hidden="true">2.3.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S5/SUMMARY.html"><strong aria-hidden="true">2.4.</strong> S5</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S5/CSE/SUMMARY.html"><strong aria-hidden="true">2.4.1.</strong> CSE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S5/ECE/SUMMARY.html"><strong aria-hidden="true">2.4.2.</strong> ECE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S5/EEE/SUMMARY.html"><strong aria-hidden="true">2.4.3.</strong> EEE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S5/CE/SUMMARY.html"><strong aria-hidden="true">2.4.4.</strong> CE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S5/ME/SUMMARY.html"><strong aria-hidden="true">2.4.5.</strong> ME</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S5/IC/SUMMARY.html"><strong aria-hidden="true">2.4.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S6/SUMMARY.html"><strong aria-hidden="true">2.5.</strong> S6</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S6/CSE/SUMMARY.html"><strong aria-hidden="true">2.5.1.</strong> CSE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S6/ECE/SUMMARY.html"><strong aria-hidden="true">2.5.2.</strong> ECE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S6/EEE/SUMMARY.html"><strong aria-hidden="true">2.5.3.</strong> EEE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S6/CE/SUMMARY.html"><strong aria-hidden="true">2.5.4.</strong> CE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S6/ME/SUMMARY.html"><strong aria-hidden="true">2.5.5.</strong> ME</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S6/IC/SUMMARY.html"><strong aria-hidden="true">2.5.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S7/SUMMARY.html"><strong aria-hidden="true">2.6.</strong> S7</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S7/CSE/SUMMARY.html"><strong aria-hidden="true">2.6.1.</strong> CSE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S7/ECE/SUMMARY.html"><strong aria-hidden="true">2.6.2.</strong> ECE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S7/EEE/SUMMARY.html"><strong aria-hidden="true">2.6.3.</strong> EEE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S7/CE/SUMMARY.html"><strong aria-hidden="true">2.6.4.</strong> CE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S7/ME/SUMMARY.html"><strong aria-hidden="true">2.6.5.</strong> ME</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S7/IC/SUMMARY.html"><strong aria-hidden="true">2.6.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S8/SUMMARY.html"><strong aria-hidden="true">2.7.</strong> S8</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S8/CSE/SUMMARY.html"><strong aria-hidden="true">2.7.1.</strong> CSE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S8/ECE/SUMMARY.html"><strong aria-hidden="true">2.7.2.</strong> ECE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S8/EEE/SUMMARY.html"><strong aria-hidden="true">2.7.3.</strong> EEE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S8/CE/SUMMARY.html"><strong aria-hidden="true">2.7.4.</strong> CE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S8/ME/SUMMARY.html"><strong aria-hidden="true">2.7.5.</strong> ME</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S8/IC/SUMMARY.html"><strong aria-hidden="true">2.7.6.</strong> IC</a></li></ol></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="WikiSyllabus/SUMMARY.html"><strong aria-hidden="true">1.</strong> </a></li><li class="chapter-item expanded "><a href="WikiSyllabus/KTU/SUMMARY.html"><strong aria-hidden="true">2.</strong> KTU</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/SUMMARY.html"><strong aria-hidden="true">2.1.</strong> 2019_Scheme</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/SUMMARY.html"><strong aria-hidden="true">2.1.1.</strong> S1 & S2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/SUMMARY.html"><strong aria-hidden="true">2.1.1.1.</strong> EST 102</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/1intro.html"><strong aria-hidden="true">2.1.1.1.1.</strong> Introduction to C Programming</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/2variables_keywords.html"><strong aria-hidden="true">2.1.1.1.2.</strong> Variables and Keywords</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/3datatypes.html"><strong aria-hidden="true">2.1.1.1.3.</strong> Datatypes</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/4constants.html"><strong aria-hidden="true">2.1.1.1.4.</strong> Constants</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/5operators.html"><strong aria-hidden="true">2.1.1.1.5.</strong> Operators</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/6control_statements.html"><strong aria-hidden="true">2.1.1.1.6.</strong> Control Statements</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/7goto.html"><strong aria-hidden="true">2.1.1.1.7.</strong> goto statement</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/8switch_statement.html"><strong aria-hidden="true">2.1.1.1.8.</strong> Switch Statement</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/9break.html"><strong aria-hidden="true">2.1.1.1.9.</strong> break Statement</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/10continue.html"><strong aria-hidden="true">2.1.1.1.10.</strong> Continue Statement</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/11loops.html"><strong aria-hidden="true">2.1.1.1.11.</strong> Loops</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/12functions.html"><strong aria-hidden="true">2.1.1.1.12.</strong> Functions</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/13function_arguments.html"><strong aria-hidden="true">2.1.1.1.13.</strong> Calling Functions</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/14library_functions.html"><strong aria-hidden="true">2.1.1.1.14.</strong> Library Functions</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/15recursion.html"><strong aria-hidden="true">2.1.1.1.15.</strong> Recursion</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/16storage_classes.html"><strong aria-hidden="true">2.1.1.1.16.</strong> Storage Classes</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/17arrays.html"><strong aria-hidden="true">2.1.1.1.17.</strong> Array</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/18pointer_arithmetic.html"><strong aria-hidden="true">2.1.1.1.18.</strong> Pointers</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/19pointer_to_pointer.html"><strong aria-hidden="true">2.1.1.1.19.</strong> Pointer to Pointer</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/20strings.html"><strong aria-hidden="true">2.1.1.1.20.</strong> Strings</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/21frequentlyaskedquestions.html"><strong aria-hidden="true">2.1.1.1.21.</strong> Frequently asked Programming questions</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/22universityqps.html"><strong aria-hidden="true">2.1.1.1.22.</strong> University Question papers</a></li></ol></li></ol></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S3/SUMMARY.html"><strong aria-hidden="true">2.1.2.</strong> S3</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S3/CSE/SUMMARY.html"><strong aria-hidden="true">2.1.2.1.</strong> CSE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S3/ECE/SUMMARY.html"><strong aria-hidden="true">2.1.2.2.</strong> ECE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S3/EEE/SUMMARY.html"><strong aria-hidden="true">2.1.2.3.</strong> EEE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S3/CE/SUMMARY.html"><strong aria-hidden="true">2.1.2.4.</strong> CE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S3/ME/SUMMARY.html"><strong aria-hidden="true">2.1.2.5.</strong> ME</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S3/IC/SUMMARY.html"><strong aria-hidden="true">2.1.2.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S4/SUMMARY.html"><strong aria-hidden="true">2.1.3.</strong> S4</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S4/IT/SUMMARY.html"><strong aria-hidden="true">2.1.3.1.</strong> IT</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S4/IT/ITT204/SUMMARY.html"><strong aria-hidden="true">2.1.3.1.1.</strong> ITT 204</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S4/IT/ITT204/M1-CO-intro.html"><strong aria-hidden="true">2.1.3.1.1.1.</strong> Fundamentals of Computer Organization</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S4/IT/ITT204/M1-CO-1.html"><strong aria-hidden="true">2.1.3.1.1.2.</strong> Basic Structure of Computers</a></li></ol></li></ol></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S4/CSE/SUMMARY.html"><strong aria-hidden="true">2.1.3.2.</strong> CSE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S4/ECE/SUMMARY.html"><strong aria-hidden="true">2.1.3.3.</strong> ECE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S4/EEE/SUMMARY.html"><strong aria-hidden="true">2.1.3.4.</strong> EEE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S4/CE/SUMMARY.html"><strong aria-hidden="true">2.1.3.5.</strong> CE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S4/ME/SUMMARY.html"><strong aria-hidden="true">2.1.3.6.</strong> ME</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S4/IC/SUMMARY.html"><strong aria-hidden="true">2.1.3.7.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S5/SUMMARY.html"><strong aria-hidden="true">2.1.4.</strong> S5</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S5/CSE/SUMMARY.html"><strong aria-hidden="true">2.1.4.1.</strong> CSE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S5/ECE/SUMMARY.html"><strong aria-hidden="true">2.1.4.2.</strong> ECE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S5/EEE/SUMMARY.html"><strong aria-hidden="true">2.1.4.3.</strong> EEE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S5/CE/SUMMARY.html"><strong aria-hidden="true">2.1.4.4.</strong> CE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S5/ME/SUMMARY.html"><strong aria-hidden="true">2.1.4.5.</strong> ME</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S5/IC/SUMMARY.html"><strong aria-hidden="true">2.1.4.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S6/SUMMARY.html"><strong aria-hidden="true">2.1.5.</strong> S6</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S6/CSE/SUMMARY.html"><strong aria-hidden="true">2.1.5.1.</strong> CSE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S6/ECE/SUMMARY.html"><strong aria-hidden="true">2.1.5.2.</strong> ECE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S6/EEE/SUMMARY.html"><strong aria-hidden="true">2.1.5.3.</strong> EEE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S6/CE/SUMMARY.html"><strong aria-hidden="true">2.1.5.4.</strong> CE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S6/ME/SUMMARY.html"><strong aria-hidden="true">2.1.5.5.</strong> ME</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S6/IC/SUMMARY.html"><strong aria-hidden="true">2.1.5.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S7/SUMMARY.html"><strong aria-hidden="true">2.1.6.</strong> S7</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S7/CSE/SUMMARY.html"><strong aria-hidden="true">2.1.6.1.</strong> CSE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S7/ECE/SUMMARY.html"><strong aria-hidden="true">2.1.6.2.</strong> ECE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S7/EEE/SUMMARY.html"><strong aria-hidden="true">2.1.6.3.</strong> EEE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S7/CE/SUMMARY.html"><strong aria-hidden="true">2.1.6.4.</strong> CE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S7/ME/SUMMARY.html"><strong aria-hidden="true">2.1.6.5.</strong> ME</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S7/IC/SUMMARY.html"><strong aria-hidden="true">2.1.6.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S8/SUMMARY.html"><strong aria-hidden="true">2.1.7.</strong> S8</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S8/CSE/SUMMARY.html"><strong aria-hidden="true">2.1.7.1.</strong> CSE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S8/ECE/SUMMARY.html"><strong aria-hidden="true">2.1.7.2.</strong> ECE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S8/EEE/SUMMARY.html"><strong aria-hidden="true">2.1.7.3.</strong> EEE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S8/CE/SUMMARY.html"><strong aria-hidden="true">2.1.7.4.</strong> CE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S8/ME/SUMMARY.html"><strong aria-hidden="true">2.1.7.5.</strong> ME</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2019_Scheme/S8/IC/SUMMARY.html"><strong aria-hidden="true">2.1.7.6.</strong> IC</a></li></ol></li></ol></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/SUMMARY.html"><strong aria-hidden="true">2.2.</strong> 2015_Scheme</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S1-S2/SUMMARY.html"><strong aria-hidden="true">2.2.1.</strong> S1-S2</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S3/SUMMARY.html"><strong aria-hidden="true">2.2.2.</strong> S3</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S3/CSE/SUMMARY.html"><strong aria-hidden="true">2.2.2.1.</strong> CSE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S3/ECE/SUMMARY.html"><strong aria-hidden="true">2.2.2.2.</strong> ECE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S3/EEE/SUMMARY.html"><strong aria-hidden="true">2.2.2.3.</strong> EEE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S3/CE/SUMMARY.html"><strong aria-hidden="true">2.2.2.4.</strong> CE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S3/ME/SUMMARY.html"><strong aria-hidden="true">2.2.2.5.</strong> ME</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S3/IC/SUMMARY.html"><strong aria-hidden="true">2.2.2.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S4/SUMMARY.html"><strong aria-hidden="true">2.2.3.</strong> S4</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S4/CSE/SUMMARY.html"><strong aria-hidden="true">2.2.3.1.</strong> CSE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S4/ECE/SUMMARY.html"><strong aria-hidden="true">2.2.3.2.</strong> ECE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S4/EEE/SUMMARY.html"><strong aria-hidden="true">2.2.3.3.</strong> EEE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S4/CE/SUMMARY.html"><strong aria-hidden="true">2.2.3.4.</strong> CE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S4/ME/SUMMARY.html"><strong aria-hidden="true">2.2.3.5.</strong> ME</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S4/IC/SUMMARY.html"><strong aria-hidden="true">2.2.3.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S5/SUMMARY.html"><strong aria-hidden="true">2.2.4.</strong> S5</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S5/CSE/SUMMARY.html"><strong aria-hidden="true">2.2.4.1.</strong> CSE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S5/ECE/SUMMARY.html"><strong aria-hidden="true">2.2.4.2.</strong> ECE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S5/EEE/SUMMARY.html"><strong aria-hidden="true">2.2.4.3.</strong> EEE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S5/CE/SUMMARY.html"><strong aria-hidden="true">2.2.4.4.</strong> CE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S5/ME/SUMMARY.html"><strong aria-hidden="true">2.2.4.5.</strong> ME</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S5/IC/SUMMARY.html"><strong aria-hidden="true">2.2.4.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S6/SUMMARY.html"><strong aria-hidden="true">2.2.5.</strong> S6</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S6/CSE/SUMMARY.html"><strong aria-hidden="true">2.2.5.1.</strong> CSE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S6/ECE/SUMMARY.html"><strong aria-hidden="true">2.2.5.2.</strong> ECE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S6/EEE/SUMMARY.html"><strong aria-hidden="true">2.2.5.3.</strong> EEE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S6/CE/SUMMARY.html"><strong aria-hidden="true">2.2.5.4.</strong> CE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S6/ME/SUMMARY.html"><strong aria-hidden="true">2.2.5.5.</strong> ME</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S6/IC/SUMMARY.html"><strong aria-hidden="true">2.2.5.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S7/SUMMARY.html"><strong aria-hidden="true">2.2.6.</strong> S7</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S7/CSE/SUMMARY.html"><strong aria-hidden="true">2.2.6.1.</strong> CSE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S7/ECE/SUMMARY.html"><strong aria-hidden="true">2.2.6.2.</strong> ECE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S7/EEE/SUMMARY.html"><strong aria-hidden="true">2.2.6.3.</strong> EEE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S7/CE/SUMMARY.html"><strong aria-hidden="true">2.2.6.4.</strong> CE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S7/ME/SUMMARY.html"><strong aria-hidden="true">2.2.6.5.</strong> ME</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S7/IC/SUMMARY.html"><strong aria-hidden="true">2.2.6.6.</strong> IC</a></li></ol></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S8/SUMMARY.html"><strong aria-hidden="true">2.2.7.</strong> S8</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S8/CSE/SUMMARY.html"><strong aria-hidden="true">2.2.7.1.</strong> CSE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S8/ECE/SUMMARY.html"><strong aria-hidden="true">2.2.7.2.</strong> ECE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S8/EEE/SUMMARY.html"><strong aria-hidden="true">2.2.7.3.</strong> EEE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S8/CE/SUMMARY.html"><strong aria-hidden="true">2.2.7.4.</strong> CE</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S8/ME/SUMMARY.html"><strong aria-hidden="true">2.2.7.5.</strong> ME</a></li><li class="chapter-item "><a href="WikiSyllabus/KTU/2015_Scheme/S8/IC/SUMMARY.html"><strong aria-hidden="true">2.2.7.6.</strong> IC</a></li></ol></li></ol></li></ol></li></ol>
             </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
         </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
 
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky bordered">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </button>
+                        </label>
                         <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
@@ -111,6 +148,7 @@
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
+
                     </div>
                 </div>
 
@@ -124,8 +162,9 @@
                         </ul>
                     </div>
                 </div>
+
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script type="text/javascript">
+                <script>
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
                     document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
                     Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
@@ -219,7 +258,7 @@
 
  int a;
 
- printf('%d&quot;;, a);
+ printf('%d";, a);
 </code></pre>
 <h3 id="6-return-statement"><a class="header" href="#6-return-statement">6. <strong>Return Statement:</strong></a></h3>
 <p>The last part of any C program is the return statement. The return statement refers to the returning of the values from a function. This return statement and return value depend upon the return type of the function. For example, if the return type is void, then there will be no return statement. In any other case, there will be a return statement and the return value will be of the type of the specified return type. <strong>Example:</strong></p>
@@ -229,7 +268,7 @@
 
  int a;
 
- printf(&quot;%d&quot;;, a);
+ printf("%d";, a);
 
  return 0;
 
@@ -264,7 +303,7 @@
       int _c, _d45, e;
 
       // Let us print a variable
-      printf(&quot;%c \n&quot;, a123);
+      printf("%c \n", a123);
 
             return 0;
         }
@@ -303,11 +342,11 @@
         int x = 20;//global variable
         void function1()
         {
-          printf(&quot;%d\n&quot; , x);
+          printf("%d\n" , x);
         }
         void function2()
         {
-          printf(&quot;%d\n&quot; , x);
+          printf("%d\n" , x);
         }
         int main() {
 
@@ -332,7 +371,7 @@
         static int y = 30;//static variable 
         x = x + 10; 
         y = y + 10; 
-        printf(&quot;\n%d,%d&quot;,x,y); 
+        printf("\n%d,%d",x,y); 
         } 
         int main() {
 
@@ -354,11 +393,12 @@
 <p>A scope is a region of the program, and the scope of variables refers to the area of the program where the variables can be accessed after its declaration.</p>
 <p>In C every variable defined in scope. You can define scope as the section or region of a program where a variable has its existence; moreover, that variable cannot be used or accessed beyond that region.</p>
 <p>In C programming, variable declared within a function is different from a variable declared outside of a function. The variable can be declared in three places. These are:</p>
-<table><thead><tr><th align="left">Position</th><th align="left">Type</th></tr></thead><tbody>
-<tr><td align="left">Inside a function or a block.</td><td align="left">local variables</td></tr>
-<tr><td align="left">Out of all functions.</td><td align="left">Global variables</td></tr>
-<tr><td align="left">In the function parameters.</td><td align="left">Formal parameters</td></tr>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Position</th><th style="text-align: left">Type</th></tr></thead><tbody>
+<tr><td style="text-align: left">Inside a function or a block.</td><td style="text-align: left">local variables</td></tr>
+<tr><td style="text-align: left">Out of all functions.</td><td style="text-align: left">Global variables</td></tr>
+<tr><td style="text-align: left">In the function parameters.</td><td style="text-align: left">Formal parameters</td></tr>
 </tbody></table>
+</div>
 <h2 id="keywords-in-c"><a class="header" href="#keywords-in-c">Keywords in C</a></h2>
 <p>Keywords are specific reserved words in C each of which has a specific feature associated with it. Almost all of the words which help us use the functionality of the C language are included in the list of keywords.</p>
 <p>There are a total of 44 keywords in C (C89 – 32, C99 – 5, C11 – 7):</p>
@@ -379,53 +419,57 @@ double interest;
 </code></pre>
 <h3 id="int-datatype"><a class="header" href="#int-datatype">INT DATATYPE</a></h3>
 <p>Integers are used to store whole numbers.</p>
-<table><thead><tr><th align="left">Type</th><th align="left">Size(bytes)</th><th align="left">Range</th></tr></thead><tbody>
-<tr><td align="left">int or signed int</td><td align="left">2</td><td align="left">-32,768 to 32767</td></tr>
-<tr><td align="left">unsigned int</td><td align="left">2</td><td align="left">0 to 65535</td></tr>
-<tr><td align="left">short int or signed short int</td><td align="left">1</td><td align="left">-128 to 127</td></tr>
-<tr><td align="left">unsigned short int</td><td align="left">1</td><td align="left">0 to 255</td></tr>
-<tr><td align="left">long int or signed long int</td><td align="left">4</td><td align="left">-2,147,483,648 to 2,147,483,647</td></tr>
-<tr><td align="left">unsigned long int</td><td align="left">4</td><td align="left">0 to 4,294,967,295</td></tr>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Type</th><th style="text-align: left">Size(bytes)</th><th style="text-align: left">Range</th></tr></thead><tbody>
+<tr><td style="text-align: left">int or signed int</td><td style="text-align: left">2</td><td style="text-align: left">-32,768 to 32767</td></tr>
+<tr><td style="text-align: left">unsigned int</td><td style="text-align: left">2</td><td style="text-align: left">0 to 65535</td></tr>
+<tr><td style="text-align: left">short int or signed short int</td><td style="text-align: left">1</td><td style="text-align: left">-128 to 127</td></tr>
+<tr><td style="text-align: left">unsigned short int</td><td style="text-align: left">1</td><td style="text-align: left">0 to 255</td></tr>
+<tr><td style="text-align: left">long int or signed long int</td><td style="text-align: left">4</td><td style="text-align: left">-2,147,483,648 to 2,147,483,647</td></tr>
+<tr><td style="text-align: left">unsigned long int</td><td style="text-align: left">4</td><td style="text-align: left">0 to 4,294,967,295</td></tr>
 </tbody></table>
+</div>
 <p>Example:</p>
 <pre><code class="language-c">int number = 456;
 long prime = 12230234029;
 </code></pre>
 <h3 id="float-datatype"><a class="header" href="#float-datatype">FLOAT DATATYPE</a></h3>
 <p>Floating types are used to store real numbers.</p>
-<table><thead><tr><th align="left">Type</th><th align="left">Size(bytes)</th><th align="left">Range</th></tr></thead><tbody>
-<tr><td align="left">float</td><td align="left">4</td><td align="left">3.4E-38 to 3.4E+38</td></tr>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Type</th><th style="text-align: left">Size(bytes)</th><th style="text-align: left">Range</th></tr></thead><tbody>
+<tr><td style="text-align: left">float</td><td style="text-align: left">4</td><td style="text-align: left">3.4E-38 to 3.4E+38</td></tr>
 </tbody></table>
+</div>
 <p>Example:</p>
 <pre><code class="language-c"> float average = 97.665;
  float mark = 67;
- printf(&quot;average is %f&quot;, average);
- printf(&quot; mark is %f&quot;, mark);
+ printf("average is %f", average);
+ printf(" mark is %f", mark);
 </code></pre>
 <p>The result of the mark will be 67.00000.</p>
 <h3 id="double-datatype"><a class="header" href="#double-datatype">DOUBLE DATATYPE</a></h3>
 <p>Double is 8 bytes, which means you can have more precision than float. This is useful in scientific programs that require precision. Float is just a single-precision data type; double is the double-precision data type. Long Double is treated the same as double by most compilers; however, it was made for quadruple data precision.</p>
-<table><thead><tr><th align="left">Type</th><th align="left">Size(bytes)</th><th align="left">Range</th></tr></thead><tbody>
-<tr><td align="left">double</td><td align="left">8</td><td align="left">1.7E-308 to 1.7E+308</td></tr>
-<tr><td align="left">long double</td><td align="left">10</td><td align="left">3.4E-4932 to 1.1E+4932</td></tr>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Type</th><th style="text-align: left">Size(bytes)</th><th style="text-align: left">Range</th></tr></thead><tbody>
+<tr><td style="text-align: left">double</td><td style="text-align: left">8</td><td style="text-align: left">1.7E-308 to 1.7E+308</td></tr>
+<tr><td style="text-align: left">long double</td><td style="text-align: left">10</td><td style="text-align: left">3.4E-4932 to 1.1E+4932</td></tr>
 </tbody></table>
+</div>
 <p>Example:</p>
 <pre><code class="language-c">double average = 679999999.454;
 float score = 679999999.454;
-printf(&quot;average is %lf&quot;, average);
-printf(&quot;, score is %f&quot;, score);
+printf("average is %lf", average);
+printf(", score is %f", score);
 </code></pre>
 <p>The outputs are – the average is 679999999.454000, the score is 680000000.000000 Note the difference in outputs – while double prints the exact value, float value is rounded off to the nearest number.</p>
 <h3 id="char-datatype"><a class="header" href="#char-datatype">CHAR DATATYPE</a></h3>
 <p>Character types are used to store characters value.</p>
-<table><thead><tr><th align="left">Type</th><th align="left">Size(bytes)</th><th align="left">Range</th></tr></thead><tbody>
-<tr><td align="left">char or signed char</td><td align="left">1</td><td align="left">-128 to 127</td></tr>
-<tr><td align="left">unsigned char</td><td align="left">1</td><td align="left">0 to 255</td></tr>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Type</th><th style="text-align: left">Size(bytes)</th><th style="text-align: left">Range</th></tr></thead><tbody>
+<tr><td style="text-align: left">char or signed char</td><td style="text-align: left">1</td><td style="text-align: left">-128 to 127</td></tr>
+<tr><td style="text-align: left">unsigned char</td><td style="text-align: left">1</td><td style="text-align: left">0 to 255</td></tr>
 </tbody></table>
+</div>
 <p>Example:</p>
 <pre><code class="language-c">char group = 'B';
-char name[30] = &quot;Student1&quot;;
-printf(&quot;group is %c, name is %s&quot;, group, name);
+char name[30] = "Student1";
+printf("group is %c, name is %s", group, name);
 </code></pre>
 <h2 id="derived-datatypes"><a class="header" href="#derived-datatypes">DERIVED DATATYPES</a></h2>
 <p>Array, pointers, struct, and union are the derived data types in C.</p>
@@ -452,14 +496,14 @@ int main(void) {
  /* address of b is assigned to ptr2*/
  ptr2 = &amp;b;
  /* display value of a and b using pointer variables */
- printf(&quot;%d&quot;, *ptr1); //prints 5
- printf(&quot;\n%d&quot;, *ptr2); //prints 10 
+ printf("%d", *ptr1); //prints 5
+ printf("\n%d", *ptr2); //prints 10 
  //print address of a and b
- printf(&quot;\n%d&quot;, ptr1); // prints address like -599163656
- printf(&quot;\n%d&quot;, ptr2); // prints address like -599163652
+ printf("\n%d", ptr1); // prints address like -599163656
+ printf("\n%d", ptr2); // prints address like -599163652
  // pointer subtraction
  int minus = ptr2 - ptr1;
- printf(&quot;\n%d&quot;, minus); // prints the difference (in this case 1)
+ printf("\n%d", minus); // prints the difference (in this case 1)
 return 0;
 }
 </code></pre>
@@ -521,7 +565,7 @@ If we print each of the enum values, the output will be –
           const int SIDE = 10;
            int area;
            area = SIDE*SIDE;
-           printf(&quot;The area of the square with side: %d is: %d sq. units&quot;, SIDE, area);
+           printf("The area of the square with side: %d is: %d sq. units", SIDE, area);
        }
 </code></pre>
 <h4 id="program-output"><a class="header" href="#program-output">Program Output:</a></h4>
@@ -567,12 +611,12 @@ If we print each of the enum values, the output will be –
 <pre><code class="language-text">'X', '5', ';'
 </code></pre>
 <h2 id="string-constant"><a class="header" href="#string-constant">String Constant</a></h2>
-<p>These are a sequence of characters enclosed in double quotes, and they may include letters, digits, special characters, and blank spaces. It is again to be noted that &quot;G&quot; and 'G' are different - because &quot;G&quot; represents a string as it is enclosed within a pair of double quotes whereas 'G' represents a single character.</p>
+<p>These are a sequence of characters enclosed in double quotes, and they may include letters, digits, special characters, and blank spaces. It is again to be noted that "G" and 'G' are different - because "G" represents a string as it is enclosed within a pair of double quotes whereas 'G' represents a single character.</p>
 <h3 id="example-2"><a class="header" href="#example-2">Example:</a></h3>
-<pre><code class="language-text">&quot;Hello!&quot;, &quot;2015&quot;, &quot;2+1&quot;
+<pre><code class="language-text">"Hello!", "2015", "2+1"
 </code></pre>
 <h2 id="backslash-character-constant"><a class="header" href="#backslash-character-constant">Backslash Character Constant</a></h2>
-<p>C supports some character constants having a backslash in front of it. The lists of backslash characters have a specific meaning which is known to the compiler. They are also termed as &quot;Escape Sequence&quot;.</p>
+<p>C supports some character constants having a backslash in front of it. The lists of backslash characters have a specific meaning which is known to the compiler. They are also termed as "Escape Sequence".</p>
 <pre><code class="language-text">  Constants                             Meaning
 
     \a                                  beep sound
@@ -583,7 +627,7 @@ If we print each of the enum values, the output will be –
     \t                                    horizontal tab
     \v                                    vertical tab
     \'                                    single quote
-    \&quot;                                    double quote
+    \"                                    double quote
     \\                                    backslash
     \0                                    null
 </code></pre>
@@ -646,7 +690,7 @@ If we print each of the enum values, the output will be –
 <ul>
 <li>The structure is something similar to an array; the only difference is array is used to store the same data types.</li>
 <li>struct keyword is used to declare the structure in C.</li>
-<li>Variables inside the structure are called members of the structure. </li>
+<li>Variables inside the structure are called members of the structure.</li>
 </ul>
 <h3 id="defining-a-structure-in-c"><a class="header" href="#defining-a-structure-in-c">Defining a structure in C</a></h3>
 <h4 id="syntax-2"><a class="header" href="#syntax-2">Syntax:</a></h4>
@@ -680,14 +724,14 @@ If we print each of the enum values, the output will be –
         struct Courses C;
 
         //Initialization
-        strcpy( C.WebSite, &quot;w3schools.in&quot;);
-        strcpy( C.Subject, &quot;The C Programming Language&quot;); 
+        strcpy( C.WebSite, "w3schools.in");
+        strcpy( C.Subject, "The C Programming Language"); 
         C.Price = 0;
 
         //Print
-        printf( &quot;WebSite : %s\n&quot;, C.WebSite);
-        printf( &quot;Book Author : %s\n&quot;, C.Subject);
-        printf( &quot;Book Price : %d\n&quot;, C.Price);
+        printf( "WebSite : %s\n", C.WebSite);
+        printf( "Book Author : %s\n", C.Subject);
+        printf( "Book Price : %d\n", C.Price);
       }
 </code></pre>
 <h4 id="output"><a class="header" href="#output">Output:</a></h4>
@@ -741,14 +785,14 @@ If we print each of the enum values, the output will be –
      {
        union Courses C;
 
-       strcpy( C.WebSite, &quot;w3schools.in&quot;);   
-       printf( &quot;WebSite : %s\n&quot;, C.WebSite);
+       strcpy( C.WebSite, "w3schools.in");   
+       printf( "WebSite : %s\n", C.WebSite);
 
-       strcpy( C.Subject, &quot;The C Programming Language&quot;);    
-       printf( &quot;Book Author : %s\n&quot;, C.Subject);
+       strcpy( C.Subject, "The C Programming Language");    
+       printf( "Book Author : %s\n", C.Subject);
 
        C.Price = 0;
-       printf( &quot;Book Price : %d\n&quot;, C.Price);
+       printf( "Book Price : %d\n", C.Price);
      } 
 </code></pre>
 <h4 id="output-1"><a class="header" href="#output-1">Output:</a></h4>
@@ -777,65 +821,70 @@ If we print each of the enum values, the output will be –
 <p>C operators can be classified into following types: 1. Arithmetic operators 2. Relational operators 3. Logical operators 4. Bitwise operators 5. Assignment operators 6. Conditional operators 7. Special operators</p>
 <h2 id="arithmetic-operators"><a class="header" href="#arithmetic-operators">ARITHMETIC OPERATORS</a></h2>
 <p>C supports all the basic arithmetic operators. The following table shows all the basic arithmetic operators</p>
-<table><thead><tr><th align="left">Operator</th><th align="left">Description</th></tr></thead><tbody>
-<tr><td align="left">+</td><td align="left">adds two operands</td></tr>
-<tr><td align="left">-</td><td align="left">subtract second operands from first</td></tr>
-<tr><td align="left">*</td><td align="left">multiply two operand</td></tr>
-<tr><td align="left">/</td><td align="left">divide numerator by denominator</td></tr>
-<tr><td align="left">%</td><td align="left">remainder of division</td></tr>
-<tr><td align="left">++</td><td align="left">Increment operator - increases integer value by one</td></tr>
-<tr><td align="left">--</td><td align="left">Decrement operator - decreases integer value by one</td></tr>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Operator</th><th style="text-align: left">Description</th></tr></thead><tbody>
+<tr><td style="text-align: left">+</td><td style="text-align: left">adds two operands</td></tr>
+<tr><td style="text-align: left">-</td><td style="text-align: left">subtract second operands from first</td></tr>
+<tr><td style="text-align: left">*</td><td style="text-align: left">multiply two operand</td></tr>
+<tr><td style="text-align: left">/</td><td style="text-align: left">divide numerator by denominator</td></tr>
+<tr><td style="text-align: left">%</td><td style="text-align: left">remainder of division</td></tr>
+<tr><td style="text-align: left">++</td><td style="text-align: left">Increment operator - increases integer value by one</td></tr>
+<tr><td style="text-align: left">--</td><td style="text-align: left">Decrement operator - decreases integer value by one</td></tr>
 </tbody></table>
+</div>
 <h2 id="relational-operators"><a class="header" href="#relational-operators">RELATIONAL OPERATORS</a></h2>
 <p>The following table shows all relation operators supported by C.</p>
-<table><thead><tr><th align="left">Operator</th><th align="left">Description</th></tr></thead><tbody>
-<tr><td align="left">==</td><td align="left">Check if two operand are equal</td></tr>
-<tr><td align="left">!=</td><td align="left">Check if two operand are not equal.</td></tr>
-<tr><td align="left">&gt;</td><td align="left">Check if operand on the left is greater than operand on the right</td></tr>
-<tr><td align="left">&lt;</td><td align="left">Check operand on the left is smaller than right operand</td></tr>
-<tr><td align="left">&gt;=</td><td align="left">check left operand is greater than or equal to right operand</td></tr>
-<tr><td align="left">&lt;=</td><td align="left">Check if operand on left is smaller than or equal to right operand</td></tr>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Operator</th><th style="text-align: left">Description</th></tr></thead><tbody>
+<tr><td style="text-align: left">==</td><td style="text-align: left">Check if two operand are equal</td></tr>
+<tr><td style="text-align: left">!=</td><td style="text-align: left">Check if two operand are not equal.</td></tr>
+<tr><td style="text-align: left">&gt;</td><td style="text-align: left">Check if operand on the left is greater than operand on the right</td></tr>
+<tr><td style="text-align: left">&lt;</td><td style="text-align: left">Check operand on the left is smaller than right operand</td></tr>
+<tr><td style="text-align: left">&gt;=</td><td style="text-align: left">check left operand is greater than or equal to right operand</td></tr>
+<tr><td style="text-align: left">&lt;=</td><td style="text-align: left">Check if operand on left is smaller than or equal to right operand</td></tr>
 </tbody></table>
+</div>
 <h2 id="logical-operators"><a class="header" href="#logical-operators">LOGICAL OPERATORS</a></h2>
 <p>C language supports following 3 logical operators. Suppose a = 1 and b = 0,</p>
-<table><thead><tr><th align="left">Operator</th><th align="left">Description</th></tr></thead><tbody>
-<tr><td align="left">&amp;&amp;</td><td align="left">Logical AND</td></tr>
-<tr><td align="left"></td><td align="left">Logical OR</td></tr>
-<tr><td align="left">!</td><td align="left">Logical NOT</td></tr>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Operator</th><th style="text-align: left">Description</th></tr></thead><tbody>
+<tr><td style="text-align: left">&amp;&amp;</td><td style="text-align: left">Logical AND</td></tr>
+<tr><td style="text-align: left"></td><td style="text-align: left">Logical OR</td></tr>
+<tr><td style="text-align: left">!</td><td style="text-align: left">Logical NOT</td></tr>
 </tbody></table>
+</div>
 <h2 id="bitwise-operators"><a class="header" href="#bitwise-operators">BITWISE OPERATORS</a></h2>
 <p>Bitwise operators perform manipulations of data at bit level. These operators also perform shifting of bits from right to left. Bitwise operators are not applied to float or double.</p>
-<table><thead><tr><th align="left">Operator</th><th align="left">Description</th></tr></thead><tbody>
-<tr><td align="left">&amp;</td><td align="left">Bitwise AND</td></tr>
-<tr><td align="left"></td><td align="left">Bitwise OR</td></tr>
-<tr><td align="left">^</td><td align="left">Bitwise exclusive OR</td></tr>
-<tr><td align="left">&lt;&lt;</td><td align="left">left shift</td></tr>
-<tr><td align="left">&gt;&gt;</td><td align="left">right shift</td></tr>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Operator</th><th style="text-align: left">Description</th></tr></thead><tbody>
+<tr><td style="text-align: left">&amp;</td><td style="text-align: left">Bitwise AND</td></tr>
+<tr><td style="text-align: left"></td><td style="text-align: left">Bitwise OR</td></tr>
+<tr><td style="text-align: left">^</td><td style="text-align: left">Bitwise exclusive OR</td></tr>
+<tr><td style="text-align: left">&lt;&lt;</td><td style="text-align: left">left shift</td></tr>
+<tr><td style="text-align: left">&gt;&gt;</td><td style="text-align: left">right shift</td></tr>
 </tbody></table>
+</div>
 <h2 id="assignment-operators"><a class="header" href="#assignment-operators">ASSIGNMENT OPERATORS</a></h2>
 <p>Assignment operators supported by C language are as follows.</p>
-<table><thead><tr><th align="left">Operator</th><th align="left">Description</th><th align="left">Example</th></tr></thead><tbody>
-<tr><td align="left">=</td><td align="left">assigns values from right side operands to left side operand</td><td align="left">a=b</td></tr>
-<tr><td align="left">+=</td><td align="left">adds right operand to the left operand and assign the result to left</td><td align="left">a+=b is same as a=a+b</td></tr>
-<tr><td align="left">-=</td><td align="left">subtracts right operand from the left operand and assign the result to left operand</td><td align="left">a-=b is same as a=a-b</td></tr>
-<tr><td align="left">*=</td><td align="left">mutiply left operand with the right operand and assign the result to left operand</td><td align="left">a_=b is same as a=a_b</td></tr>
-<tr><td align="left">/=</td><td align="left">divides left operand with the right operand and assign the result to left operand</td><td align="left">a/=b is same as a=a/b</td></tr>
-<tr><td align="left">%=</td><td align="left">calculate modulus using two operands and assign the result to left operand</td><td align="left">a%=b is same as a=a%b</td></tr>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Operator</th><th style="text-align: left">Description</th><th style="text-align: left">Example</th></tr></thead><tbody>
+<tr><td style="text-align: left">=</td><td style="text-align: left">assigns values from right side operands to left side operand</td><td style="text-align: left">a=b</td></tr>
+<tr><td style="text-align: left">+=</td><td style="text-align: left">adds right operand to the left operand and assign the result to left</td><td style="text-align: left">a+=b is same as a=a+b</td></tr>
+<tr><td style="text-align: left">-=</td><td style="text-align: left">subtracts right operand from the left operand and assign the result to left operand</td><td style="text-align: left">a-=b is same as a=a-b</td></tr>
+<tr><td style="text-align: left">*=</td><td style="text-align: left">mutiply left operand with the right operand and assign the result to left operand</td><td style="text-align: left">a_=b is same as a=a_b</td></tr>
+<tr><td style="text-align: left">/=</td><td style="text-align: left">divides left operand with the right operand and assign the result to left operand</td><td style="text-align: left">a/=b is same as a=a/b</td></tr>
+<tr><td style="text-align: left">%=</td><td style="text-align: left">calculate modulus using two operands and assign the result to left operand</td><td style="text-align: left">a%=b is same as a=a%b</td></tr>
 </tbody></table>
+</div>
 <h2 id="conditional-operators"><a class="header" href="#conditional-operators">CONDITIONAL OPERATORS</a></h2>
 <p>Conditional operators in C language are known by two more names 1. Ternary Operator 2. ? : Operator</p>
 <p>It is actually the if condition that we use in C language decision making, but using conditional operator, we turn the if condition statement into a short and simple operator.</p>
 <p>The syntax of a conditional operator is :</p>
 <pre><code class="language-c">expression 1 ? expression 2: expression 3
 </code></pre>
-<p>Explanation: 1. The question mark &quot;?&quot; in the syntax represents the if part. 2. The first expression (expression 1) generally returns either true or false, based on which it is decided whether (expression 2) will be executed or (expression 3) 3. If (expression 1) returns true then the expression on the left side of &quot; : &quot; i.e (expression 2) is executed. 4. If (expression 1) returns false then the expression on the right side of &quot; : &quot; i.e (expression 3) is executed.</p>
+<p>Explanation: 1. The question mark "?" in the syntax represents the if part. 2. The first expression (expression 1) generally returns either true or false, based on which it is decided whether (expression 2) will be executed or (expression 3) 3. If (expression 1) returns true then the expression on the left side of " : " i.e (expression 2) is executed. 4. If (expression 1) returns false then the expression on the right side of " : " i.e (expression 3) is executed.</p>
 <h2 id="special-operators"><a class="header" href="#special-operators">SPECIAL OPERATORS</a></h2>
-<table><thead><tr><th align="left">Operator</th><th align="left">Description</th><th align="left">Example</th></tr></thead><tbody>
-<tr><td align="left">sizeof</td><td align="left">Returns the size of an variable</td><td align="left">sizeof(x) return size of the variable x</td></tr>
-<tr><td align="left">&amp;</td><td align="left">Returns the address of an variable</td><td align="left">&amp;x ; return address of the variable x</td></tr>
-<tr><td align="left">*</td><td align="left">Pointer to a variable</td><td align="left">*x ; will be pointer to a variable x</td></tr>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Operator</th><th style="text-align: left">Description</th><th style="text-align: left">Example</th></tr></thead><tbody>
+<tr><td style="text-align: left">sizeof</td><td style="text-align: left">Returns the size of an variable</td><td style="text-align: left">sizeof(x) return size of the variable x</td></tr>
+<tr><td style="text-align: left">&amp;</td><td style="text-align: left">Returns the address of an variable</td><td style="text-align: left">&amp;x ; return address of the variable x</td></tr>
+<tr><td style="text-align: left">*</td><td style="text-align: left">Pointer to a variable</td><td style="text-align: left">*x ; will be pointer to a variable x</td></tr>
 </tbody></table>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="control-statements"><a class="header" href="#control-statements">Control Statements</a></h1>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="control-statements"><a class="header" href="#control-statements">Control Statements</a></h1>
 <p>If statements in C are used to control the program flow based on some condition, it is used to execute some statement code block if the expression is evaluated to true. Otherwise, it will get skipped. This is the simplest way to modify the control flow of the program</p>
 <p>The if statement in C can be used in various forms depending on the situation and complexity.</p>
 <p>There are four different types of if statement in C. These are:</p>
@@ -937,7 +986,7 @@ else
 <div style="break-before: page; page-break-before: always;"></div><h1 id="switch-statement"><a class="header" href="#switch-statement">switch Statement</a></h1>
 <h5 id="a-switch-statement-allows-a-variable-to-be-tested-for-equality-against-a-list-of-values-each-value-is-called-a-case-and-the-variable-being-switched-on-is-checked-for-each-switch-case"><a class="header" href="#a-switch-statement-allows-a-variable-to-be-tested-for-equality-against-a-list-of-values-each-value-is-called-a-case-and-the-variable-being-switched-on-is-checked-for-each-switch-case">A switch Statement allows a variable to be tested for equality against a list of values. Each value is called a case, and the variable being switched on is checked for each switch case.</a></h5>
 <h3 id="syntax-4"><a class="header" href="#syntax-4">Syntax</a></h3>
-<p>The syntax for a switch statement in C programming language is as follows − </p>
+<p>The syntax for a switch statement in C programming language is as follows −</p>
 <pre><code class="language-c">
 switch(expression)
 	 {
@@ -987,23 +1036,23 @@ switch(expression)
 
 	   switch(grade) {
 	      case 'A' :
-		 printf(&quot;Excellent!\n&quot; );
+		 printf("Excellent!\n" );
 		 break;
 	      case 'B' :
 	      case 'C' :
-		 printf(&quot;Well done\n&quot; );
+		 printf("Well done\n" );
 		 break;
 	      case 'D' :
-		 printf(&quot;You passed\n&quot; );
+		 printf("You passed\n" );
 		 break;
 	      case 'F' :
-		 printf(&quot;Better try again\n&quot; );
+		 printf("Better try again\n" );
 		 break;
 	      default :
-		 printf(&quot;Invalid grade\n&quot; );
+		 printf("Invalid grade\n" );
 	   }
 
-	   printf(&quot;Your grade is  %c\n&quot;, grade );
+	   printf("Your grade is  %c\n", grade );
 
 	   return 0;
 	}
@@ -1029,7 +1078,7 @@ Your grade is B
 <p>Consider the situation where we want to search an element in an array. To do this, use a loop to traverse the array starting from the first index and compare the array elements with the given key.</p>
 <p>Below is the implementation of this idea:</p>
 <p><img src="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/breaksimpleloops.png" alt="" /></p>
-<p><strong>Output:</strong> 
+<p><strong>Output:</strong>
 <img src="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/Breaksimpleloopsoutput.png" alt="" /></p>
 <p>The above code runs fine with no errors. But the above code is not efficient. The above code completes all the iterations even after the element is found. Suppose there are <strong>1000</strong> elements in the array and the key to be searched is present at 1st position so the above approach will execute <strong>999</strong> iterations which are of no purpose and are useless. To avoid these useless iterations, we can use the break statement in our program. Once the break statement is encountered the control from the loop will return immediately after the condition gets satisfied. So will use the break statement with the if condition which compares the key with array elements as shown below:</p>
 <p><img src="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/breaksimpleloops2.png" alt="" />
@@ -1037,7 +1086,7 @@ Your grade is B
 <p><img src="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/breaksimpleloops2output.png" alt="" /></p>
 <h2 id="2-nested-loops-"><a class="header" href="#2-nested-loops-">2. <strong>Nested Loops</strong> :</a></h2>
 <p>We can also use break statement while working with nested loops. If the break statement is used in the innermost loop. The control will come out only from the innermost loop. Below is the example of using break with nested loops:</p>
-<p><img src="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/Breaknestedloops.png" alt="" /> 
+<p><img src="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/Breaknestedloops.png" alt="" />
 <strong>Output:</strong></p>
 <p><img src="WikiSyllabus/KTU/2019_Scheme/S1-S2/EST102/Breaknestedloopsoutput.png" alt="" /></p>
 <p>In the above code we can clearly see that the inner loop is programmed to execute for 10 iterations. But as soon as the value of <strong>j</strong> becomes greater than 3 the inner loop stops executing which restricts the number of iteration of the inner loop to 3 iterations only. However the iteration of outer loop remains unaffected. <strong>Therefore, break applies to only the loop within which it is present.</strong></p>
@@ -1081,12 +1130,13 @@ Your grade is B
 <p>The for loop</p>
 </li>
 </ol>
-<table><thead><tr><th><strong>Sr. No.</strong></th><th><strong>Loop Type</strong></th><th><strong>Description</strong></th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th><strong>Sr. No.</strong></th><th><strong>Loop Type</strong></th><th><strong>Description</strong></th></tr></thead><tbody>
 <tr><td>1.</td><td>While Loop</td><td>In while loop, a condition is evaluated before processing a body of the loop. If a condition is true then and only then the body of a loop is executed.</td></tr>
 <tr><td>---</td><td>---</td><td>---</td></tr>
 <tr><td>2.</td><td>Do-While Loop</td><td>In a do...while loop, the condition is always executed after the body of a loop. It is also called an exit-controlled loop.</td></tr>
 <tr><td>3.</td><td>For Loop</td><td>In a for loop, the initial value is performed only once, then the condition tests and compares the counter to a fixed value after each iteration, stopping the for loop when false is returned.</td></tr>
 </tbody></table>
+</div>
 <h2 id="while-loop-in-c"><a class="header" href="#while-loop-in-c">While Loop in C</a></h2>
 <p>A while loop is the most straightforward looping structure. While loop syntax in C programming language is as follows:</p>
 <p>Syntax of While Loop in C:</p>
@@ -1106,7 +1156,7 @@ Your grade is B
 		int num=1;	//initializing the variable
 		while(num&lt;=10)	//while loop with condition
 		{
-			printf(&quot;%d\n&quot;,num);
+			printf("%d\n",num);
 			num++;		//incrementing operation
 		}
 		return 0;
@@ -1146,7 +1196,7 @@ Your grade is B
 		int num=1;	//initializing the variable
 		do	//do-while loop 
 		{
-			printf(&quot;%d\n&quot;,2*num);
+			printf("%d\n",2*num);
 			num++;		//incrementing operation
 		}while(num&lt;=10);
 		return 0;
@@ -1187,7 +1237,7 @@ Your grade is B
 		int number;
 		for(number=1;number&lt;=10;number++)	//for loop to print 1-10 numbers
 		{
-			printf(&quot;%d\n&quot;,number);		//to print the number
+			printf("%d\n",number);		//to print the number
 		}
 		return 0;
 	}
@@ -1257,7 +1307,7 @@ Your grade is B
 
 /* calling a function to get addition value */    answer = addition();
 
-printf(&quot;The addition of the two numbers is: %d\n&quot;,answer);
+printf("The addition of the two numbers is: %d\n",answer);
 return 0;
   }
 
@@ -1297,7 +1347,7 @@ Call by Reference     Instead of copying variable; an address is passed to funct
 
       /* calling a function to get addition value */    answer = addition(num1,num2);
 
-      printf(&quot;The addition of two numbers is: %d\n&quot;,answer);
+      printf("The addition of two numbers is: %d\n",answer);
       return 0;
   }
 
@@ -1322,7 +1372,7 @@ Call by Reference     Instead of copying variable; an address is passed to funct
 
       /* calling a function to get addition value */    answer = addition(&amp;num1,&amp;num2);
 
-      printf(&quot;The addition of two numbers is: %d\n&quot;,answer);
+      printf("The addition of two numbers is: %d\n",answer);
       return 0;
   }
 
@@ -1347,12 +1397,12 @@ Call by Reference     Instead of copying variable; an address is passed to funct
     int i = -10, e = 2, d = 10; /* Variables Defining and Assign values */  float rad = 1.43;
     double d1 = 3.0, d2 = 4.0;
 
-    printf(&quot;%d\n&quot;, abs(i));
-    printf(&quot;%f\n&quot;, sin(rad));
-    printf(&quot;%f\n&quot;, cos(rad));
-    printf(&quot;%f\n&quot;, exp(e));
-    printf(&quot;%d\n&quot;, log(d));
-    printf(&quot;%f\n&quot;, pow(d1, d2));    
+    printf("%d\n", abs(i));
+    printf("%f\n", sin(rad));
+    printf("%f\n", cos(rad));
+    printf("%f\n", exp(e));
+    printf("%d\n", log(d));
+    printf("%f\n", pow(d1, d2));    
   }
 </code></pre>
 <p>Program output:</p>
@@ -1390,7 +1440,7 @@ Call by Reference     Instead of copying variable; an address is passed to funct
 
 int fact(int f) {
   if (f &amp; lt; = 1) {
-    printf(&quot;Calculated Factorial&quot;);
+    printf("Calculated Factorial");
     return 1;
   }
   return f * fact(f - 1);
@@ -1399,7 +1449,7 @@ int fact(int f) {
 int main(void) {
   int f = 12;
   clrscr();
-  printf(&quot;The factorial of %d is %d \n&quot;, f, fact(f));
+  printf("The factorial of %d is %d \n", f, fact(f));
   getch();
   return 0;
 }
@@ -1424,7 +1474,7 @@ int main(void) {
     int g;
     clrscr();
     for (g = 0; g &amp; lt; 10; g++) {
-      printf(&quot;\nNumbers are: %d \t &quot;, fibonacci(g));
+      printf("\nNumbers are: %d \t ", fibonacci(g));
     }
     getch();
     return 0;
@@ -1487,7 +1537,7 @@ int main(void) {
         // within the program
         void funcExtern() 
         {
-           printf(&quot;Value is: %d\n&quot;, val);
+           printf("Value is: %d\n", val);
         }
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="arrays-1"><a class="header" href="#arrays-1">Arrays</a></h1>
@@ -1500,9 +1550,10 @@ int main(void) {
 int age[5] = {13, 26, 57, 76, 45};
 </code></pre>
 <p>Here the array named 'age' declared with the datatype of integer(int). The array age is given a size of 5 and indexed as,</p>
-<table><thead><tr><th align="left">index number (of the array)</th><th align="left">0</th><th align="left">1</th><th align="left">2</th><th align="left">3</th><th align="left">4</th></tr></thead><tbody>
-<tr><td align="left">array elements of age (name of the array)</td><td align="left">13</td><td align="left">26</td><td align="left">57</td><td align="left">76</td><td align="left">45</td></tr>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">index number (of the array)</th><th style="text-align: left">0</th><th style="text-align: left">1</th><th style="text-align: left">2</th><th style="text-align: left">3</th><th style="text-align: left">4</th></tr></thead><tbody>
+<tr><td style="text-align: left">array elements of age (name of the array)</td><td style="text-align: left">13</td><td style="text-align: left">26</td><td style="text-align: left">57</td><td style="text-align: left">76</td><td style="text-align: left">45</td></tr>
 </tbody></table>
+</div>
 <h2 id="declaration-of-arrays"><a class="header" href="#declaration-of-arrays"><strong>Declaration of Arrays</strong></a></h2>
 <p>An array declaration is similar to the form of a normal declaration [ dataType variableName], but here we add on a size:</p>
 <pre><code class="language-text">  dataType variableName[size]; 
@@ -1536,7 +1587,7 @@ So, we could think of the last declaration as a table with 5 rows and 10 columns
 <p>Array declarations must contain the information about the size of the array. It is possible to leave the size out of the [....] in the declaration as long as you
 initialize the array inline, in which case the array is made just large enough to capture the initialized data.
 Examples:</p>
-<pre><code class="language-text">  char name[] = &quot;Charlie&quot;;        // size is 7
+<pre><code class="language-text">  char name[] = "Charlie";        // size is 7
   int list[] = {1, 1, 2, 3, 5};  // size is 5
 </code></pre>
 <p>Another shortcut with initializer sets is to use fewer elements than the size specifies. Remaining elements will default to 0.
@@ -1593,9 +1644,9 @@ int main(){
 int number=50;        
 int *p;//pointer to int      
 p=&amp;number;//stores the address of number variable        
-printf(&quot;Address of p variable is %u \n&quot;,p);        
+printf("Address of p variable is %u \n",p);        
 p=p+1;        
-printf(&quot;After increment: Address of p variable is %u \n&quot;,p); // in our case, p will get incremented by 4 bytes.      
+printf("After increment: Address of p variable is %u \n",p); // in our case, p will get incremented by 4 bytes.      
 return 0;  
 }  
 </code></pre>
@@ -1610,10 +1661,10 @@ void main ()
     int arr[5] = {1, 2, 3, 4, 5};  
     int *p = arr;  
     int i;  
-    printf(&quot;printing array elements...\n&quot;);  
+    printf("printing array elements...\n");  
     for(i = 0; i&lt; 5; i++)  
     {  
-        printf(&quot;%d  &quot;,*(p+i));  
+        printf("%d  ",*(p+i));  
     }  
 }  
 </code></pre>
@@ -1635,9 +1686,9 @@ void main(){
 int number=50;        
 int *p;//pointer to int      
 p=&amp;number;//stores the address of number variable        
-printf(&quot;Address of p variable is %u \n&quot;,p);        
+printf("Address of p variable is %u \n",p);        
 p=p-1;       
-printf(&quot;After decrement: Address of p variable is %u \n&quot;,p); // P will now point to the immidiate previous location.         
+printf("After decrement: Address of p variable is %u \n",p); // P will now point to the immidiate previous location.         
 }    
 </code></pre>
 <p>Output</p>
@@ -1658,9 +1709,9 @@ int main(){
 int number=50;        
 int *p;//pointer to int      
 p=&amp;number;//stores the address of number variable        
-printf(&quot;Address of p variable is %u \n&quot;,p);        
+printf("Address of p variable is %u \n",p);        
 p=p+3;   //adding 3 to pointer variable    
-printf(&quot;After adding 3: Address of p variable is %u \n&quot;,p);       
+printf("After adding 3: Address of p variable is %u \n",p);       
 return 0;  
 }   
 </code></pre>
@@ -1683,9 +1734,9 @@ int main(){
 int number=50;        
 int *p;//pointer to int      
 p=&amp;number;//stores the address of number variable        
-printf(&quot;Address of p variable is %u \n&quot;,p);        
+printf("Address of p variable is %u \n",p);        
 p=p-3; //subtracting 3 from pointer variable    
-printf(&quot;After subtracting 3: Address of p variable is %u \n&quot;,p);        
+printf("After subtracting 3: Address of p variable is %u \n",p);        
 return 0;  
 }    
 </code></pre>
@@ -1707,7 +1758,7 @@ void main ()
     int *temp;  
     temp = p;   
     p = p + 3;  
-    printf(&quot;Pointer Subtraction: %d - %d = %d&quot;,p, temp, p-temp);  
+    printf("Pointer Subtraction: %d - %d = %d",p, temp, p-temp);  
 }  
 </code></pre>
 <p>Output</p>
@@ -1723,13 +1774,13 @@ int main ()
     int (*ptr)();  
     ptr = &amp;addition;  
     result = (*ptr)();  
-    printf(&quot;The sum is %d&quot;,result);  
+    printf("The sum is %d",result);  
 }  
 int addition()  
 {  
     int a, b;   
-    printf(&quot;Enter two numbers?&quot;);  
-    scanf(&quot;%d %d&quot;,&amp;a,&amp;b);  
+    printf("Enter two numbers?");  
+    scanf("%d %d",&amp;a,&amp;b);  
     return a+b;  
 }  
 </code></pre>
@@ -1752,7 +1803,7 @@ int main ()
     arr[1] = showadd;  
     ptr = &amp;arr;  
     result1 = (**ptr)();  
-    printf(&quot;printing the value returned by show : %d&quot;,result1);  
+    printf("printing the value returned by show : %d",result1);  
     (*(*ptr+1))(result1);  
 }  
 int show()  
@@ -1762,7 +1813,7 @@ int show()
 }  
 int showadd(int b)  
 {  
-    printf(&quot;\nAdding 90 to the value returned by show: %d&quot;,b+90);  
+    printf("\nAdding 90 to the value returned by show: %d",b+90);  
 }  
 </code></pre>
 <p>Output</p>
@@ -1783,10 +1834,10 @@ void main (){
     int **pp;   
     p = &amp;a; // pointer p is pointing to the address of a  
     pp = &amp;p; // pointer pp is a double pointer pointing to the address of pointer p  
-    printf(&quot;address of a: %x\n&quot;,p); // Address of a will be printed   
-    printf(&quot;address of p: %x\n&quot;,pp); // Address of p will be printed  
-    printf(&quot;value stored at p: %d\n&quot;,*p); // value stoted at the address contained by p i.e. 10 will be printed  
-    printf(&quot;value stored at pp: %d\n&quot;,**pp); // value stored at the address contained by the pointer stoyred at pp  
+    printf("address of a: %x\n",p); // Address of a will be printed   
+    printf("address of p: %x\n",pp); // Address of p will be printed  
+    printf("value stored at p: %d\n",*p); // value stoted at the address contained by p i.e. 10 will be printed  
+    printf("value stored at pp: %d\n",**pp); // value stored at the address contained by the pointer stoyred at pp  
   }  
 </code></pre>
 <p>Output</p>
@@ -1806,11 +1857,11 @@ int main(){
     int **p2;//pointer to pointer        
     p=&amp;number;//stores the address of number variable      
     p2=&amp;p;    
-    printf(&quot;Address of number variable is %x \n&quot;,&amp;number);      
-    printf(&quot;Address of p variable is %x \n&quot;,p);      
-    printf(&quot;Value of *p variable is %d \n&quot;,*p);      
-    printf(&quot;Address of p2 variable is %x \n&quot;,p2);      
-    printf(&quot;Value of **p2 variable is %d \n&quot;,*p);      
+    printf("Address of number variable is %x \n",&amp;number);      
+    printf("Address of p variable is %x \n",p);      
+    printf("Value of *p variable is %d \n",*p);      
+    printf("Address of p2 variable is %x \n",p2);      
+    printf("Value of **p2 variable is %d \n",*p);      
     return 0;  
   } 
 </code></pre>
@@ -1828,13 +1879,13 @@ void main (){
     int *p[] = {a, a+1, a+2, a+3, a+4, a+5}; //Line 2  
     int **pp = p; //Line 3  
     pp++; // Line 4  
-    printf(&quot;%d %d %d\n&quot;,pp-p,*pp - a,**pp); // Line 5  
+    printf("%d %d %d\n",pp-p,*pp - a,**pp); // Line 5  
     *pp++; // Line 6  
-    printf(&quot;%d %d %d\n&quot;,pp-p,*pp - a,**pp); // Line 7  
+    printf("%d %d %d\n",pp-p,*pp - a,**pp); // Line 7  
     ++*pp; // Line 8  
-    printf(&quot;%d %d %d\n&quot;,pp-p,*pp - a,**pp); // Line 9  
+    printf("%d %d %d\n",pp-p,*pp - a,**pp); // Line 9  
     ++**pp; // Line 10   
-    printf(&quot;%d %d %d\n&quot;,pp-p,*pp - a,**pp); // Line 11  
+    printf("%d %d %d\n",pp-p,*pp - a,**pp); // Line 11  
   }  
 </code></pre>
 <h2 id="explanation"><a class="header" href="#explanation">Explanation:</a></h2>
@@ -1851,9 +1902,9 @@ void main (){
 <pre><code class="language-c">char str_name[size];
 </code></pre>
 <h2 id="methods-of-initializing-string"><a class="header" href="#methods-of-initializing-string">Methods of Initializing String</a></h2>
-<pre><code class="language-c">1. char str[] = &quot;Hello World&quot;;
+<pre><code class="language-c">1. char str[] = "Hello World";
 
-2. char str[50] = &quot;Hello World&quot;;
+2. char str[50] = "Hello World";
 
 3. char str[] = {'H','e','l','l','o',' ','W','o','r','l','d','\0'};
 
@@ -1868,7 +1919,7 @@ void main (){
 int main () {
 
    char greeting[100];
-   scanf(&quot;%s&quot;, greeting);
+   scanf("%s", greeting);
    return 0;
 }
 </code></pre>
@@ -1880,21 +1931,21 @@ int main () {
 
 int main () {
 
-   char greeting[] = &quot;Hello World&quot;;
-   printf(&quot;%s\n&quot;, greeting);
+   char greeting[] = "Hello World";
+   printf("%s\n", greeting);
    return 0;
 }
 </code></pre>
 <h2 id="string-functions"><a class="header" href="#string-functions">String Functions</a></h2>
-<table><thead><tr><th>No.</th><th align="center">Functions</th><th align="left">Used for</th></tr></thead><tbody>
-<tr><td>1</td><td align="center"><code>strcpy(s1, s2);</code></td><td align="left">Copies string s2 into string s1.</td></tr>
-<tr><td>2</td><td align="center"><code>strcat(s1, s2);</code></td><td align="left">Concatenates string s2 onto the end of string s1.</td></tr>
-<tr><td>3</td><td align="center"><code>strlen(s1);</code></td><td align="left">Returns the length of string s1.</td></tr>
-<tr><td>4</td><td align="center"><code>strcmp(s1, s2);</code></td><td align="left">Returns 0 if s1 and s2 are the same; less than 0 if s1&lt;s2; greater than 0 if s1&gt;s2.</td></tr>
-<tr><td>5</td><td align="center"><code>strchr(s1, ch);</code></td><td align="left">Returns a pointer to the first occurrence of character ch in string s1.</td></tr>
-<tr><td>6</td><td align="center"><code>strstr(s1, s2);</code></td><td align="left">Returns a pointer to the first occurrence of string s2 in string s1.</td></tr>
+<div class="table-wrapper"><table><thead><tr><th>No.</th><th style="text-align: center">Functions</th><th style="text-align: left">Used for</th></tr></thead><tbody>
+<tr><td>1</td><td style="text-align: center"><code>strcpy(s1, s2);</code></td><td style="text-align: left">Copies string s2 into string s1.</td></tr>
+<tr><td>2</td><td style="text-align: center"><code>strcat(s1, s2);</code></td><td style="text-align: left">Concatenates string s2 onto the end of string s1.</td></tr>
+<tr><td>3</td><td style="text-align: center"><code>strlen(s1);</code></td><td style="text-align: left">Returns the length of string s1.</td></tr>
+<tr><td>4</td><td style="text-align: center"><code>strcmp(s1, s2);</code></td><td style="text-align: left">Returns 0 if s1 and s2 are the same; less than 0 if s1&lt;s2; greater than 0 if s1&gt;s2.</td></tr>
+<tr><td>5</td><td style="text-align: center"><code>strchr(s1, ch);</code></td><td style="text-align: left">Returns a pointer to the first occurrence of character ch in string s1.</td></tr>
+<tr><td>6</td><td style="text-align: center"><code>strstr(s1, s2);</code></td><td style="text-align: left">Returns a pointer to the first occurrence of string s2 in string s1.</td></tr>
 </tbody></table>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="frequently-asked-c-programming-questions"><a class="header" href="#frequently-asked-c-programming-questions">Frequently asked C programming Questions</a></h1>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="frequently-asked-c-programming-questions"><a class="header" href="#frequently-asked-c-programming-questions">Frequently asked C programming Questions</a></h1>
 <h2 id="1-write-a-c-program-to-check-whether-a-given-number-is-palindrome-or-not-using-command-line-argumentsimp"><a class="header" href="#1-write-a-c-program-to-check-whether-a-given-number-is-palindrome-or-not-using-command-line-argumentsimp">1. Write a C program to check whether a given number is palindrome or not using command line arguments.(IMP)</a></h2>
 <p>A palindrome is a word, sentence, verse, or even number that reads the same backward or forward.
 For example <strong>Racecar</strong> is a palindrome whereas <strong>Wikisyllabus</strong> isn't. <strong>1331</strong> is a palindrome but <strong>2156</strong> isn't.</p>
@@ -1904,8 +1955,8 @@ For example <strong>Racecar</strong> is a palindrome whereas <strong>Wikisyllabu
 int main()
 {
  int n,r,sum=0,temp; //variable declaration
- printf(&quot;Enter number:&quot;); 
- scanf(&quot;%d&quot;,&amp;n); // get number from user
+ printf("Enter number:"); 
+ scanf("%d",&amp;n); // get number from user
  temp = n;
  while(n&gt;0) // to reverse the number
  {
@@ -1915,12 +1966,12 @@ int main()
  }
  if(temp==sum) //to check if reversed number equal to input number 
  {
- printf(&quot;%d is a palindrome&quot;, temp); // 
+ printf("%d is a palindrome", temp); // 
 
  } 
  else
  {
- printf(&quot;%d is not a palindrome&quot;,temp);
+ printf("%d is not a palindrome",temp);
  }
 
 }
@@ -1944,12 +1995,12 @@ Enter number: 1546
   char filename[100]; 
   char ch;
   int lc=0, wc=0, cc=0;
-  printf(&quot;Enter a filename :&quot;);
+  printf("Enter a filename :");
   gets(filename);
-  fp = fopen(filename,&quot;r&quot;); // open existing file or create a new file
+  fp = fopen(filename,"r"); // open existing file or create a new file
   if (fp==NULL) 
   {
-printf(&quot;The file %s doesn't exist\n&quot;,filename);
+printf("The file %s doesn't exist\n",filename);
 exit(1);
   }
   else
@@ -1962,13 +2013,13 @@ while ((ch = fgetc(fp))!= EOF)
 }
 fclose(fp);
   }
-  printf(&quot;Lines : %d \n&quot;, lc);
-  printf(&quot;Words : %d \n&quot;, wc);
-  printf(&quot;Characters : %d \n&quot;, cc);
+  printf("Lines : %d \n", lc);
+  printf("Words : %d \n", wc);
+  printf("Characters : %d \n", cc);
   
-  fp=fopen (&quot;result.txt&quot;, &quot;w&quot;);
-  printf(&quot;Writing to result.txt\n&quot;);
-  fprintf (fp, &quot;Lines : %d \n Words : %d \n Characters : %d \n&quot;, lc,wc,cc);
+  fp=fopen ("result.txt", "w");
+  printf("Writing to result.txt\n");
+  fprintf (fp, "Lines : %d \n Words : %d \n Characters : %d \n", lc,wc,cc);
   fclose (fp); //close the file opened.
   return 0;
  }
@@ -1986,13 +2037,13 @@ Writing to result.txt
 int main() 
  { 
   int n1=0,n2=1,n3,i,number; 
-  printf(&quot;Enter the number of elements:&quot;); 
-  scanf(&quot;%d&quot;,&amp;number); 
-  printf(&quot;\n%d %d&quot;,n1,n2);//printing 0 and 1 
+  printf("Enter the number of elements:"); 
+  scanf("%d",&amp;number); 
+  printf("\n%d %d",n1,n2);//printing 0 and 1 
   for(i=2;i&lt;number;++i)//loop starts from 2 because 0 and 1 are already printed 
   { 
 n3=n1+n2; 
-printf(&quot; %d&quot;,n3); 
+printf(" %d",n3); 
 n1=n2; 
 n2=n3; 
   }  
@@ -2021,11 +2072,11 @@ int main()
  
  char a[50], b[50], e[50], f[50] ;
  int i,j,c,d;
- printf(&quot;String concatenation without using Builtin function\n&quot;);
- printf(&quot;Enter First string:&quot;);
- scanf(&quot;%s&quot;,a);
- printf(&quot;Enter Second string:&quot;);
- scanf(&quot;%s&quot;,b);
+ printf("String concatenation without using Builtin function\n");
+ printf("Enter First string:");
+ scanf("%s",a);
+ printf("Enter Second string:");
+ scanf("%s",b);
  c=strlen(a);
  d=strlen(b);  
 for(j=0;j&lt;=d;j++){
@@ -2033,7 +2084,7 @@ for(j=0;j&lt;=d;j++){
 a[c]=b[j];
 c++;
 }
-printf(&quot;The concatenated string is: %s &quot;,a) ; 
+printf("The concatenated string is: %s ",a) ; 
 }
 </code></pre>
 <h2 id="5-write-a-c-program-to-find-largest-element-in-an-array"><a class="header" href="#5-write-a-c-program-to-find-largest-element-in-an-array">5. Write a C program to find largest element in an array</a></h2>
@@ -2043,12 +2094,12 @@ printf(&quot;The concatenated string is: %s &quot;,a) ;
  int main()
  {
   int a[100], n,i,j;
-  printf(&quot;Enter number of elements:&quot;);
-  scanf(&quot;%d&quot;,&amp;n);
+  printf("Enter number of elements:");
+  scanf("%d",&amp;n);
   for(i=0;i&lt;n;i++)
   {
-printf(&quot;Enter a[%d]:&quot;,i);
-scanf(&quot;%d&quot;,&amp;a[i]);
+printf("Enter a[%d]:",i);
+scanf("%d",&amp;a[i]);
   }
  
   for(i=1;i&lt;n;i++)
@@ -2059,7 +2110,7 @@ if(a[0]&lt;a[i+1])
 }
   
   }
-  printf(&quot;The largest number in the array is %d&quot;,a[0]);
+  printf("The largest number in the array is %d",a[0]);
  }
 </code></pre>
 <h3 id="output-5"><a class="header" href="#output-5">Output</a></h3>
@@ -2086,21 +2137,21 @@ if(a[0]&lt;a[i+1])
  int main()
  {
   int a,b,*ap,*bp,s;
-  printf(&quot;Enter number:&quot;);
-  scanf(&quot;%d&quot;,&amp;a);
-  printf(&quot;Enter number:&quot;);
-  scanf(&quot;%d&quot;,&amp;b);
-  printf(&quot;Before swapping:\n&quot;);
-  printf(&quot;a=%d &quot;,a);
-  printf(&quot;b=%d &quot;,b);
-  printf(&quot;\n&quot;);
+  printf("Enter number:");
+  scanf("%d",&amp;a);
+  printf("Enter number:");
+  scanf("%d",&amp;b);
+  printf("Before swapping:\n");
+  printf("a=%d ",a);
+  printf("b=%d ",b);
+  printf("\n");
   ap=&amp;a;
   bp=&amp;b;
   swap(ap,bp);
-  printf(&quot;After swapping:\n&quot;);
-  printf(&quot;a=%d &quot;,a);
-  printf(&quot;b=%d &quot;,b);
-  printf(&quot;\n&quot;); 
+  printf("After swapping:\n");
+  printf("a=%d ",a);
+  printf("b=%d ",b);
+  printf("\n"); 
  }
 </code></pre>
 <h3 id="output-6"><a class="header" href="#output-6">Output</a></h3>
@@ -2117,7 +2168,7 @@ if(a[0]&lt;a[i+1])
  int main()
  {
  for(;;)
- printf(&quot;10&quot;);
+ printf("10");
  
  return 0;
  }
@@ -2132,8 +2183,8 @@ if(a[0]&lt;a[i+1])
  int main()
  {
   int n,num,a,rev=0;
-  printf(&quot;Enter no:&quot;);
-  scanf(&quot;%d&quot;,&amp;num);
+  printf("Enter no:");
+  scanf("%d",&amp;num);
   n=num;
   for(num;num!=0;num=num/10){
   a= num % 10;
@@ -2141,14 +2192,14 @@ if(a[0]&lt;a[i+1])
   }
   if(n==rev)
   {
-printf(&quot;Amstrong number&quot;);
+printf("Amstrong number");
   } 
   
   else
   {
-printf(&quot;Not an Amstrong number&quot;);
+printf("Not an Amstrong number");
   }
-  printf(&quot;\n&quot;);
+  printf("\n");
   return 0; 
  }
 </code></pre>
@@ -2166,30 +2217,30 @@ printf(&quot;Not an Amstrong number&quot;);
   int a[10][10];
   int transp[10][10];
   int i,j,r,c;
-  printf(&quot;First matrix A\n&quot;);
-  printf(&quot;Enter number of rows:&quot;);
-  scanf(&quot;%d&quot;,&amp;r);
-  printf(&quot;Enter number of columns:&quot;);
-  scanf(&quot;%d&quot;,&amp;c);
+  printf("First matrix A\n");
+  printf("Enter number of rows:");
+  scanf("%d",&amp;r);
+  printf("Enter number of columns:");
+  scanf("%d",&amp;c);
   // Getting the Matrix from user 
   for(i=0;i&lt;r;i++)
   {
 for(j=0;j&lt;c;j++)
 {
- printf(&quot;Enter a[%d][%d]:&quot;,i+1,j+1);
- scanf(&quot;%d&quot;,&amp;a[i][j]);
+ printf("Enter a[%d][%d]:",i+1,j+1);
+ scanf("%d",&amp;a[i][j]);
 }
   }
   // Displaying Input Matrix
-  printf(&quot;The Matrix A is :\n&quot;);
+  printf("The Matrix A is :\n");
   for(i=0;i&lt;r;i++)
   {
 for(j=0;j&lt;c;j++)
 {
- printf(&quot;%d  &quot;,a[i][j]);
+ printf("%d  ",a[i][j]);
 
 }
-printf(&quot;\n&quot;);
+printf("\n");
   }
   // Transposing the Input Matrix 
   for(i=0;i&lt;r;i++)
@@ -2200,14 +2251,14 @@ for(j=0;j&lt;c;j++)
 }
   }  
   // Displaying Transpose Matrix 
-  printf(&quot;Transpose of Matrix A:\n&quot;);  
+  printf("Transpose of Matrix A:\n");  
   for(i=0;i&lt;r;i++)
   {
 for(j=0;j&lt;c;j++)
 {
- printf(&quot;%d  &quot;,transp[i][j]);
+ printf("%d  ",transp[i][j]);
 }
-printf(&quot;\n&quot;);
+printf("\n");
   }
  
  }  
@@ -2244,55 +2295,55 @@ int a[10][10];
 int b[10][10];
 int diff[10][10];
 int i,j,r,c;
-printf(&quot;First matrix A\n&quot;);
-printf(&quot;Enter number of rows:&quot;);
-  scanf(&quot;%d&quot;,&amp;r);
-  printf(&quot;Enter number of columns:&quot;);
-  scanf(&quot;%d&quot;,&amp;c);
+printf("First matrix A\n");
+printf("Enter number of rows:");
+  scanf("%d",&amp;r);
+  printf("Enter number of columns:");
+  scanf("%d",&amp;c);
   
   for(i=0;i&lt;r;i++)
   {
 for(j=0;j&lt;c;j++)
 {
- printf(&quot;Enter a[%d][%d]:&quot;,i+1,j+1);
- scanf(&quot;%d&quot;,&amp;a[i][j]);
+ printf("Enter a[%d][%d]:",i+1,j+1);
+ scanf("%d",&amp;a[i][j]);
 }
   }
   
 
   
-  printf(&quot;Second matrix B\n&quot;);
-  printf(&quot;Enter number of rows:&quot;);
-  scanf(&quot;%d&quot;,&amp;r);
-  printf(&quot;Enter number of columns:&quot;);
-  scanf(&quot;%d&quot;,&amp;c);
+  printf("Second matrix B\n");
+  printf("Enter number of rows:");
+  scanf("%d",&amp;r);
+  printf("Enter number of columns:");
+  scanf("%d",&amp;c);
   
   for(i=0;i&lt;r;i++)
   {
 for(j=0;j&lt;c;j++)
 {
- printf(&quot;Enter b[%d][%d]:&quot;,i+1,j+1);
- scanf(&quot;%d&quot;,&amp;b[i][j]);
+ printf("Enter b[%d][%d]:",i+1,j+1);
+ scanf("%d",&amp;b[i][j]);
 }
   }
   
-  printf(&quot;The matrix A is :\n&quot;);
+  printf("The matrix A is :\n");
   for(i=0;i&lt;r;i++)
   {
 for(j=0;j&lt;c;j++)
 {
- printf(&quot;%d\t&quot;,a[i][j]);
+ printf("%d\t",a[i][j]);
 }
-printf(&quot;\n&quot;);
+printf("\n");
   }
-  printf(&quot;The matrix B is :\n&quot;);
+  printf("The matrix B is :\n");
   for(i=0;i&lt;r;i++)
   {
 for(j=0;j&lt;c;j++)
 {
- printf(&quot;%d\t&quot;,b[i][j]);
+ printf("%d\t",b[i][j]);
 }
-printf(&quot;\n&quot;);
+printf("\n");
   }
   for(i=0;i&lt;r;i++)
   {
@@ -2302,14 +2353,14 @@ for(j=0;j&lt;c;j++)
 }
   }
   
-  printf(&quot;The Difference Matrix is :\n&quot;);
+  printf("The Difference Matrix is :\n");
   for(i=0;i&lt;r;i++)
   {
 for(j=0;j&lt;c;j++)
 {
- printf(&quot;%d\t&quot;,diff[i][j]);
+ printf("%d\t",diff[i][j]);
 }
-printf(&quot;\n&quot;);
+printf("\n");
   }
  }
 </code></pre>
@@ -2361,29 +2412,29 @@ printf(&quot;\n&quot;);
  {
 
   int r,c,r1,c1,i,j,k,a[10][10],b[10][10],pro[10][10],sum = 0;
-  printf(&quot;First Matrix A&quot;);
-  printf(&quot;\nEnter the number of rows:&quot;);
-  scanf(&quot;%d&quot;,&amp;r);
-  printf(&quot;Enter the number of columns:&quot;);
-  scanf(&quot;%d&quot;,&amp;c);
+  printf("First Matrix A");
+  printf("\nEnter the number of rows:");
+  scanf("%d",&amp;r);
+  printf("Enter the number of columns:");
+  scanf("%d",&amp;c);
 
   for(i = 0; i &lt; r; i++)
   {  
 for(j = 0; j &lt; c; j++){
- printf(&quot;Enter a[%d][%d]: &quot;,i+1,j+1);
- scanf(&quot;%d&quot;, &amp;a[i][j]);
+ printf("Enter a[%d][%d]: ",i+1,j+1);
+ scanf("%d", &amp;a[i][j]);
 }
   }
-  printf(&quot;Second Matrix B\n&quot;);
-  printf(&quot;Enter the number of rows:&quot;);
-  scanf(&quot;%d&quot;,&amp;r1);
-  printf(&quot;Enter the number of columns:&quot;);
-  scanf(&quot;%d&quot;,&amp;c1);
+  printf("Second Matrix B\n");
+  printf("Enter the number of rows:");
+  scanf("%d",&amp;r1);
+  printf("Enter the number of columns:");
+  scanf("%d",&amp;c1);
 
   for(i = 0; i &lt; r1; i++){  
 for(j = 0; j &lt; c1; j++){
- printf(&quot;Enter b[%d][%d]: &quot;,i+1,j+1);
- scanf(&quot;%d&quot;, &amp;b[i][j]);
+ printf("Enter b[%d][%d]: ",i+1,j+1);
+ scanf("%d", &amp;b[i][j]);
 }
   }  
   for(i = 0; i &lt; r; i++){
@@ -2396,27 +2447,27 @@ sum=0;
   }
   }
   
-  printf(&quot;The matrix A is :\n&quot;);
+  printf("The matrix A is :\n");
   for(i=0;i&lt;r;i++){
   for(j=0;j&lt;c;j++){
-printf(&quot;%d  &quot;,a[i][j]);
+printf("%d  ",a[i][j]);
 
   }
-  printf(&quot;\n&quot;);
+  printf("\n");
   }
-  printf(&quot;The matrix is :\n&quot;);
+  printf("The matrix is :\n");
 for(i=0;i&lt;r1;i++){
 for(j=0;j&lt;c1;j++){
- printf(&quot;%d  &quot;,b[i][j]);
+ printf("%d  ",b[i][j]);
 }
-printf(&quot;\n&quot;);
+printf("\n");
 }
-  printf(&quot;The product matrix\n&quot;);
+  printf("The product matrix\n");
 for(i = 0; i &lt; r; i++){
 for(j = 0; j &lt; c1; j++){
- printf(&quot;%d&quot;, pro[i][j]);
+ printf("%d", pro[i][j]);
 }
- printf(&quot;\n&quot;); 
+ printf("\n"); 
 }
  }
 </code></pre>
@@ -2465,17 +2516,17 @@ for(j = 0; j &lt; c1; j++){
 int main()
 {
   int n,a[100],i,j,temp;
-  printf(&quot;Enter no of elements:&quot;);
-  scanf(&quot;%d&quot;,&amp;n);
+  printf("Enter no of elements:");
+  scanf("%d",&amp;n);
   for(i=0; i&lt;n; i++)
   {
-    printf(&quot;Enter element:&quot;);
-    scanf(&quot;%d&quot;,&amp;a[i]);
+    printf("Enter element:");
+    scanf("%d",&amp;a[i]);
   }
-  printf(&quot;Array before Sorting:&quot;);
+  printf("Array before Sorting:");
    for(i=0; i&lt;n; i++)
   {
-    printf(&quot;%d &quot;,a[i]);
+    printf("%d ",a[i]);
   }  
   for(i=0; i&lt;n-1; i++)
   {
@@ -2489,10 +2540,10 @@ int main()
       }
     }
   }
-   printf(&quot;\nArray after Sorting:&quot;);
+   printf("\nArray after Sorting:");
    for(i=0; i&lt;n; i++)
   {
-    printf(&quot;%d &quot;,a[i]);
+    printf("%d ",a[i]);
   }   
    
 }
@@ -2514,15 +2565,15 @@ Array after Sorting:4 4 5 6 7
 int main()
 {
   int n,a[100],i,x,temp;
-  printf(&quot;Enter number of elements:&quot;);
-  scanf(&quot;%d&quot;,&amp;n);
+  printf("Enter number of elements:");
+  scanf("%d",&amp;n);
   for(i=0; i&lt;n; i++)
   {
-    printf(&quot;Enter element:&quot;);
-    scanf(&quot;%d&quot;,&amp;a[i]);
+    printf("Enter element:");
+    scanf("%d",&amp;a[i]);
   }
-  printf(&quot;Enter the number to be found:&quot;);
-  scanf(&quot;%d&quot;,&amp;x);
+  printf("Enter the number to be found:");
+  scanf("%d",&amp;x);
   int flag=0;
   for(i=0; i&lt;n; i++)
   {
@@ -2533,9 +2584,9 @@ int main()
     }
   }
   if(flag==0)
-    printf(&quot;Element not found&quot;);
+    printf("Element not found");
   else
-    printf(&quot;Element found at index %d &quot;,temp);  
+    printf("Element found at index %d ",temp);  
 }
 </code></pre>
 <h3 id="output-13"><a class="header" href="#output-13">Output</a></h3>
@@ -2557,8 +2608,8 @@ int main() {
 
     vowels = consonant = 0;
 
-    printf(&quot;Enter a line of string: &quot;);
-    scanf(&quot;%s&quot;,line);
+    printf("Enter a line of string: ");
+    scanf("%s",line);
 
     for (int i = 0; line[i] != '\0'; ++i) {
         if (line[i] == 'a' || line[i] == 'e' || line[i] == 'i' ||
@@ -2571,8 +2622,8 @@ int main() {
         } 
     }
 
-    printf(&quot;Vowels: %d&quot;, vowels);
-    printf(&quot;\nConsonants: %d&quot;, consonant);
+    printf("Vowels: %d", vowels);
+    printf("\nConsonants: %d", consonant);
 
 }
 </code></pre>
@@ -2589,8 +2640,8 @@ Consonants: 9
  {  
   
   int num, b_num=0, d_num = 0, base = 1, rem;  
-  printf (&quot;Enter a binary number:&quot;);  
-  scanf (&quot; %d&quot;, &amp;num);
+  printf ("Enter a binary number:");  
+  scanf (" %d", &amp;num);
   b_num = num;
   while ( num &gt; 0)  
   {  
@@ -2600,7 +2651,7 @@ Consonants: 9
     base = base * 2;  
   }  
  
-  printf(&quot;Decimal equivalent of %d = %d&quot;, b_num,d_num);
+  printf("Decimal equivalent of %d = %d", b_num,d_num);
   
   
  } 
@@ -2619,14 +2670,14 @@ Consonants: 9
 int main() {
 int n,i,j,k = 1;
 
-printf(&quot;Enter number of rows:&quot;);
-scanf(&quot;%d&quot;,&amp;n);
+printf("Enter number of rows:");
+scanf("%d",&amp;n);
 
 for(i = 1; i &lt;= n; i++) {
 for(j = 1;j &lt;= i; j++)
-printf(&quot;%3d&quot;, k++);
+printf("%3d", k++);
 
-printf(&quot;\n&quot;);
+printf("\n");
 }
 
 return 0;
@@ -2774,21 +2825,21 @@ return 0;
 <h4 id="syllabus"><a class="header" href="#syllabus">Syllabus</a></h4>
 <ul>
 <li>Basic Structure of computers</li>
-<li>functional units </li>
-<li>basic operational concepts </li>
-<li>bus structures </li>
+<li>functional units</li>
+<li>basic operational concepts</li>
+<li>bus structures</li>
 <li>software</li>
-<li>Memory locations and addresses </li>
-<li>memory operations </li>
-<li>instructions and instruction sequencing </li>
-<li>addressing modes </li>
+<li>Memory locations and addresses</li>
+<li>memory operations</li>
+<li>instructions and instruction sequencing</li>
+<li>addressing modes</li>
 <li>ARM Example (programs not required)</li>
-<li>Basic I/O operations </li>
-<li>stacks, subroutine calls </li>
-<li>Basic processing unit </li>
-<li>fundamental concepts </li>
-<li>instruction cycle </li>
-<li>execution of a complete instruction </li>
+<li>Basic I/O operations</li>
+<li>stacks, subroutine calls</li>
+<li>Basic processing unit</li>
+<li>fundamental concepts</li>
+<li>instruction cycle</li>
+<li>execution of a complete instruction</li>
 <li>multiple-bus organization</li>
 <li>sequencing of control signals</li>
 </ul>
@@ -2835,7 +2886,7 @@ tasks that requires a lot of processing speed. Can also be an ordinary personal 
 to a LAN (local area network).</li>
 <li><strong>Super Computer:</strong> A computer that is considered to be fastest in the world. Used to execute
 tasks that would take lot of time for other computers. For Ex: Modeling weather systems,
-genome sequence, etc </li>
+genome sequence, etc</li>
 <li><strong>Main Frame:</strong> Large expensive computer capable of simultaneously processing data for
 hundreds or thousands of users. Used to store, manage, and process large amounts of data that
 need to be reliable, secure, and centralized.</li>
@@ -2938,31 +2989,43 @@ elements in a single chip. Typical Examples: Sony Play station, Core 2 Duo, i3, 
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+
+
                         <div style="clear: both"></div>
                     </nav>
                 </div>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
             </nav>
 
         </div>
 
-        <script type="text/javascript">
+
+
+
+        <script>
             window.playground_copyable = true;
         </script>
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
 
         <!-- Custom JS scripts -->
-        <script type="text/javascript">
+
+        <script>
         window.addEventListener('load', function() {
             window.setTimeout(window.print, 100);
         });
         </script>
+
+    </div>
     </body>
 </html>
