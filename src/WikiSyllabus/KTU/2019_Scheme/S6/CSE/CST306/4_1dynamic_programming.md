@@ -106,5 +106,28 @@ Algorithm Matrix_Chain_Order(p)
   }
   return m[][] and s[][]
 }
+```
+
+4. **Constructing an optimal solution**
+   
+```python
+Algorithm Print_Optimal_Parens(s,i,j)
+{
+if i==j then
+print “A”i
+else
+print “(“
+print_Optimal_Parens(s,i,s[i,j])
+print_Optimal_Parens(s,s[i,j]+1,j)
+print “)”
+
+}
+```
+
+## Time Complexity
+- We are generating n(n-1)/2 number of elements in matrix m[].
+- To calculate each element it will take atmost n time.
+- So the time complexity = O( n.n(n-1)/2) = O(n3)
+
 
 
