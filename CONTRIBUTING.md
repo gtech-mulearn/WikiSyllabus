@@ -57,8 +57,18 @@ For contributions to KTU (Kerala Technological University):
 4. Inside each of these folders, there are seven folders, `S1&S2` to `S8`.
 5. Go to the folder corresponding to the semester you want to contribute.
 6. Create a new folder with the course code as its name.
-7. Add a `SUMMARY.md` file inside this folder and type the current folder's name.
-8. You can create one or more `.md` files in this folder. The names of these files should be specific to their content.
+7. Add a `SUMMARY.md` file inside this folder and type the current folder's name, and the subject name. Add its index that your going to contribute md files 
+    Example :-(If your Subject is C-programming)
+    ```
+    # EST 102 - C PROGRAMMING
+    #### INDEX
+
+    - [Introduction to C Programming](./1intro.md)
+    - [Variables and Keywords](./2variables_keywords.md)
+    - [Datatypes](./3datatypes.md)
+    ```
+   
+9. You can create one or more `.md` files in this folder. The names of these files should be specific to their content.
 
 ## Adding Content to the `.md` File
 
