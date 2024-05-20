@@ -1,6 +1,6 @@
 # WikiSyllabus : Take your syllabus online
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)  [![Deploy mdBook site to Pages](https://github.com/gtech-mulearn/WikiSyllabus/actions/workflows/mdbook.yml/badge.svg)](https://github.com/gtech-mulearn/WikiSyllabus/actions/workflows/mdbook.yml)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 A collaborative project to build an evolving website/wiki to host, enhance, link, extend &amp; update the university syllabus to help students find a way to connect their education to what’s new in the industry.
 
