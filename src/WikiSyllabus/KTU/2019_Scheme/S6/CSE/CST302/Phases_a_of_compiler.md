@@ -134,11 +134,11 @@
 - If the target language is assembly language, this phase generates the assembly code as
   its output.
 - In our example, the code generated is:
-  LDF R2, id3
-  MULF R2, #60.0
-  LDF R1, id2
-  ADDF R1, R2
-  STF id1, R1
+  - LDF R2, id3
+  - MULF R2, #60.0
+  - LDF R1, id2
+  - ADDF R1, R2
+  - STF id1, R1
 
 - The first operand of each instruction specifies a destination.
 - The F in each instruction tells us that it deals with floating-point numbers.
