@@ -2,7 +2,7 @@
 #### INDEX
 
 Please note that the information provided in this document is not comprehensive and is primarily focused on coding concepts rather than theoretical concepts (Module 1). This document is a work in progress and should be used only as a quick reference. If you notice any errors or have any suggestions feel free to open a pr and add.
-Email: aswinasokofficial@gmail.com
+
 
 # Theory
 
@@ -155,12 +155,8 @@ Access specifiers are specific sets of keywords that, when combined with a code 
 
 | Scope | default | private | protected | public |
 | --- | --- | --- | --- | --- |
-| Same Class | true | true | true | true |
-| Same Package
-Child Class | true | false  | true | true |
-| Same Package
-Non-Child Class | true | false  | true | true |
-| Different Package
-Child Class | false | false  | true | true |
-| Different Package
-Non-Child Class | false | false  | false | true |
+ Same Class | true | true | true | true |
+Same Package <br/> Child Class | true | false  | true | true |
+Same Package <br/> Non-Child Class | true | false  | true | true |
+Different <br/> Package Child Class | false | false  | true | true |
+Different <br/> Package Non-Child Class | false | false  | false | true |
