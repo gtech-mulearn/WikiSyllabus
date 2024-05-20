@@ -78,3 +78,74 @@
   value of initial.
 - The root of the tree, labeled =, indicates that we must store the result of this addition
   into the location for the identifier position.
+
+# Semantic Analysis
+- The semantic analyzer uses the syntax tree and the information in the symbol table to
+  check the source program for semantic consistency with the language definition.
+- It also gathers type information and saves it in either the syntax tree or the symbol
+  table, for subsequent use during intermediate-code generation.
+- An important part of semantic analysis is type checking, where the compiler checks
+  that each operator has matching operands.
+- For example, many programming language definitions require an array index to be an
+  integer; the compiler must report an error if a floating-point number is used to index
+  an array.
+- Some sort of type conversion is also done by the semantic analyzer.
+- For example, if the operator is applied to a floating point number and an integer, the
+  compiler may convert the integer into a floating point number.
+- In our example, suppose that position, initial, and rate have been declared to be
+  floating- point numbers, and that the lexeme 60 by itself forms an integer.
+- The semantic analyzer discovers that the operator * is applied to a floating-point
+  number rate and an integer 60.
+- In this case, the integer may be converted into a floating-point number.
+- In the following figure, notice that the output of the semantic analyzer has an extra
+  node for the operator inttofloat , which explicitly converts its integer argument into a
+  floating-point number.
+  //pic
+
+# Intermediate Code Generation
+- In the process of translating a source program into target code, a compiler may
+  construct one or more intermediate representations, which can have a variety of forms.
+- Syntax trees are a form of intermediate representation; they are commonly used
+  during syntax and semantic analysis.
+- After syntax and semantic analysis of the source program, many compilers generate
+  an explicit low-level or machine-like intermediate representation, which we can think
+  of as a program for an abstract machine.
+- This intermediate representation should have two important properties:
+  - It should be simple and easy to produce
+  - It should be easy to translate into the target machine.
+- In our example, the intermediate representation used is three-address code, which
+  consists of a sequence of assembly-like instructions with three operands per
+  instruction.
+
+   - t1 = inttofloat(60)
+   - t2 = id3 * t1
+   - t3 = id2 + t2
+   - id1 = t3
+
+# Code Generator
+- The code generator takes as input an intermediate representation of the source
+  program and maps it into the target language.
+- If the target language is machine code, registers or memory locations are selected for
+  each of the variables used by the program.
+- Then, the intermediate instructions are translated into sequences of machine
+  instructions that perform the same task.
+- A crucial aspect of code generation is the judicious assignment of registers to hold
+  variables.
+- If the target language is assembly language, this phase generates the assembly code as
+  its output.
+- In our example, the code generated is:
+  LDF R2, id3
+  MULF R2, #60.0
+  LDF R1, id2
+  ADDF R1, R2
+  STF id1, R1
+
+- The first operand of each instruction specifies a destination.
+- The F in each instruction tells us that it deals with floating-point numbers.
+- The above code loads the contents of address id3 into register R2, then multiplies it
+  with floating-point constant 60.0.
+- The # signifies that 60.0 is to be treated as an immediate constant.
+- The third instruction moves id2 into register Rl and the fourth adds to it the value
+  previously computed in register R2.
+- Finally, the value in register Rl is stored into the address of idl , so the code correctly
+  implements the assignment statement position = initial + rate * 60.
