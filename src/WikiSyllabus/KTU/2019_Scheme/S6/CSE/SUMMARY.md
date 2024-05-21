@@ -3,3 +3,4 @@
 #### INDEX
 
 -  [CST 306 - AAD](./CST306/SUMMARY.md)
+-  [CST 302 - CD](./CST302/SUMMARY.md)
