@@ -23,6 +23,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://aravinds-arv.github.io/"><img src="https://avatars.githubusercontent.com/u/78845005?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aravind S</b></sub></a><br /><a href="https://github.com/gtechatfg/WikiSyllabus/commits?author=aravinds-arv" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/milandeepak"><img src="https://avatars.githubusercontent.com/u/71485068?v=4?s=100" width="100px;" alt=""/><br /><sub><b>milandeepak</b></sub></a><br /><a href="#question-milandeepak" title="Answering Questions">💬</a> <a href="https://github.com/gtechatfg/WikiSyllabus/commits?author=milandeepak" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/athul-2003"><img src="https://avatars.githubusercontent.com/u/128019369?s=400&u=51428c2c08488fb516f81735e347846f1fd34b34&v=4" width="100px;" alt=""/><br /><sub><b>H Athulkrishnan</b></sub></a><br /><a href="https://github.com/athul-2003/WikiSyllabus/commit/4ffba6a76a986a705aec1f07243ff0e923de4bae" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/sinan-sulaiman-33"><img src="https://avatars.githubusercontent.com/u/143943603?v=4" width="100px;" alt="" /><br /><sub><b>Sinan Sulaiman</b></sub></a><br /><a href="https://github.com/sinan-sulaiman-33/WikiSyllabus/commit/c164ccbf0aa2527e25385f7a12eb1ab31f740632" title="Theory Content">📖</a>
+    </td>
   </tr>
 </table>
 
