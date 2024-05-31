@@ -4,4 +4,4 @@
 
 - [KTU](./WikiSyllabus/KTU/SUMMARY.md)
 
-- [MGU](./MGU/SUMMARY.md)
+<!-- - [MGU](./MGU/SUMMARY.md) -->
