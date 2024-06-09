@@ -278,3 +278,12 @@ over time.
 |4. Early adopters help test new products and provide word-of-mouth marketing campaigns.| 4. It is suitable mainly for tech products and services.
 
 ##
+
+**7. ADMINISTERED PRICING**
+
+- The term administered pricing is used to denote the price charged by the monopolists.
+- Administered prices are not fixed by the market mechanism
+- In the case of india, Administered price is fixed by the government
+- Example: Price of cooking gas
+
+  ##
