@@ -3,3 +3,4 @@
 #### INDEX
 
 -  [CST 306 - AAD](./CST306/SUMMARY.md)
+-  [HUT 300 - IEFT](./HUT300/SUMMARY.md)
